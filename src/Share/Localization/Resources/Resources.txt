@@ -1,0 +1,19 @@
+﻿#region ERROR
+
+ERR_MSG_INVALID_GUID_ID = {0} không hợp lệ. Yêu cầu phải là kiểu dữ liệu Guid. Xin kiểm tra lại.
+ERR_MSG_DATA_WITH_ID_NOT_FOUND = Không tìm thấy dữ liệu với mã: {0}. Xin kiểm tra lại.
+ERR_MSG_IMAGE_INVALID_WITH_BASE64 = Hình ảnh: {0} không hợp lệ, nó phải phù hợp với định dạng base64
+ERR_MSG_IMAGE_INVALID_WITH_BYTE_TYPE = Hình ảnh: {0} không hợp lệ, nó không phù hợp với dữ liệu của hình ảnh
+ERR_MSG_CANNOT_UPLOAD_IMAGE = Không thể tải hình ảnh lên cho: {0}.
+ERR_MSG_INVALID_DATA_TYPE = Kiểu dữ liệu không hợp lệ - Yêu cầu là kiểu: {0}
+ERR_MSG_FILE_IS_EMPTY = File không tồn tại dữ liệu
+ERR_MSG_DATA_EXISTED = Dữ liệu đã tồn tại - Dữ liệu yêu cầu là duy nhất. 
+
+#endregion ERROR
+
+#region INFO
+
+INF_MSG_SAVE_SUCCESSFULLY = Lưu dữ liệu thành công
+INF_MSG_SUCCESSFULLY = Thành công
+
+#endregion INFO

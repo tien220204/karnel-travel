@@ -1,0 +1,14 @@
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.csproj.AssemblyReference.cache
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\KarnelTravel.Share.Localization.Resources.resources
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.csproj.GenerateResource.cache
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.AssemblyInfoInputs.cache
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.AssemblyInfo.cs
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.csproj.CoreCompileInputs.cache
+D:\workspace\KarnelTravel\Share\bin\Debug\net8.0\Share.deps.json
+D:\workspace\KarnelTravel\Share\bin\Debug\net8.0\Share.dll
+D:\workspace\KarnelTravel\Share\bin\Debug\net8.0\Share.pdb
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.dll
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\refint\Share.dll
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\Share.pdb
+D:\workspace\KarnelTravel\Share\obj\Debug\net8.0\ref\Share.dll
