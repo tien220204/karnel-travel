@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Serilog;
 using KarnelTravel.Share.Localization;
+using KarnelTravel.API.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
