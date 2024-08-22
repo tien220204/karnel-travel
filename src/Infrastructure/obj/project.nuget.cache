@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VeSbATNRC7g=",
+  "dgSpecHash": "mQm3Cvyeznk=",
   "success": true,
-  "projectFilePath": "D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj",
+  "projectFilePath": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\viluo\\.nuget\\packages\\ardalis.guardclauses\\4.6.0\\ardalis.guardclauses.4.6.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",

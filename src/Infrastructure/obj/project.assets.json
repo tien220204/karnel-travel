@@ -6003,11 +6003,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj",
       "projectName": "KarnelTravel.Infrastructure",
-      "projectPath": "D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj",
+      "projectPath": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\viluo\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\KarnelTravel\\Infrastructure4\\obj\\",
+      "outputPath": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\viluo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6025,14 +6025,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\workspace\\KarnelTravel\\Application\\Application.csproj": {
-              "projectPath": "D:\\workspace\\KarnelTravel\\Application\\Application.csproj"
+            "D:\\workspace\\KarnelTravel\\src\\Application\\Application.csproj": {
+              "projectPath": "D:\\workspace\\KarnelTravel\\src\\Application\\Application.csproj"
             },
-            "D:\\workspace\\KarnelTravel\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\workspace\\KarnelTravel\\Domain\\Domain.csproj"
+            "D:\\workspace\\KarnelTravel\\src\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\workspace\\KarnelTravel\\src\\Domain\\Domain.csproj"
             },
-            "D:\\workspace\\KarnelTravel\\Share\\Share.csproj": {
-              "projectPath": "D:\\workspace\\KarnelTravel\\Share\\Share.csproj"
+            "D:\\workspace\\KarnelTravel\\src\\Share\\Share.csproj": {
+              "projectPath": "D:\\workspace\\KarnelTravel\\src\\Share\\Share.csproj"
             }
           }
         }
@@ -6067,7 +6067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

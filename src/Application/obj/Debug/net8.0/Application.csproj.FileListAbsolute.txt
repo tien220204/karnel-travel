@@ -3,3 +3,9 @@ D:\workspace\KarnelTravel\Application\obj\Debug\net8.0\Application.GeneratedMSBu
 D:\workspace\KarnelTravel\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
 D:\workspace\KarnelTravel\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 D:\workspace\KarnelTravel\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.sourcelink.json

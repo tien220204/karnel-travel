@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure4\Infrastructure.csproj", "{2034D542-FBD7-4713-B03A-63090BE42D96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{2034D542-FBD7-4713-B03A-63090BE42D96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Share", "src\Share\Share.csproj", "{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}"
 EndProject
