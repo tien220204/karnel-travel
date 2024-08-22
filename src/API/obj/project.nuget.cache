@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y0zYOKp0gGU=",
+  "dgSpecHash": "4E5hwEUKPPY=",
   "success": true,
   "projectFilePath": "D:\\workspace\\KarnelTravel\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,9 @@
     "C:\\Users\\viluo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.8\\microsoft.aspnetcore.cryptography.internal.8.0.8.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.8\\microsoft.aspnetcore.cryptography.keyderivation.8.0.8.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\8.0.8\\microsoft.aspnetcore.dataprotection.8.0.8.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\8.0.8\\microsoft.aspnetcore.dataprotection.abstractions.8.0.8.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.entityframeworkcore\\8.0.8\\microsoft.aspnetcore.dataprotection.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\8.0.8\\microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
@@ -132,6 +135,7 @@
     "C:\\Users\\viluo\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\system.security.cryptography.xml\\8.0.1\\system.security.cryptography.xml.8.0.1.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
