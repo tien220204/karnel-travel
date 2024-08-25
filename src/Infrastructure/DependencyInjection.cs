@@ -5,6 +5,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.DataProtection;
+using KarnelTravel.Infrastructure.Identity;
+using KarnelTravel.Domain.Constants;
+
+
 
 namespace KarnelTravel.Infrastructure;
 public static class DependencyInjection
