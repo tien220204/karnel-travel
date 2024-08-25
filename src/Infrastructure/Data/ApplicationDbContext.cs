@@ -1,12 +1,29 @@
-﻿using KarnelTravel.Application.Common;
-using KarnelTravel.Domain.Entities.Features.Users;
+﻿using KarnelTravel.Domain.Entities.Features.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using KarnelTravel.Domain.Common;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using KarnelTravel.Application.Common.Interfaces;
 
 namespace KarnelTravel.Infrastructure.Data;
+
+public static class InitialiserExtensions
+{
+	public static async Task InitialiseDatabaseAsync(this WebApplication app)
+	{
+		using var scope = app.Services.CreateScope();
+
+		var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
+
+		await initialiser.InitialiseAsync();
+		await initialiser.InitialisePersistedGrantDbAsync();
+		// await initialiser.SeedAsync();
+	}
+}
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>, IApplicationDbContext, IDataProtectionKeyContext
 {

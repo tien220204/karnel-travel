@@ -4,3 +4,10 @@ D:\workspace\KarnelTravel\KarnelTravel\obj\Debug\net8.0\API.AssemblyInfoInputs.c
 D:\workspace\KarnelTravel\KarnelTravel\obj\Debug\net8.0\API.AssemblyInfo.cs
 D:\workspace\KarnelTravel\KarnelTravel\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
 D:\workspace\KarnelTravel\KarnelTravel\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\KarnelTravel.API.MvcApplicationPartsAssemblyInfo.cache
+D:\workspace\KarnelTravel\src\API\obj\Debug\net8.0\API.sourcelink.json

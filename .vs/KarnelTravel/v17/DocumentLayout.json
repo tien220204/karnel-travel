@@ -3,132 +3,56 @@
   "WorkspaceRootPath": "D:\\workspace\\KarnelTravel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|d:\\workspace\\karneltravel\\src\\domain\\entities\\features\\users\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\entities\\features\\users\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\configurations\\features\\users\\applicationroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\configurations\\features\\users\\applicationroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\configurations\\features\\users\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\configurations\\features\\users\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Common\\BaseEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Localization\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Localization\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\interceptors\\auditableentitiesinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\interceptors\\auditableentitiesinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppDataNotFoundException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Exceptions\\AppDataNotFoundException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\applicationdbcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppBusinessException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Exceptions\\AppBusinessException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppArgumentException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Exceptions\\AppArgumentException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\ImageFormatConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Contants\\ImageFormatConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\common\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\KarnelTravel\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KarnelTravel\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Common\\BaseEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|d:\\workspace\\karneltravel\\src\\domain\\common\\baseauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\common\\baseauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\DeviceTypeConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Contants\\DeviceTypeConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\GenderConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Contants\\GenderConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Localization\\DependencyInjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Localization\\DependencyInjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\CommonFormatConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Common\\Contants\\CommonFormatConstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Entities\\Features\\Users\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Entities\\Features\\Users\\ApplicationRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Common\\IAuditableEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Common\\IAuditableEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Common\\ValueObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Common\\ValueObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Common\\DomainEventEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Common\\DomainEventEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\Share.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\Share.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure4\\Infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\KarnelTravel\\API.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KarnelTravel\\API.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Application\\Application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\Domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Domain\\GlobalUsings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\GlobalUsings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -143,359 +67,171 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "src\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "RelativeToolTip": "src\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\DependencyInjection.cs*",
+              "RelativeToolTip": "src\\Infrastructure\\DependencyInjection.cs*",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAvwBgAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T10:40:17.496Z",
+              "WhenOpened": "2024-08-25T15:26:59.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\GlobalUsing.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\GlobalUsing.cs*",
+              "RelativeToolTip": "src\\Infrastructure\\GlobalUsing.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:25:41.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationUserConfiguration.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs*",
+              "RelativeToolTip": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:24:32.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\API\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-22T10:19:24.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\API\\Program.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\Program.cs",
-              "RelativeToolTip": "src\\API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAKAAAA",
+              "Title": "ApplicationRoleConfiguration.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs*",
+              "RelativeToolTip": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T15:30:29.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\API\\appsettings.json",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.json",
-              "RelativeToolTip": "src\\API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-22T10:19:20.437Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppBusinessException.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppBusinessException.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Exceptions\\AppBusinessException.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppBusinessException.cs",
-              "RelativeToolTip": "Share\\Common\\Exceptions\\AppBusinessException.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:35:05.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppArgumentException.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppArgumentException.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Exceptions\\AppArgumentException.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppArgumentException.cs",
-              "RelativeToolTip": "Share\\Common\\Exceptions\\AppArgumentException.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:35:04.572Z"
+              "WhenOpened": "2024-08-25T15:24:06.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "Title": "DispatchDomainEventsInterceptor.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAswCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:40:21.571Z"
+              "WhenOpened": "2024-08-25T15:12:20.348Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppDataNotFoundException.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppDataNotFoundException.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Exceptions\\AppDataNotFoundException.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Exceptions\\AppDataNotFoundException.cs",
-              "RelativeToolTip": "Share\\Common\\Exceptions\\AppDataNotFoundException.cs",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:35:08.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ImageFormatConstant.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\ImageFormatConstant.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Contants\\ImageFormatConstant.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\ImageFormatConstant.cs",
-              "RelativeToolTip": "Share\\Common\\Contants\\ImageFormatConstant.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:34:59.599Z"
+              "WhenOpened": "2024-08-24T07:28:52.062Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ResourceManager.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Localization\\ResourceManager.cs",
-              "RelativeDocumentMoniker": "Share\\Localization\\ResourceManager.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Localization\\ResourceManager.cs",
-              "RelativeToolTip": "Share\\Localization\\ResourceManager.cs",
+              "Title": "AuditableEntitiesInterceptor.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\Interceptors\\AuditableEntitiesInterceptor.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\Interceptors\\AuditableEntitiesInterceptor.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\Interceptors\\AuditableEntitiesInterceptor.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\Interceptors\\AuditableEntitiesInterceptor.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAvwEgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:35:16.582Z"
+              "WhenOpened": "2024-08-25T12:41:58.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUser.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\Common\\Interfaces\\IUser.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IUser.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\Common\\Interfaces\\IUser.cs",
+              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T12:46:41.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContextSeed.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T07:28:48.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\KarnelTravel\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "KarnelTravel\\appsettings.Development.json",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\KarnelTravel\\appsettings.Development.json",
-              "RelativeToolTip": "KarnelTravel\\appsettings.Development.json",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-20T14:34:37.559Z"
+              "Title": "ApplicationDbContextInitialiser.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T07:28:50.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "BaseEvent.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEvent.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\BaseEvent.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Common\\BaseEvent.cs",
-              "RelativeToolTip": "Domain\\Common\\BaseEvent.cs",
+              "Title": "BaseAuditableEntity.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "RelativeToolTip": "src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:43:56.622Z"
+              "WhenOpened": "2024-08-22T16:23:24.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "DeviceTypeConstant.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\DeviceTypeConstant.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Contants\\DeviceTypeConstant.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\DeviceTypeConstant.cs",
-              "RelativeToolTip": "Share\\Common\\Contants\\DeviceTypeConstant.cs",
+              "Title": "IApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs*",
+              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:34:54.56Z"
+              "WhenOpened": "2024-08-24T07:29:11.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GenderConstant.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\GenderConstant.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Contants\\GenderConstant.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\GenderConstant.cs",
-              "RelativeToolTip": "Share\\Common\\Contants\\GenderConstant.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:34:55.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Localization\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Share\\Localization\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Localization\\DependencyInjection.cs",
-              "RelativeToolTip": "Share\\Localization\\DependencyInjection.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:04:08.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CommonFormatConstant.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\CommonFormatConstant.cs",
-              "RelativeDocumentMoniker": "Share\\Common\\Contants\\CommonFormatConstant.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Common\\Contants\\CommonFormatConstant.cs",
-              "RelativeToolTip": "Share\\Common\\Contants\\CommonFormatConstant.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:34:49.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApplicationUserRole.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs",
-              "RelativeToolTip": "Domain\\Entities\\Features\\Users\\ApplicationUserRole.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:33:33.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ApplicationUserClaim.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs",
-              "RelativeToolTip": "Domain\\Entities\\Features\\Users\\ApplicationUserClaim.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:33:27.899Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "RelativeToolTip": "Domain\\Entities\\Features\\Users\\ApplicationUser.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:33:24.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ApplicationRoleClaim.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs",
-              "RelativeToolTip": "Domain\\Entities\\Features\\Users\\ApplicationRoleClaim.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:29:44.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ApplicationRole.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRole.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Features\\Users\\ApplicationRole.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Entities\\Features\\Users\\ApplicationRole.cs",
-              "RelativeToolTip": "Domain\\Entities\\Features\\Users\\ApplicationRole.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:20:15.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IAuditableEntity.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Common\\IAuditableEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\IAuditableEntity.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Common\\IAuditableEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\IAuditableEntity.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:10:54.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ValueObject.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Common\\ValueObject.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\ValueObject.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Common\\ValueObject.cs",
-              "RelativeToolTip": "Domain\\Common\\ValueObject.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T14:16:13.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "DomainEventEntity.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Common\\DomainEventEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\DomainEventEntity.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Common\\DomainEventEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\DomainEventEntity.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:42:59.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Share.csproj",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\Share.csproj",
-              "RelativeDocumentMoniker": "Share\\Share.csproj",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\Share.csproj",
-              "RelativeToolTip": "Share\\Share.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T14:14:28.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 7,
               "Title": "Infrastructure.csproj",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Infrastructure4\\Infrastructure.csproj",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Infrastructure4\\Infrastructure.csproj",
-              "RelativeToolTip": "Infrastructure4\\Infrastructure.csproj",
+              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj*",
+              "RelativeToolTip": "src\\Infrastructure\\Infrastructure.csproj*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T14:13:58.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "API.csproj",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\KarnelTravel\\API.csproj",
-              "RelativeDocumentMoniker": "KarnelTravel\\API.csproj",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\KarnelTravel\\API.csproj",
-              "RelativeToolTip": "KarnelTravel\\API.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T14:13:18.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Application.csproj",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "Application\\Application.csproj",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Application\\Application.csproj",
-              "RelativeToolTip": "Application\\Application.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T14:12:43.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Domain.csproj",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\Domain.csproj",
-              "RelativeToolTip": "Domain\\Domain.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T13:13:25.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "GlobalUsings.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Domain\\GlobalUsings.cs",
-              "RelativeDocumentMoniker": "Domain\\GlobalUsings.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Domain\\GlobalUsings.cs",
-              "RelativeToolTip": "Domain\\GlobalUsings.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:21:45.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ImageAndThumbnailResponse.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs",
-              "RelativeDocumentMoniker": "Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs",
-              "RelativeToolTip": "Share\\CloudinaryService\\Reponses\\ImageAndThumbnailResponse.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:07:29.802Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CloudinaryStorageDataService.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs",
-              "RelativeDocumentMoniker": "Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs",
-              "RelativeToolTip": "Share\\CloudinaryService\\Services\\CloudinaryStorageDataService.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T13:07:26.769Z"
+              "WhenOpened": "2024-08-22T16:24:28.267Z",
+              "EditorCaption": ""
             }
           ]
         }
