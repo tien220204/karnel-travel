@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9720ef8a34e908289eca300e3159b0f23c68486c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0880f9b780d559b1842ac98a6c93c877933d5abe")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

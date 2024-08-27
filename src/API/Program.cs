@@ -5,6 +5,8 @@ using System.Globalization;
 using Serilog;
 using KarnelTravel.Share.Localization;
 using KarnelTravel.API.Logging;
+using KarnelTravel.Infrastructure.Data;
+using KarnelTravel.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,7 @@ builder.Host.UseSerilog();
 
 // Add services to the container.
 //builder.Services.AddApiServices(builder.Configuration, builder.Environment);
-//builder.Services.AddApplicationServices();
+builder.Services.AddApplicationServices();
 //builder.Services.AddInfrastructureServices(builder.Configuration);
 //builder.Services.AddCloudinaryServices(builder.Configuration);
 //builder.Services.AddApplicationCache(builder.Configuration);
