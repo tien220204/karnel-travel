@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+using KarnelTravel.API;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
@@ -7,18 +7,22 @@ using KarnelTravel.Share.Localization;
 using KarnelTravel.API.Logging;
 using KarnelTravel.Infrastructure.Data;
 using KarnelTravel.Application;
+using HealthChecks.UI.Client;
+using KarnelTravel.Infrastructure;
+using KarnelTravel.Share.CloudinaryService;
+using KarnelTravel.Share.Cache;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
 
 // Add services to the container.
-//builder.Services.AddApiServices(builder.Configuration, builder.Environment);
+builder.Services.AddApiServices(builder.Configuration, builder.Environment);
 builder.Services.AddApplicationServices();
-//builder.Services.AddInfrastructureServices(builder.Configuration);
-//builder.Services.AddCloudinaryServices(builder.Configuration);
-//builder.Services.AddApplicationCache(builder.Configuration);
-//builder.Services.ConfigMapper();
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddCloudinaryServices(builder.Configuration);
+builder.Services.AddApplicationCache(builder.Configuration);
+builder.Services.ConfigMapper();
 
 builder.Services.AddLocalizationSupport("vi");
 builder.Services.Configure<RequestLocalizationOptions>(options =>
@@ -39,6 +43,8 @@ if (app.Environment.IsDevelopment())
 	app.UseDeveloperExceptionPage();
 	app.UseMigrationsEndPoint();
 	loggerFactory?.AddFileSerilog(builder.Configuration, builder.Environment.ContentRootPath);
+
+	
 }
 else
 {

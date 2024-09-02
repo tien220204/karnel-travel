@@ -15,3 +15,10 @@ D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\workspace\KarnelTravel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.deps.json
+D:\workspace\KarnelTravel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.dll
+D:\workspace\KarnelTravel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.pdb
+D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.dll
+D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\refint\KarnelTravel.Domain.dll
+D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.pdb
+D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\ref\KarnelTravel.Domain.dll

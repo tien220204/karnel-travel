@@ -9,3 +9,15 @@ D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.AssemblyI
 D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
 D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Application.deps.json
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Application.dll
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Application.pdb
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Domain.dll
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Share.dll
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Domain.pdb
+D:\workspace\KarnelTravel\src\Application\bin\Debug\net8.0\KarnelTravel.Share.pdb
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\KarnelTravel.Application.dll
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\refint\KarnelTravel.Application.dll
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\KarnelTravel.Application.pdb
+D:\workspace\KarnelTravel\src\Application\obj\Debug\net8.0\ref\KarnelTravel.Application.dll

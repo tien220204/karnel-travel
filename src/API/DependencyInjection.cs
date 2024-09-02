@@ -43,7 +43,7 @@ public static class DependencyInjection
 
 		services.AddOpenApiDocument((configure, sp) =>
 		{
-			configure.Title = "HopTri API";
+			configure.Title = "KarnelTravel API";
 
 			// Add JWT
 			configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
