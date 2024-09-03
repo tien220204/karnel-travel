@@ -1,0 +1,1 @@
+﻿global using KarnelTravel.Share.Common.Models;

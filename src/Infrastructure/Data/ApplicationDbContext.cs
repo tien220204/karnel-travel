@@ -1,10 +1,12 @@
 ﻿using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Domain.Common;
+using KarnelTravel.Domain.Entities.Features.MasterData;
 using KarnelTravel.Domain.Entities.Features.Users;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using System.Reflection.Metadata;
 
 namespace KarnelTravel.Infrastructure.Data;
 
@@ -32,6 +34,14 @@ public class ApplicationDbContext :
 	//public DbSet<Document> Documents => Set<Document>();
 
 	#endregion document
+
+	#region masterdata
+	public DbSet<Country> Countries => Set<Country>();
+	public DbSet<Province> Provinces => Set<Province>();
+	public DbSet<District> Districts => Set<District>();
+	public DbSet<Ward> Wards => Set<Ward>();
+
+	#endregion masterdata
 
 	protected override void OnModelCreating(ModelBuilder builder)
 	{
