@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KarnelTravel.Domain.Enums;
-internal class PropertyType
+﻿namespace KarnelTravel.Domain.Enums;
+public enum PropertyType
 {
+	Hotel,
+	Cabin,
+	CountryHouse,
+	BedBreakfast,
+	Apartment,
+	TreeHouse,
+	Cruise,
+	Castle,
 }

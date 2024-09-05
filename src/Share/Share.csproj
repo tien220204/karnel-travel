@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.402.5" />
     <PackageReference Include="CloudinaryDotNet" Version="1.26.2" />
     <PackageReference Include="EPPlus" Version="7.3.0" />
     <PackageReference Include="ExcelDataReader" Version="3.7.0" />
