@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "pBLUGzwZDY0=",
+  "dgSpecHash": "J5UQsbvRxGU=",
   "success": true,
   "projectFilePath": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\viluo\\.nuget\\packages\\ardalis.guardclauses\\4.6.0\\ardalis.guardclauses.4.6.0.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\awssdk.core\\3.7.400.14\\awssdk.core.3.7.400.14.nupkg.sha512",
+    "C:\\Users\\viluo\\.nuget\\packages\\awssdk.s3\\3.7.402.5\\awssdk.s3.3.7.402.5.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\cloudinarydotnet\\1.26.2\\cloudinarydotnet.1.26.2.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\duende.identityserver\\7.0.6\\duende.identityserver.7.0.6.nupkg.sha512",
     "C:\\Users\\viluo\\.nuget\\packages\\duende.identityserver.entityframework\\7.0.6\\duende.identityserver.entityframework.7.0.6.nupkg.sha512",
