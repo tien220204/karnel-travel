@@ -1,5 +1,6 @@
 ﻿using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Domain.Common;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Entities.Features.MasterData;
 using KarnelTravel.Domain.Entities.Features.Users;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
@@ -25,10 +26,17 @@ public class ApplicationDbContext :
 	public DbSet<ApplicationRoleClaim> AspNetRoleClaims => Set<ApplicationRoleClaim>();
 	public DbSet<ApplicationUserRole> AspNetUserRoles => Set<ApplicationUserRole>();
 
-	#region product
-	//public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
-
-	#endregion product
+	#region hotel
+	public DbSet<Hotel> Hotels => Set<Hotel>();
+	public DbSet<HotelAmenity> HotelAmenities => Set<HotelAmenity>();
+	public DbSet<HotelPolicy> HotelPolicies => Set<HotelPolicy>();
+	public DbSet<HotelReview> HotelReviews => Set<HotelReview>();
+	public DbSet<HotelRoom> HotelRooms => Set<HotelRoom>();
+	public DbSet<HotelImage> HotelImages => Set<HotelImage>();
+	public DbSet<HotelPropertyType> HotelPropertyTypes => Set<HotelPropertyType>();
+	public DbSet<HotelStyle> HotelStyles => Set<HotelStyle>();
+	public DbSet<Style> Style => Set<Style>();
+	#endregion hotel
 
 	#region document
 	//public DbSet<Document> Documents => Set<Document>();

@@ -1,11 +1,9 @@
 ﻿using KarnelTravel.Domain.Common;
 
 namespace KarnelTravel.Domain.Entities.Features.Hotels;
-public class HotelAmenity : BaseAuditableEntity<long>
+public class HotelRoom : BaseAuditableEntity<Guid>
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
+    public string Code { get; set; }
     public Guid HotelId { get; set; }
     public Hotel Hotel { get; set; }
-
 }

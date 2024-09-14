@@ -64,6 +64,7 @@
           },
           "messages": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/AppMessage"
             }
