@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravel.Share")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cd9e2944a629b986e59989c76fc9ce8bbe2c82a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24b0bdd8c179fa89688541cfa33949fdcc495c9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravel.Share")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravel.Share")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

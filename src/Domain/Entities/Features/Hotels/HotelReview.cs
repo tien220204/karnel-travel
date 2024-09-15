@@ -11,4 +11,5 @@ public class HotelReview : BaseAuditableEntity<long>
     //public Customer Customer { get; set; }
     public HotelReview ParentReview { get; set; }
     public ICollection<HotelReview> ChildReviews { get; set; }
+    public Hotel Hotel { get; set; }
 }
