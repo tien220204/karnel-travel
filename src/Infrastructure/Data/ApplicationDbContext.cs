@@ -1,5 +1,7 @@
 ﻿using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Domain.Common;
+using KarnelTravel.Domain.Entities.Features.Flights;
+using KarnelTravel.Domain.Entities.Features.Hotel;
 using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Entities.Features.MasterData;
 using KarnelTravel.Domain.Entities.Features.Users;
@@ -50,6 +52,18 @@ public class ApplicationDbContext :
 	public DbSet<Ward> Wards => Set<Ward>();
 
 	#endregion masterdata
+
+	#region flight
+	public DbSet<Flight> Flights => Set<Flight>();
+	public DbSet<FlightTicket> FlightsTickets => Set<FlightTicket>();
+	public DbSet<FlightExtension> FlightsExtensions => Set<FlightExtension>();
+	public DbSet<Airport> Airports => Set<Airport>();
+	public DbSet<Airline> Airlines => Set<Airline>();
+	#endregion
+
+	#region booking
+	public DbSet<BookingDetail> BookingDetail => Set<BookingDetail>();
+	#endregion
 
 	protected override void OnModelCreating(ModelBuilder builder)
 	{

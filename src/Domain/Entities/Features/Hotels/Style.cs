@@ -1,12 +1,8 @@
 ﻿using KarnelTravel.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 
-namespace KarnelTravel.Domain.Entities.Features.Hotels;
-public class Style: BaseAuditableEntity<long>
+namespace KarnelTravel.Domain.Entities.Features.Hotel;
+public class Style : BaseAuditableEntity<long>
 {
 	public string Name { get; set; }
 	public string Description { get; set; }

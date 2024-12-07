@@ -1,4 +1,6 @@
-﻿using KarnelTravel.Domain.Entities.Features.Hotels;
+﻿using KarnelTravel.Domain.Entities.Features.Flights;
+using KarnelTravel.Domain.Entities.Features.Hotel;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Entities.Features.MasterData;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,4 +27,15 @@ public interface IApplicationDbContext
 	DbSet<District> Districts { get; }
 	DbSet<Ward> Wards { get; }
 	Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+
+	//flight
+	DbSet<Flight> Flights { get; }
+	DbSet<Airline> Airlines { get; }
+	DbSet<Airport> Airports { get; }
+	DbSet<FlightExtension> FlightsExtensions { get; }
+	DbSet<FlightTicket> FlightsTickets { get; }
+
+	//Booking detail 
+	DbSet<BookingDetail> BookingDetail { get; }
+	
 }

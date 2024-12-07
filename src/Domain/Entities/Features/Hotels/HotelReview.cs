@@ -5,7 +5,7 @@ public class HotelReview : BaseAuditableEntity<long>
 {
     public decimal StarRate { get; set; }
     public string Review { get; set; }
-    public Guid HotelId { get; set; }
+    public long HotelId { get; set; }
     public long ParentReviewId { get; set; }
     //public Guid CustomerId { get; set; }
     //public Customer Customer { get; set; }
