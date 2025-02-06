@@ -1,24 +1,25 @@
 ﻿namespace KarnelTravel.Application.Common.Interfaces;
-public interface IElasticSearchService<T>
+public interface IElasticSearchService
 {
 	//create index
 	Task CreateIndexIfNotExisted(string indexName);
 
 	//add or update data
-	Task<bool> AddOrUpdate(T dataObject);
+	Task<bool> AddOrUpdate<T>(T dataObject);
 
 	//update bulk data
-	Task<bool>  AddOrUpdateBulk(IEnumerable<T> dataObjects, string indexName);
+	Task<bool>  AddOrUpdateBulk<T>(IEnumerable<T> dataObjects, string indexName);
 
 	//get data
-	Task<T> Get(string key);
+	Task<T> Get<T>(string key);
 
 	//get all object data
-	Task<List<T>> GetAll();
+	Task<List<T>> GetAll<T>();
 
 	//remove key
-	Task<bool> Remove(string key);
+	Task<bool> Remove<T>(string key);
 
 	//remove all
-	Task<long?> RemoveAll(string key);
+	Task<long?> RemoveAll<T>(string key);
 }
+ 
