@@ -1,110 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\workspace\\KarnelTravel\\",
+  "WorkspaceRootPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\features\\hotels\\models\\dtos\\hoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\models\\dtos\\hoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\features\\hotels\\queries\\gethotelwithfilterandpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\queries\\gethotelwithfilterandpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\data\\migrations\\20250323125327_addingisdeletedstatusobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\migrations\\20250323125327_addingisdeletedstatusobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|d:\\workspace\\karneltravel\\src\\domain\\entities\\features\\hotels\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\entities\\features\\hotels\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\controllers\\features\\hotel\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\controllers\\features\\hotel\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\controllers\\features\\hotel\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\controllers\\features\\masterdata\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\controllers\\features\\masterdata\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\controllers\\features\\masterdata\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\logs\\log-20241207.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\logs\\log-20241207.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\logs\\log-20240903.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\logs\\log-20240903.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\logs\\log-20240902.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\logs\\log-20240902.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\logs\\log-20240829.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\logs\\log-20240829.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\features\\hotels\\commands\\createhotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\commands\\createhotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\commands\\createhotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\karneltravel\\src\\api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\models\\requests\\basehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\models\\requests\\basehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\localization\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\localization\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\commands\\updatehotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\commands\\updatehotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\cloudinaryservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\cloudinaryservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\domain\\entities\\features\\hotels\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\entities\\features\\hotels\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\applicationdbcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\commands\\deletehotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\commands\\deletehotelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\domain\\common\\baseauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AFACEAD-C504-44D1-B6D2-68818A9B0EE8}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\common\\baseauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\karneltravel\\src\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\models\\dtos\\hoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\models\\dtos\\hoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\vngcloudstorageservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\vngcloudstorageservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\flights\\commands\\createflightcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\flights\\commands\\createflightcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\karneltravel\\src\\infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\features\\hotels\\queries\\gethotelwithfilterandpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\hotels\\queries\\gethotelwithfilterandpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\googlesearchapiservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\googlesearchapiservice\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\googlesearchapiservice\\settings\\googlesearchapisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\googlesearchapiservice\\settings\\googlesearchapisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\vngcloudstorageservice\\settings\\vngcloudstorageoauthapisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\vngcloudstorageservice\\settings\\vngcloudstorageoauthapisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\googlesearchapiservice\\serpapi\\flightsearchapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\googlesearchapiservice\\serpapi\\flightsearchapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|d:\\workspace\\karneltravel\\src\\share\\googlesearchapiservice\\serpapi\\serpapisearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}|src\\Share\\Share.csproj|solutionrelative:src\\share\\googlesearchapiservice\\serpapi\\serpapisearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,321 +82,234 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Hotel.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
-              "RelativeDocumentMoniker": "src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
-              "RelativeToolTip": "src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T02:33:12.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HotelDto.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
-              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T02:32:20.282Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
+              "RelativeToolTip": "src\\API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T12:54:24.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetHotelWithFilterAndPaginationQuery.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
-              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T02:25:56.277Z"
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T12:54:23.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "log-20241207.txt",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20241207.txt",
-              "RelativeDocumentMoniker": "src\\API\\logs\\log-20241207.txt",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20241207.txt",
-              "RelativeToolTip": "src\\API\\logs\\log-20241207.txt",
-              "ViewState": "AQIAACgAAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-03T02:18:21.933Z"
+              "DocumentIndex": 2,
+              "Title": "20250323125327_AddingIsDeletedStatusObject.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Data\\Migrations\\20250323125327_AddingIsDeletedStatusObject.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\Migrations\\20250323125327_AddingIsDeletedStatusObject.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Data\\Migrations\\20250323125327_AddingIsDeletedStatusObject.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\Migrations\\20250323125327_AddingIsDeletedStatusObject.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:53:27.741Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
-              "RelativeDocumentMoniker": "src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
-              "RelativeToolTip": "src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
-              "ViewState": "AQIAAAEAAABggSXGoBobwAMAAAAwAAAA",
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
+              "RelativeDocumentMoniker": "src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
+              "RelativeToolTip": "src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:25:36.896Z"
+              "WhenOpened": "2025-03-23T12:49:42.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
+              "RelativeDocumentMoniker": "src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
+              "RelativeToolTip": "src\\API\\Controllers\\Features\\Hotel\\HotelController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:49:38.916Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LocationController.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
-              "RelativeDocumentMoniker": "src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
-              "RelativeToolTip": "src\\API\\Controllers\\Features\\MasterData\\LocationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:10:02.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "src\\API\\Controllers\\BaseController.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "src\\API\\Controllers\\BaseController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAABBwBoAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:07:15.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApiControllerBase.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\ApiControllerBase.cs",
-              "RelativeDocumentMoniker": "src\\API\\Controllers\\ApiControllerBase.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\Controllers\\ApiControllerBase.cs",
-              "RelativeToolTip": "src\\API\\Controllers\\ApiControllerBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:06:29.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreateHotelCommand.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
-              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAABBwBkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T04:05:51.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "log-20240902.txt",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240902.txt",
-              "RelativeDocumentMoniker": "src\\API\\logs\\log-20240902.txt",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240902.txt",
-              "RelativeToolTip": "src\\API\\logs\\log-20240902.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-23T04:05:41.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "log-20240903.txt",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240903.txt",
-              "RelativeDocumentMoniker": "src\\API\\logs\\log-20240903.txt",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240903.txt",
-              "RelativeToolTip": "src\\API\\logs\\log-20240903.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-23T04:05:40.808Z"
+              "Title": "API",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\API.csproj",
+              "RelativeDocumentMoniker": "src\\API\\API.csproj",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\API.csproj",
+              "RelativeToolTip": "src\\API\\API.csproj",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwDEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-23T12:48:51.238Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "log-20240829.txt",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240829.txt",
-              "RelativeDocumentMoniker": "src\\API\\logs\\log-20240829.txt",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\logs\\log-20240829.txt",
-              "RelativeToolTip": "src\\API\\logs\\log-20240829.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-23T04:05:38.769Z"
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
+              "RelativeToolTip": "src\\Domain\\Entities\\Features\\Hotels\\Hotel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:10:02.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseHotelRequest.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Models\\Requests\\BaseHotelRequest.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Models\\Requests\\BaseHotelRequest.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Models\\Requests\\BaseHotelRequest.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Models\\Requests\\BaseHotelRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T11:17:48.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseAuditableEntity.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "RelativeToolTip": "src\\Domain\\Common\\BaseAuditableEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T11:05:42.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HotelDto.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Models\\Dtos\\HotelDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T09:47:58.55Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\API\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\API\\DependencyInjection.cs",
-              "ViewState": "AQIAAIEAAAAAAAAAAABBwBIAAAAUAAAA",
+              "Title": "PaginatedList.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Models\\PaginatedList.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Common\\Models\\PaginatedList.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Models\\PaginatedList.cs",
+              "RelativeToolTip": "src\\Application\\Common\\Models\\PaginatedList.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:09:43.815Z"
+              "WhenOpened": "2025-02-07T09:11:49.481Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\Localization\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\Share\\Localization\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\Localization\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\Share\\Localization\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:09:19.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\CloudinaryService\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\Share\\CloudinaryService\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\CloudinaryService\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\Share\\CloudinaryService\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:09:13.009Z"
+              "WhenOpened": "2025-02-07T09:03:32.771Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ApplicationDbContextSeed.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContextSeed.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAABBwAAAAAAbAAAA",
+              "Title": "GetHotelWithFilterAndPaginationQuery.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Queries\\GetHotelWithFilterAndPaginationQuery.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:08:58.435Z"
+              "WhenOpened": "2025-02-07T09:02:48.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ApplicationDbContextInitialiser.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "DocumentIndex": 8,
+              "Title": "UpdateHotelCommand.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\UpdateHotelCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Commands\\UpdateHotelCommand.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\UpdateHotelCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Commands\\UpdateHotelCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:08:55.025Z"
+              "WhenOpened": "2025-02-07T09:02:42.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\Application\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Application\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\Application\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "DocumentIndex": 10,
+              "Title": "DeleteHotelCommand.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\DeleteHotelCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Commands\\DeleteHotelCommand.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\DeleteHotelCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Commands\\DeleteHotelCommand.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:08:15.789Z"
+              "WhenOpened": "2025-02-07T09:02:32.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\GlobalUsing.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Infrastructure\\GlobalUsing.cs",
-              "RelativeToolTip": "src\\Infrastructure\\GlobalUsing.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "CreateHotelCommand.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Hotels\\Commands\\CreateHotelCommand.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwB4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:07:37.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\VngCloudStorageService\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\Share\\VngCloudStorageService\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\VngCloudStorageService\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\Share\\VngCloudStorageService\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:03:34.157Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\API\\appsettings.Development.json",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-08T11:02:06.253Z",
+              "WhenOpened": "2025-02-07T09:02:27.252Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "VngCloudStorageOAuthApiSettings.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\VngCloudStorageService\\Settings\\VngCloudStorageOAuthApiSettings.cs",
-              "RelativeDocumentMoniker": "src\\Share\\VngCloudStorageService\\Settings\\VngCloudStorageOAuthApiSettings.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\VngCloudStorageService\\Settings\\VngCloudStorageOAuthApiSettings.cs",
-              "RelativeToolTip": "src\\Share\\VngCloudStorageService\\Settings\\VngCloudStorageOAuthApiSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "DocumentIndex": 15,
+              "Title": "CreateFlightCommand.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Flights\\Commands\\CreateFlightCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\Flights\\Commands\\CreateFlightCommand.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Features\\Flights\\Commands\\CreateFlightCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\Flights\\Commands\\CreateFlightCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:01:35.011Z"
+              "WhenOpened": "2025-02-07T09:02:21.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GoogleSearchApiSettings.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\Settings\\GoogleSearchApiSettings.cs",
-              "RelativeDocumentMoniker": "src\\Share\\GoogleSearchApiService\\Settings\\GoogleSearchApiSettings.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\Settings\\GoogleSearchApiSettings.cs",
-              "RelativeToolTip": "src\\Share\\GoogleSearchApiService\\Settings\\GoogleSearchApiSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\API\\Program.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Program.cs",
+              "RelativeToolTip": "src\\API\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T11:01:32.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\Share\\GoogleSearchApiService\\DependencyInjection.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\Share\\GoogleSearchApiService\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:51:22.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FlightSearchApi.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\SerpApi\\FlightSearchApi.cs",
-              "RelativeDocumentMoniker": "src\\Share\\GoogleSearchApiService\\SerpApi\\FlightSearchApi.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\SerpApi\\FlightSearchApi.cs",
-              "RelativeToolTip": "src\\Share\\GoogleSearchApiService\\SerpApi\\FlightSearchApi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:41:33.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SerpApiSearch.cs",
-              "DocumentMoniker": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\SerpApi\\SerpApiSearch.cs",
-              "RelativeDocumentMoniker": "src\\Share\\GoogleSearchApiService\\SerpApi\\SerpApiSearch.cs",
-              "ToolTip": "D:\\workspace\\KarnelTravel\\src\\Share\\GoogleSearchApiService\\SerpApi\\SerpApiSearch.cs",
-              "RelativeToolTip": "src\\Share\\GoogleSearchApiService\\SerpApi\\SerpApiSearch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:25:24.334Z"
+              "WhenOpened": "2025-02-06T11:15:16.805Z"
             }
           ]
         }

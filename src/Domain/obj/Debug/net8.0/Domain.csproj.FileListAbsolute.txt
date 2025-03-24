@@ -22,3 +22,16 @@ D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.dll
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\refint\KarnelTravel.Domain.dll
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.pdb
 D:\workspace\KarnelTravel\src\Domain\obj\Debug\net8.0\ref\KarnelTravel.Domain.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.deps.json
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\bin\Debug\net8.0\KarnelTravel.Domain.pdb
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\refint\KarnelTravel.Domain.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\KarnelTravel.Domain.pdb
+D:\Workspace\PersonalProjects\karnel-travel\src\Domain\obj\Debug\net8.0\ref\KarnelTravel.Domain.dll

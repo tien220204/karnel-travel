@@ -1,0 +1,23 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.4
+    container_name: keycloak
+    command: ["start-dev"]
+    environment:
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://host.docker.internal:5432/KarnelTravelDb
+      - KC_DB_USERNAME=postgres 
+      - KC_DB_PASSWORD=123456
+      - KC_HOSTNAME=localhost
+      - KC_HTTP_PORT=8080
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - keycloak_network
+
+networks:
+  keycloak_network:
+    driver: bridge

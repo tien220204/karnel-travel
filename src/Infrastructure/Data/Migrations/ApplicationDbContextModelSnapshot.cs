@@ -39,6 +39,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -72,6 +75,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<long>("FlightTicketPrice")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -111,6 +117,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<long>("HotelRoomPrice")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -139,6 +148,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -173,6 +185,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<string>("ICAOCode")
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -217,6 +232,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("FlightCode")
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -255,6 +273,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<long>("FlightId")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -287,6 +308,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<long>("FLightId")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -324,6 +348,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -354,6 +381,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -391,6 +421,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<int>("HotelClass")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -455,6 +488,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<long>("HotelId")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -489,6 +525,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsAvatar")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
@@ -530,6 +569,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<long>("HotelId")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -562,6 +604,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<long>("HotelId")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
@@ -613,6 +658,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<long>("HotelId")
                         .HasColumnType("bigint");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");
 
@@ -645,6 +693,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     b.Property<long>("HotelId")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<DateTimeOffset>("LastModified")
                         .HasColumnType("timestamp with time zone");

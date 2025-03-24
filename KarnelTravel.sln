@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Share", "src\Share\Share.csproj", "{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.ElasticSearch", "src\Infrastructure.ElasticSearch\Infrastructure.ElasticSearch.csproj", "{048243FD-7B5C-4B75-8C40-4448C7D7DE61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A76C73B8-6E51-4D1D-B30B-6A96830F30DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048243FD-7B5C-4B75-8C40-4448C7D7DE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048243FD-7B5C-4B75-8C40-4448C7D7DE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048243FD-7B5C-4B75-8C40-4448C7D7DE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048243FD-7B5C-4B75-8C40-4448C7D7DE61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
