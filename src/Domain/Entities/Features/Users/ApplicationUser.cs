@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Identity;
 
 namespace KarnelTravel.Domain.Entities.Features.Users;
 
-public class ApplicationUser : IdentityUser, IAuditableEntity
+public class ApplicationUser : BaseAuditableEntity<Guid>
 {
-    public DateTime? DateOfBirth { get; set; }
+	public string KeycloakId { get; set; } = null!;
+
+	public DateTime? DateOfBirth { get; set; }
 
     public string FullName { get; set; } = null!;
 
@@ -23,15 +25,5 @@ public class ApplicationUser : IdentityUser, IAuditableEntity
 
     public string Address { get; set; }
 
-    public DateTimeOffset Created { get; set; }
 
-    public string CreatedBy { get; set; }
-
-    public DateTimeOffset LastModified { get; set; }
-
-    public string LastModifiedBy { get; set; }
-
-    public virtual ICollection<ApplicationUserClaim> Claims { get; set; } = new List<ApplicationUserClaim>();
-
-    public virtual ICollection<ApplicationUserRole> UserRoles { get; set; } = new List<ApplicationUserRole>();
 }

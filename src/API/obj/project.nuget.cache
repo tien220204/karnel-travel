@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q5mGYPAD9JY=",
+  "dgSpecHash": "MWf9oBXpYb8=",
   "success": true,
   "projectFilePath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\phamt\\.nuget\\packages\\identitymodel\\6.2.0\\identitymodel.6.2.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.14\\microsoft.aspnetcore.authentication.jwtbearer.8.0.14.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.3\\microsoft.aspnetcore.authentication.openidconnect.8.0.3.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.8\\microsoft.aspnetcore.cryptography.internal.8.0.8.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.8\\microsoft.aspnetcore.cryptography.keyderivation.8.0.8.nupkg.sha512",

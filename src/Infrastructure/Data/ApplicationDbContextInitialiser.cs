@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System.Net.Http.Headers;
+using System.Security.Cryptography.Xml;
 
 namespace KarnelTravel.Infrastructure.Data;
 
@@ -17,7 +19,7 @@ public static class InitialiserExtensions
 		var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
 
 		await initialiser.InitialiseAsync();
-		await initialiser.InitialisePersistedGrantDbAsync();
+		//await initialiser.InitialisePersistedGrantDbAsync();
 		// await initialiser.SeedAsync();
 	}
 }
@@ -27,18 +29,19 @@ public class ApplicationDbContextInitialiser
 {
 	private readonly ILogger<ApplicationDbContextInitialiser> _logger;
 	private readonly ApplicationDbContext _context;
-	private readonly PersistedGrantDbContext _persistedGrantDbContext;
+	//Transform into  keycloak
+	//private readonly PersistedGrantDbContext _persistedGrantDbContext;
 	private readonly UserManager<ApplicationUser> _userManager;
 
 	public ApplicationDbContextInitialiser(
 		ILogger<ApplicationDbContextInitialiser> logger,
 		ApplicationDbContext context,
-		PersistedGrantDbContext persistedGrantDbContext,
+		//PersistedGrantDbContext persistedGrantDbContext,
 		UserManager<ApplicationUser> userManager)
 	{
 		_logger = logger;
 		_context = context;
-		_persistedGrantDbContext = persistedGrantDbContext;
+		//_persistedGrantDbContext = persistedGrantDbContext;
 		_userManager = userManager;
 	}
 
@@ -70,18 +73,18 @@ public class ApplicationDbContextInitialiser
 
 	public async Task InitialisePersistedGrantDbAsync()
 	{
-		try
-		{
-			if ((await _persistedGrantDbContext.Database.GetPendingMigrationsAsync()).Any())
-			{
-				await _persistedGrantDbContext.Database.MigrateAsync();
-			}
-		}
-		catch (Exception ex)
-		{
-			_logger.LogError(ex, "An error occurred while initialising the database.");
-			throw;
-		}
+		//try
+		//{
+		//	if ((await _persistedGrantDbContext.Database.GetPendingMigrationsAsync()).Any())
+		//	{
+		//		await _persistedGrantDbContext.Database.MigrateAsync();
+		//	}
+		//}
+		//catch (Exception ex)
+		//{
+		//	_logger.LogError(ex, "An error occurred while initialising the database.");
+		//	throw;
+		//}
 	}
 
 	public async Task TrySeedAsync()

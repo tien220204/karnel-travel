@@ -2,6 +2,7 @@
 using KarnelTravel.Domain.Entities.Features.Hotel;
 using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Entities.Features.MasterData;
+using KarnelTravel.Domain.Entities.Features.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace KarnelTravel.Application.Common.Interfaces;
@@ -37,5 +38,9 @@ public interface IApplicationDbContext
 
 	//Booking detail 
 	DbSet<BookingDetail> BookingDetail { get; }
-	
+
+	//user
+	DbSet<ApplicationUser> ApplicationUsers { get; }
+
+
 }

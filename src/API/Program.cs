@@ -84,7 +84,7 @@ app.UseCors(config => config
 app.UseRouting();
 
 app.UseAuthentication();
-app.UseIdentityServer();
+//app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapDefaultControllerRoute();
