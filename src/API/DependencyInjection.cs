@@ -84,7 +84,7 @@ public static class DependencyInjection
 			.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 			.AddJwtBearer(options =>
 			{
-				options.Authority = keycloakConfig["Authority"];
+				options.Authority = keycloakConfig["ServerUrl"] + "/realms/" + keycloakConfig["Realm"];
 				options.Audience = keycloakConfig["ClientId"];
 				options.RequireHttpsMetadata = false;
 

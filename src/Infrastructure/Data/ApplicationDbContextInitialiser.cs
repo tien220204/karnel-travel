@@ -31,18 +31,19 @@ public class ApplicationDbContextInitialiser
 	private readonly ApplicationDbContext _context;
 	//Transform into  keycloak
 	//private readonly PersistedGrantDbContext _persistedGrantDbContext;
-	private readonly UserManager<ApplicationUser> _userManager;
+	//private readonly UserManager<ApplicationUser> _userManager;
 
 	public ApplicationDbContextInitialiser(
 		ILogger<ApplicationDbContextInitialiser> logger,
-		ApplicationDbContext context,
+		ApplicationDbContext context
 		//PersistedGrantDbContext persistedGrantDbContext,
-		UserManager<ApplicationUser> userManager)
+		//UserManager<ApplicationUser> userManager)
+		)
 	{
 		_logger = logger;
 		_context = context;
 		//_persistedGrantDbContext = persistedGrantDbContext;
-		_userManager = userManager;
+		//_userManager = userManager;
 	}
 
 	public async Task InitialiseAsync()

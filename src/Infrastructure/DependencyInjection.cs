@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.DataProtection;
 using KarnelTravel.Infrastructure.Identity;
 using KarnelTravel.Domain.Constants;
+using KarnelTravel.Infrastructure.Keycloak;
 
 
 
@@ -44,7 +45,8 @@ public static class DependencyInjection
 
 		services.AddSingleton(TimeProvider.System);
 		services.AddTransient<IIdentityService, IdentityService>();
-		
+		services.AddTransient<IKeycloakService, KeycloakService>();
+
 
 
 		services.AddAuthorization(options =>

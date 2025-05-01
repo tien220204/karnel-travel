@@ -427,3 +427,6 @@ D:\Workspace\PersonalProjects\karnel-travel\src\API\obj\Debug\net8.0\KarnelTrave
 D:\Workspace\PersonalProjects\karnel-travel\src\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 D:\Workspace\PersonalProjects\karnel-travel\src\API\obj\Debug\net8.0\ref\KarnelTravel.API.dll
 D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Flurl.Http.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Flurl.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Keycloak.Net.dll

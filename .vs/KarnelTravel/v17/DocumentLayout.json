@@ -3,64 +3,32 @@
   "WorkspaceRootPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\custom\\resourceownerpasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\custom\\resourceownerpasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\data\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\identity\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\identity\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\interfaces\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\keycloak\\keycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\keycloak\\keycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\behaviours\\authorizationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\behaviours\\authorizationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\customexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\customexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\identityserverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\identityserverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\behaviours\\performancebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\behaviours\\performancebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\interfaces\\ikeycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\ikeycloakservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\services\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\services\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\configurations\\features\\users\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\configurations\\features\\users\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\api\\custom\\customprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{763F207C-ABC8-4AB7-8E16-5B7DEE056E53}|src\\API\\API.csproj|solutionrelative:src\\api\\custom\\customprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\infrastructure\\configurations\\features\\users\\applicationroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2034D542-FBD7-4713-B03A-63090BE42D96}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\configurations\\features\\users\\applicationroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|d:\\workspace\\personalprojects\\karnel-travel\\src\\application\\common\\interfaces\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD527CE7-51ED-45EE-9F2A-624C7EBE6941}|src\\Application\\Application.csproj|solutionrelative:src\\application\\common\\interfaces\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,123 +38,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAC8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T15:03:29.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ResourceOwnerPasswordValidator.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Custom\\ResourceOwnerPasswordValidator.cs",
-              "RelativeDocumentMoniker": "src\\API\\Custom\\ResourceOwnerPasswordValidator.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Custom\\ResourceOwnerPasswordValidator.cs*",
-              "RelativeToolTip": "src\\API\\Custom\\ResourceOwnerPasswordValidator.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwDwAAAAAAAAAAAAAAA==",
+              "Title": "ApplicationDbContextInitialiser.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs*",
+              "RelativeToolTip": "src\\Infrastructure\\Data\\ApplicationDbContextInitialiser.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswCUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:55:24.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IIdentityService.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IIdentityService.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IIdentityService.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IIdentityService.cs",
-              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IIdentityService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:51:00.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IdentityServerConfig.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\IdentityServerConfig.cs",
-              "RelativeDocumentMoniker": "src\\API\\IdentityServerConfig.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\IdentityServerConfig.cs",
-              "RelativeToolTip": "src\\API\\IdentityServerConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:36:28.541Z",
+              "WhenOpened": "2025-05-01T15:02:23.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CustomExceptionHandler.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\CustomExceptionHandler.cs",
-              "RelativeDocumentMoniker": "src\\API\\CustomExceptionHandler.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\CustomExceptionHandler.cs",
-              "RelativeToolTip": "src\\API\\CustomExceptionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IKeycloakService.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IKeycloakService.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IKeycloakService.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IKeycloakService.cs",
+              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IKeycloakService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:36:15.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PerformanceBehaviour.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Behaviours\\PerformanceBehaviour.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Common\\Behaviours\\PerformanceBehaviour.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Behaviours\\PerformanceBehaviour.cs",
-              "RelativeToolTip": "src\\Application\\Common\\Behaviours\\PerformanceBehaviour.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:35:51.084Z",
+              "WhenOpened": "2025-05-01T13:24:26.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\API\\DependencyInjection.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\API\\DependencyInjection.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T12:52:35.496Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
+              "RelativeToolTip": "src\\API\\appsettings.Development.json",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-01T12:20:27.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CurrentUser.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Services\\CurrentUser.cs",
-              "RelativeDocumentMoniker": "src\\API\\Services\\CurrentUser.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Services\\CurrentUser.cs",
-              "RelativeToolTip": "src\\API\\Services\\CurrentUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IdentityService.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Identity\\IdentityService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Identity\\IdentityService.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Identity\\IdentityService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Identity\\IdentityService.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAqwHwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:42:46.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUser.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IUser.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IUser.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IUser.cs",
-              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:42:12.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorizationBehaviour.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Behaviours\\AuthorizationBehaviour.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Common\\Behaviours\\AuthorizationBehaviour.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Behaviours\\AuthorizationBehaviour.cs",
-              "RelativeToolTip": "src\\Application\\Common\\Behaviours\\AuthorizationBehaviour.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T03:22:39.96Z",
+              "WhenOpened": "2025-05-01T02:30:24.426Z",
               "EditorCaption": ""
             },
             {
@@ -195,76 +111,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IdentityService.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Identity\\IdentityService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Identity\\IdentityService.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Identity\\IdentityService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Identity\\IdentityService.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "KeycloakService.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Keycloak\\KeycloakService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Keycloak\\KeycloakService.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Keycloak\\KeycloakService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Keycloak\\KeycloakService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAASwCwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:18:54.182Z",
+              "WhenOpened": "2025-05-01T02:31:42.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApplicationUserConfiguration.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationUserConfiguration.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IIdentityService.cs",
+              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IIdentityService.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IIdentityService.cs",
+              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IIdentityService.cs",
+              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IIdentityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:47:55.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CustomProfileService.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Custom\\CustomProfileService.cs",
-              "RelativeDocumentMoniker": "src\\API\\Custom\\CustomProfileService.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\Custom\\CustomProfileService.cs",
-              "RelativeToolTip": "src\\API\\Custom\\CustomProfileService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwB4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T14:41:29.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationRoleConfiguration.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Configurations\\Features\\Users\\ApplicationRoleConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T14:40:30.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "RelativeToolTip": "src\\Application\\Common\\Interfaces\\IApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T14:40:10.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
-              "ToolTip": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\API\\appsettings.Development.json",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-28T14:40:02.765Z",
+              "WhenOpened": "2025-05-01T02:29:20.047Z",
               "EditorCaption": ""
             }
           ]

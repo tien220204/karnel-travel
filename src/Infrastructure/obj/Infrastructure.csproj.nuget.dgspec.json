@@ -253,6 +253,10 @@
               "target": "Package",
               "version": "[7.0.6, )"
             },
+            "Keycloak.Net": {
+              "target": "Package",
+              "version": "[1.0.18, )"
+            },
             "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
