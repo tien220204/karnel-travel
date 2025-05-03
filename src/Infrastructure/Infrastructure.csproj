@@ -10,14 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Keycloak.Net\src\Keycloak.Net\Keycloak.Net.csproj" />
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Share\Share.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="7.0.6" />
-    <PackageReference Include="Keycloak.Net" Version="1.0.18" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">

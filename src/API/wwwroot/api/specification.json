@@ -57,7 +57,7 @@
         "tags": [
           "Hotel"
         ],
-        "operationId": "Hotel_ImportLocationFile",
+        "operationId": "Hotel_CreateHotel",
         "requestBody": {
           "x-name": "command",
           "content": {
@@ -87,6 +87,132 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel/search": {
+      "post": {
+        "tags": [
+          "Hotel"
+        ],
+        "operationId": "Hotel_GetHotelWithSearchFilterAndPaginationQuery",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHotelWithFilterAndPaginationQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfPaginatedListOfHotelDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfPaginatedListOfHotelDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/flight/create": {
+      "post": {
+        "tags": [
+          "Flight"
+        ],
+        "operationId": "Flight_CreateFlight",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/flight/search": {
+      "post": {
+        "tags": [
+          "Flight"
+        ],
+        "operationId": "Flight_GetFlightWithSearchFilterAndPaginationQuery",
+        "requestBody": {
+          "x-name": "query",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetFlightsWithFilterAndPaginationQuery"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfPaginatedListOfFlightDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfPaginatedListOfFlightDto"
                 }
               }
             }
@@ -992,6 +1118,593 @@
             }
           }
         ]
+      },
+      "AppApiResultOfPaginatedListOfHotelDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "messages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AppMessage"
+            }
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PaginatedListOfHotelDto"
+              }
+            ]
+          }
+        }
+      },
+      "PaginatedListOfHotelDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/HotelDto"
+            }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HotelDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "propertyType": {
+                "$ref": "#/components/schemas/PropertyType"
+              },
+              "hotelClass": {
+                "$ref": "#/components/schemas/HotelClass"
+              },
+              "countryCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "wardCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "provinceCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "districtCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "longitude": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "latitude": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "paymentTypes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PaymentType"
+                }
+              },
+              "servedMeals": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ServedMeal"
+                }
+              },
+              "hotelPolicies": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelPolicy"
+                }
+              },
+              "country": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                ]
+              },
+              "province": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Province"
+                  }
+                ]
+              },
+              "district": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/District"
+                  }
+                ]
+              },
+              "ward": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Ward"
+                  }
+                ]
+              },
+              "hotelImages": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelImage"
+                }
+              },
+              "hotelAmenities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelAmenity"
+                }
+              },
+              "hotelRooms": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelRoom"
+                }
+              },
+              "hotelReviews": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelReview"
+                }
+              },
+              "hotelStyles": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelStyle"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BaseAuditableEntityDtoOfLong": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetHotelWithFilterAndPaginationQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "searchText": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AppApiResultOfPaginatedListOfFlightDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "messages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AppMessage"
+            }
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PaginatedListOfFlightDto"
+              }
+            ]
+          }
+        }
+      },
+      "PaginatedListOfFlightDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FlightDto"
+            }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "FlightDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "flightCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "departureAirportId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "arrivalAirportId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "airlineId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "flightTickets": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FlightTicket"
+                }
+              },
+              "airline": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Airline"
+                  }
+                ]
+              },
+              "airport": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Airport"
+                  }
+                ]
+              },
+              "flightExtensions": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FlightExtension"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FlightTicket": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "ticketType": {
+                "$ref": "#/components/schemas/TicketType"
+              },
+              "fLightId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "flight": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Flight"
+                  }
+                ]
+              },
+              "ticketStatus": {
+                "$ref": "#/components/schemas/TicketStatus"
+              }
+            }
+          }
+        ]
+      },
+      "TicketType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "CabinClass",
+          "PremiumEconomyClass",
+          "BusinessClass",
+          "FirstClass"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "Flight": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "flightCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "departureAirportId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "arrivalAirportId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "airlineId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "flightTickets": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FlightTicket"
+                }
+              },
+              "airline": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Airline"
+                  }
+                ]
+              },
+              "airport": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Airport"
+                  }
+                ]
+              },
+              "flightExtensions": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/FlightExtension"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Airline": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "flights": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Flight"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Airport": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "iataCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "icaoCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "timezone": {
+                "type": "string",
+                "nullable": true
+              },
+              "flights": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Flight"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "FlightExtension": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "flightId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "flight": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Flight"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "TicketStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Available",
+          "Pending",
+          "Unavailable"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "GetFlightsWithFilterAndPaginationQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "searchText": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
       }
     },
     "securitySchemes": {

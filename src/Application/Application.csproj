@@ -29,6 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Flights\Models\Events\" />
+    <Folder Include="Features\Flights\Models\Requests\" />
     <Folder Include="Features\Hotels\Models\Events\" />
     <Folder Include="Features\Hotels\Validators\" />
     <Folder Include="Features\MasterData\Queries\" />

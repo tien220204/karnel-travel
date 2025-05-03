@@ -409,20 +409,6 @@
           }
         }
       },
-      "Keycloak.Net/1.0.18": {
-        "type": "package",
-        "dependencies": {
-          "Flurl.Http.Signed": "2.4.2",
-          "Microsoft.CSharp": "4.7.0",
-          "System.Net.Http": "4.3.4"
-        },
-        "compile": {
-          "lib/netstandard2.1/Keycloak.Net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Keycloak.Net.dll": {}
-        }
-      },
       "MediatR/12.4.0": {
         "type": "package",
         "dependencies": {
@@ -3764,7 +3750,7 @@
           "KarnelTravel.Application": "1.0.0",
           "KarnelTravel.Domain": "1.0.0",
           "KarnelTravel.Share": "1.0.0",
-          "Keycloak.Net": "1.0.18",
+          "Keycloak.Net": "1.0.0",
           "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
@@ -3802,6 +3788,21 @@
         },
         "runtime": {
           "bin/placeholder/KarnelTravel.Share.dll": {}
+        }
+      },
+      "Keycloak.Net/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Flurl.Http.Signed": "2.4.2",
+          "Microsoft.CSharp": "4.7.0",
+          "System.Net.Http": "4.3.4"
+        },
+        "compile": {
+          "bin/placeholder/Keycloak.Net.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Keycloak.Net.dll": {}
         }
       }
     }
@@ -4344,22 +4345,6 @@
         "lib/netstandard2.0/IdentityModel.dll",
         "lib/netstandard2.0/IdentityModel.pdb",
         "lib/netstandard2.0/IdentityModel.xml"
-      ]
-    },
-    "Keycloak.Net/1.0.18": {
-      "sha512": "8mtl4lcce8lsZVmeGTUEOIF7kzZqRx6TUx8VS/Gzl/yOHYC03jJb5dOlbrtuI2Ssz8gB3uThPnYdSVFo0ZYErg==",
-      "type": "package",
-      "path": "keycloak.net/1.0.18",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "keycloak.net.1.0.18.nupkg.sha512",
-        "keycloak.net.nuspec",
-        "lib/net452/Keycloak.Net.dll",
-        "lib/netstandard1.4/Keycloak.Net.dll",
-        "lib/netstandard2.0/Keycloak.Net.dll",
-        "lib/netstandard2.1/Keycloak.Net.dll"
       ]
     },
     "MediatR/12.4.0": {
@@ -10788,6 +10773,11 @@
       "type": "project",
       "path": "../Share/Share.csproj",
       "msbuildProject": "../Share/Share.csproj"
+    },
+    "Keycloak.Net/1.0.0": {
+      "type": "project",
+      "path": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj",
+      "msbuildProject": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj"
     }
   },
   "projectFileDependencyGroups": {

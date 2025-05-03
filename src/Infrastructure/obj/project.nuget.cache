@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YLy6XDmE3Yk=",
+  "dgSpecHash": "5lfUt5VZtXw=",
   "success": true,
   "projectFilePath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -25,7 +25,6 @@
     "C:\\Users\\phamt\\.nuget\\packages\\flurl.signed\\2.8.2\\flurl.signed.2.8.2.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\identitymodel\\6.2.0\\identitymodel.6.2.0.nupkg.sha512",
-    "C:\\Users\\phamt\\.nuget\\packages\\keycloak.net\\1.0.18\\keycloak.net.1.0.18.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.3\\microsoft.aspnetcore.authentication.openidconnect.8.0.3.nupkg.sha512",

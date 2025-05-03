@@ -1,14 +1,7 @@
 ﻿using KarnelTravel.Application.Common.Interfaces;
-using Keycloak.Net.Models.Root;
-using Keycloak.Net.Models.Users;
 using Keycloak.Net;
+using Keycloak.Net.Models.Users;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Keycloak.Net.Models.Roles;
 
 namespace KarnelTravel.Infrastructure.Keycloak;
 public class KeycloakService : IKeycloakService
@@ -26,9 +19,9 @@ public class KeycloakService : IKeycloakService
 		var clientSecret = config["Keycloak:ClientSecret"];
 		_realm = config["Keycloak:Realm"];
 
-		_client = new  KeycloakClient(
-			url: url,      
-			clientSecret: clientSecret    
+		_client = new KeycloakClient(
+			url: url,
+			clientSecret: clientSecret
 		);
 	}
 
@@ -51,12 +44,12 @@ public class KeycloakService : IKeycloakService
 		};
 
 		var success = await _client.CreateUserAsync(_realm, user);
-		
+
 
 		if (!success)
 			return null;
 
-		var users = await _client.GetUsersAsync(_realm, username:username);
+		var users = await _client.GetUsersAsync(_realm, username: username);
 		var createdUser = users?.FirstOrDefault(u => u.UserName == username);
 		return createdUser?.Id;
 	}
@@ -72,7 +65,7 @@ public class KeycloakService : IKeycloakService
 		if (user == null) return false;
 
 		// Get available realm roles
-		var allRoles = await _client.GetRolesAsync(_realm, _clientId );
+		var allRoles = await _client.GetRolesAsync(_realm, _clientId);
 		var targetRole = allRoles.FirstOrDefault(r => r.Name == roleName);
 
 		if (targetRole == null) return false;
@@ -83,7 +76,21 @@ public class KeycloakService : IKeycloakService
 
 	public async Task<List<string>> GetUserRolesAsync(string keycloakUserId)
 	{
-		var roles = await _client.GetRealmRoleMappingsForUserAsync(_realm, keycloakUserId);
+		var clientUuid = await GetClientUuidAsync(_clientId);
+		if (string.IsNullOrEmpty(clientUuid))
+			throw new Exception("Client not found in Keycloak");
+
+		//var roles = await _client.GetRealmRoleMappingsForUserAsync(_realm, keycloakUserId);
+		var roles = await _client.GetClientRoleMappingsForUserAsync(_realm, keycloakUserId, clientUuid);
 		return roles?.Select(r => r.Name).ToList() ?? new List<string>();
 	}
+
+	private async Task<string> GetClientUuidAsync(string clientId)
+	{
+		var clients = await _client.GetClientsAsync(_realm);
+		var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+		return client?.Id; 
+	}
+
+	
 }

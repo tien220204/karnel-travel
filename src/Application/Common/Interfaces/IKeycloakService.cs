@@ -11,4 +11,5 @@ public interface IKeycloakService
 	Task<bool> DeleteUserAsync(string keycloakUserId);
 	Task<bool> AssignRoleAsync(string keycloakUserId, string role);
 	Task<List<string>> GetUserRolesAsync(string keycloakUserId);
+	
 }

@@ -430,3 +430,4 @@ D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Microsoft.A
 D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Flurl.Http.dll
 D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Flurl.dll
 D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Keycloak.Net.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\API\bin\Debug\net8.0\Keycloak.Net.pdb

@@ -1,26 +1,27 @@
 ﻿using KarnelTravel.Application.Common.Models;
-using KarnelTravel.Application.Common.Security;
 using KarnelTravel.Application.Feature.Hotels;
-using KarnelTravel.Application.Features.Hotels.Models.Dtos;
-using KarnelTravel.Application.Features.Hotels.Queries;
-using KarnelTravel.Application.Features.MasterData.Commands;
+using KarnelTravel.Application.Features.Flights.Models.Dtos;
+using KarnelTravel.Application.Features.Flights.Queries;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KarnelTravel.API.Controllers.Features.Hotel;
+namespace KarnelTravel.API.Controllers.Features.Flight;
+
+
+
 [ApiVersion("1.0")]
-[Route("api/v{version:apiVersion}/hotel")]
-public class HotelController : ApiControllerBase
+[Route("api/v{version:apiVersion}/flight")]
+public class FlightController : ApiControllerBase
 {
 	/// <summary>
-	/// create hotel command
+	/// create flight command
 	/// </summary>
 	/// <param name="command"></param>
 	/// <returns></returns>
 	[HttpPost("create")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> CreateHotelAsync(CreateHotelCommand command)
+	public async Task<IActionResult> CreateFlightAsync(CreateHotelCommand command)
 	{
 
 		if (!ModelState.IsValid)
@@ -39,14 +40,14 @@ public class HotelController : ApiControllerBase
 	}
 
 	/// <summary>
-	/// Get hotel with filter and pagination query
+	/// Get flight with filter and pagination query
 	/// </summary>
 	/// <param name="query"></param>
 	/// <returns></returns>
 	[HttpPost("search")]
-	[ProducesResponseType(typeof(AppApiResult<PaginatedList<HotelDto>>), StatusCodes.Status200OK)]
-	[ProducesResponseType(typeof(AppApiResult<PaginatedList<HotelDto>>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> GetHotelWithSearchFilterAndPaginationQueryAsync(GetHotelWithFilterAndPaginationQuery query)
+	[ProducesResponseType(typeof(AppApiResult<PaginatedList<FlightDto>>), StatusCodes.Status200OK)]
+	[ProducesResponseType(typeof(AppApiResult<PaginatedList<FlightDto>>), StatusCodes.Status400BadRequest)]
+	public async Task<IActionResult> GetFlightWithSearchFilterAndPaginationQueryAsync(GetFlightsWithFilterAndPaginationQuery query)
 	{
 		if (!ModelState.IsValid)
 		{

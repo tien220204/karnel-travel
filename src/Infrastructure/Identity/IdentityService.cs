@@ -2,8 +2,8 @@
 using KarnelTravel.Domain.Entities.Features.Users;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Share.Common.Extensions;
 
 namespace KarnelTravel.Infrastructure.Identity;
 
@@ -27,7 +27,7 @@ public class IdentityService : IIdentityService
 
 	public async Task<string?> GetUserNameAsync(string userId)
 	{
-		var user = await _context.ApplicationUsers.FindAsync(userId);
+		var user = await _context.ApplicationUsers.FindAsync(Guid.Parse(userId));
 
 		return user?.FullName;
 	}
@@ -69,10 +69,10 @@ public class IdentityService : IIdentityService
 		// Lưu thông tin user vào DB
 		var appUser = new ApplicationUser
 		{
-			
+
 			KeycloakId = keycloakUserId,
 			FullName = userName,
-			
+
 		};
 
 		await _context.ApplicationUsers.AddAsync(appUser);
@@ -88,15 +88,16 @@ public class IdentityService : IIdentityService
 	//	return user != null && await _userManager.IsInRoleAsync(user, role);
 	//}
 
-	public async Task<bool> IsInRoleAsync(string userId, string role)
+	public async Task<bool> IsInRoleAsync(string userKeycloakId, string role)
 	{
+		if (userKeycloakId.IsNullOrEmpty())
+		{
+			return false;
+		}
 
-		var user = await _context.ApplicationUsers
-			.FirstOrDefaultAsync(u => u.Id.ToString() == userId);
+		var userRoleList = await _keycloakService.GetUserRolesAsync(userKeycloakId);
 
-		var userRoleList = await _keycloakService.GetUserRolesAsync(user.KeycloakId);
-
-		return user != null && userRoleList.Contains(role);
+		return userRoleList.Contains(role);
 	}
 
 

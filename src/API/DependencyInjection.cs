@@ -85,7 +85,8 @@ public static class DependencyInjection
 			.AddJwtBearer(options =>
 			{
 				options.Authority = keycloakConfig["ServerUrl"] + "/realms/" + keycloakConfig["Realm"];
-				options.Audience = keycloakConfig["ClientId"];
+				//options.Audience = keycloakConfig["ClientId"];
+				options.Audience = "account";
 				options.RequireHttpsMetadata = false;
 
 				options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
@@ -130,6 +131,11 @@ public static class DependencyInjection
 							}
 						}
 
+						return Task.CompletedTask;
+					},
+					OnAuthenticationFailed = ctx =>
+					{
+						Console.WriteLine("JWT Authentication failed: " + ctx.Exception.Message);
 						return Task.CompletedTask;
 					}
 				};

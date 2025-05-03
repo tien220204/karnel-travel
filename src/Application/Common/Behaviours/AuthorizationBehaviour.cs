@@ -2,12 +2,7 @@
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Security;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KarnelTravel.Application.Common.Behaviours;
 
@@ -70,7 +65,7 @@ public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRe
 			//	foreach (var policy in authorizeAttributesWithPolicies.Select(a => a.Policy))
 			//	{
 			//		var authorized = await _identityService.AuthorizeAsync(_user.Id, policy);
-					 
+
 			//		if (!authorized)
 			//		{
 			//			throw new ForbiddenAccessException();
