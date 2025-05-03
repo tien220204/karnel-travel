@@ -10776,8 +10776,8 @@
     },
     "Keycloak.Net/1.0.0": {
       "type": "project",
-      "path": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj",
-      "msbuildProject": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj"
+      "path": "../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj",
+      "msbuildProject": "../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj"
     }
   },
   "projectFileDependencyGroups": {

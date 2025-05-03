@@ -8441,8 +8441,8 @@
     },
     "Keycloak.Net/1.0.0": {
       "type": "project",
-      "path": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj",
-      "msbuildProject": "../../../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj"
+      "path": "../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj",
+      "msbuildProject": "../Keycloak.Net/src/Keycloak.Net/Keycloak.Net.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8497,6 +8497,9 @@
             },
             "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Domain.csproj": {
               "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Domain\\Domain.csproj"
+            },
+            "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Keycloak.Net\\src\\Keycloak.Net\\Keycloak.Net.csproj": {
+              "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Keycloak.Net\\src\\Keycloak.Net\\Keycloak.Net.csproj"
             },
             "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj": {
               "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj"
