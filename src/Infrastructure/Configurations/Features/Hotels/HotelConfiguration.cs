@@ -22,7 +22,7 @@ public class HotelConfiguration : IEntityTypeConfiguration<Hotel>
 		builder.HasMany(p => p.HotelRooms).WithOne(pi => pi.Hotel).HasForeignKey(po => po.HotelId);
 		builder.HasMany(p => p.HotelReviews).WithOne(pi => pi.Hotel).HasForeignKey(po => po.HotelId);
 		builder.HasMany(p => p.HotelStyles).WithOne(pi => pi.Hotel).HasForeignKey(po => po.HotelId);
-		
-		
+		builder.HasMany(p => p.HotelRatings).WithOne(pi => pi.Hotel).HasForeignKey(po => po.HotelId);
+
 	}
 }

@@ -1,10 +1,5 @@
 ﻿using KarnelTravel.Domain.Entities.Features.Flights;
 using Share.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KarnelTravel.Application.Features.Flights.Models.Dtos;
 public class FlightDto : BaseAuditableEntityDto<long>
