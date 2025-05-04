@@ -27,5 +27,6 @@ public class Hotel : BaseAuditableEntity<long>
 	public ICollection<HotelRoom> HotelRooms { get; set; }
 	public ICollection<HotelReview > HotelReviews { get; set; }
 	public ICollection<HotelStyle> HotelStyles { get; set; }
+	public ICollection<HotelRating> HotelRatings { get; set; }
 	//public ICollection<HotelPropertyType> HotelProprtyTypes { get; set; }
 }

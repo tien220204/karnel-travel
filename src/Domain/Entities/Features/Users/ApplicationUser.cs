@@ -1,4 +1,5 @@
 ﻿using KarnelTravel.Domain.Common;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 using Microsoft.AspNetCore.Identity;
 
 namespace KarnelTravel.Domain.Entities.Features.Users;

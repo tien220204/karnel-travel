@@ -20,7 +20,8 @@ public interface IApplicationDbContext
 	DbSet<HotelPropertyType> HotelPropertyTypes { get; }
 	DbSet<HotelStyle> HotelStyles { get; }
 	DbSet<Style> Style { get; }
-	
+	DbSet<HotelRating> HotelRatings { get; }
+
 
 	//master data
 	DbSet<Country> Countries { get; }

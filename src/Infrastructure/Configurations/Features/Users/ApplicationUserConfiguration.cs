@@ -35,5 +35,8 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
 
 		builder.Property(e => e.ProvinceName)
 			.HasMaxLength(255);
+
+		
+
 	}
 }

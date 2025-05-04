@@ -35,7 +35,8 @@ public class ApplicationDbContext :
 	public DbSet<HotelPropertyType> HotelPropertyTypes => Set<HotelPropertyType>();
 	public DbSet<HotelStyle> HotelStyles => Set<HotelStyle>();
 	public DbSet<Style> Style => Set<Style>();
-	#endregion hotel
+	public DbSet<HotelRating> HotelRatings => Set<HotelRating>();
+	#endregion hotels
 
 	#region document
 	//public DbSet<Document> Documents => Set<Document>();
