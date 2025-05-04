@@ -29,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\ApplicationUsers\Models\Dtos\" />
+    <Folder Include="Features\ApplicationUsers\Models\Requests\" />
+    <Folder Include="Features\ApplicationUsers\Queries\" />
     <Folder Include="Features\Flights\Models\Events\" />
     <Folder Include="Features\Flights\Models\Requests\" />
     <Folder Include="Features\Hotels\Models\Events\" />

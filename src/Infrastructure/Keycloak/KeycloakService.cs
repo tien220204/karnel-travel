@@ -30,8 +30,10 @@ public class KeycloakService : IKeycloakService
 		var user = new User
 		{
 			UserName = username,
-			//Email = email,
+			Email = "@gmail.com",
 			Enabled = true,
+			FirstName = "test1",
+			LastName = "test 1",
 			Credentials = new List<Credentials>
 			{
 				new Credentials
@@ -44,7 +46,6 @@ public class KeycloakService : IKeycloakService
 		};
 
 		var success = await _client.CreateUserAsync(_realm, user);
-
 
 		if (!success)
 			return null;

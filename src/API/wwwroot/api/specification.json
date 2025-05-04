@@ -136,6 +136,288 @@
         }
       }
     },
+    "/api/v1/hotel-rating/create": {
+      "post": {
+        "tags": [
+          "HotelRating"
+        ],
+        "operationId": "HotelRating_CreateHotel",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelRatingCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-rating/update": {
+      "post": {
+        "tags": [
+          "HotelRating"
+        ],
+        "operationId": "HotelRating_UpdateHotelRating",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelRatingCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-rating/delete": {
+      "post": {
+        "tags": [
+          "HotelRating"
+        ],
+        "operationId": "HotelRating_DeleteHotelRating",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteHotelRatingCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-review/create": {
+      "post": {
+        "tags": [
+          "HotelReview"
+        ],
+        "operationId": "HotelReview_CreateHotelReview",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelReviewCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-review/update": {
+      "post": {
+        "tags": [
+          "HotelReview"
+        ],
+        "operationId": "HotelReview_UpdateHotelReview",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelReviewCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-review/delete": {
+      "post": {
+        "tags": [
+          "HotelReview"
+        ],
+        "operationId": "HotelReview_DeleteHotel",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteHotelReviewCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel-review/all": {
+      "get": {
+        "tags": [
+          "HotelReview"
+        ],
+        "operationId": "HotelReview_GetAllProductCategory",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfIListOfHotelReviewDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfIListOfHotelReviewDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/flight/create": {
       "post": {
         "tags": [
@@ -213,6 +495,48 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AppApiResultOfPaginatedListOfFlightDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/user/create": {
+      "post": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "operationId": "ApplicationUser_CreateUserAccount",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApplicationUserCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
                 }
               }
             }
@@ -663,6 +987,13 @@
                 "items": {
                   "$ref": "#/components/schemas/HotelStyle"
                 }
+              },
+              "hotelRatings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelRating"
+                }
               }
             }
           }
@@ -1003,10 +1334,6 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "starRate": {
-                "type": "number",
-                "format": "decimal"
-              },
               "review": {
                 "type": "string",
                 "nullable": true
@@ -1108,6 +1435,10 @@
                 "nullable": true
               },
               "address": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
                 "type": "string",
                 "nullable": true
               }
@@ -1234,6 +1565,47 @@
                 "items": {
                   "$ref": "#/components/schemas/HotelStyle"
                 }
+              }
+            }
+          }
+        ]
+      },
+      "HotelRating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "starRate": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "userId": {
+                "type": "string",
+                "format": "guid"
+              },
+              "hotelId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "user": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ApplicationUser"
+                  }
+                ]
+              },
+              "hotel": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Hotel"
+                  }
+                ]
               }
             }
           }
@@ -1472,6 +1844,158 @@
             "format": "int32"
           }
         }
+      },
+      "CreateHotelRatingCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "starRate": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "hotelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateHotelRatingCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "starRate": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "DeleteHotelRatingCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelReviewCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "review": {
+            "type": "string",
+            "nullable": true
+          },
+          "hotelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentReviewId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateHotelReviewCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "hotelReviewId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "review": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "DeleteHotelReviewCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "AppApiResultOfIListOfHotelReviewDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "messages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AppMessage"
+            }
+          },
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/HotelReviewDto"
+            }
+          }
+        }
+      },
+      "HotelReviewDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "review": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "userName": {
+                "type": "string",
+                "nullable": true
+              },
+              "userAvatar": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentReviewId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "childReviews": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelReviewDto"
+                }
+              }
+            }
+          }
+        ]
       },
       "AppApiResultOfPaginatedListOfFlightDto": {
         "type": "object",
@@ -1823,6 +2347,32 @@
           "pageSize": {
             "type": "integer",
             "format": "int32"
+          }
+        }
+      },
+      "CreateApplicationUserCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
           }
         }
       }

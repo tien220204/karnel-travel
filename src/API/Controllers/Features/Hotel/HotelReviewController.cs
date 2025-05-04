@@ -1,9 +1,7 @@
-﻿using KarnelTravel.Application.Feature.Hotels;
-using KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
+﻿using KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
 using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Application.Features.Hotels.Queries;
 using KarnelTravel.Share.Common.Models;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KarnelTravel.API.Controllers.Features.Hotel;
@@ -89,7 +87,7 @@ public class HotelReviewController : ApiControllerBase
 		return ClientError(result.Detail);
 	}
 
-	
+
 	[HttpGet("all")]
 	[ProducesResponseType(typeof(AppApiResult<IList<HotelReviewDto>>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<IList<HotelReviewDto>>), StatusCodes.Status400BadRequest)]

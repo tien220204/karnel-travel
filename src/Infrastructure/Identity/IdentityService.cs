@@ -58,15 +58,15 @@ public class IdentityService : IIdentityService
 	{
 		var result = new AppActionResultData<string>();
 
-		// Tạo user trên Keycloak (bạn cần implement gọi API ở KeycloakService)
+		//create on keycloak first
 		var keycloakUserId = await _keycloakService.CreateUserAsync(userName, password);
 
 		if (keycloakUserId == null)
 		{
-			return result.BuildError("Tạo user trên Keycloak thất bại");
+			return result.BuildError("Create user failed");
 		}
 
-		// Lưu thông tin user vào DB
+		// save info from keycloak to db
 		var appUser = new ApplicationUser
 		{
 
