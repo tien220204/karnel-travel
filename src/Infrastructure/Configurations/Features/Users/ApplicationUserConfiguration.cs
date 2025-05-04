@@ -9,16 +9,16 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
 	public void Configure(EntityTypeBuilder<ApplicationUser> builder)
 	{
 		// Each User can have many UserClaims
-		builder.HasMany(e => e.Claims)
-			.WithOne(e => e.User)
-			.HasForeignKey(uc => uc.UserId)
-			.IsRequired();
+		//builder.HasMany(e => e.Claims)
+		//	.WithOne(e => e.User)
+		//	.HasForeignKey(uc => uc.UserId)
+		//	.IsRequired();
 
 		// Each User can have many entries in the UserRole join table
-		builder.HasMany(e => e.UserRoles)
-			.WithOne(e => e.User)
-			.HasForeignKey(ur => ur.UserId)
-			.IsRequired();
+		//builder.HasMany(e => e.UserRoles)
+		//	.WithOne(e => e.User)
+		//	.HasForeignKey(ur => ur.UserId)
+		//	.IsRequired();
 
 		builder.Property(e => e.FullName)
 			.IsRequired()

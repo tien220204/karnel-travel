@@ -47,3 +47,5 @@ D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\obj\Debug\net8.0\
 D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\obj\Debug\net8.0\KarnelTravel.Infrastructure.pdb
 D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\obj\Debug\net8.0\ref\KarnelTravel.Infrastructure.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\bin\Debug\net8.0\Keycloak.Net.dll
+D:\Workspace\PersonalProjects\karnel-travel\src\Infrastructure\bin\Debug\net8.0\Keycloak.Net.pdb

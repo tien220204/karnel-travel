@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using KarnelTravel.Application.Features.Hotels.Models.Dtos;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 
 namespace KarnelTravel.Infrastructure.Models.Mappings;
 public class ModelMapper
@@ -7,6 +9,7 @@ public class ModelMapper
 	{
 		config.DisableConstructorMapping();
 		ConfigureProductsDtoMapping(config);
+		ConfigureHotelDtoMapping(config);
 	}
 
 	private static void ConfigureProductsDtoMapping(IMapperConfigurationExpression config)
@@ -35,5 +38,10 @@ public class ModelMapper
 		//config.CreateMap<ProductReward, ProductRewardDto>(MemberList.Destination)
 		//	  .ForMember(dest => dest.Id, opt => opt.MapFrom(src => AutoMapperHelper.GuidToStringConverter(src.Id)))
 		//	  .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => AutoMapperHelper.GuidToStringConverter(src.ProductId)));
+	}
+
+	private static void ConfigureHotelDtoMapping(IMapperConfigurationExpression config)
+	{
+		config.CreateMap<Hotel, HotelDto>(MemberList.Destination);
 	}
 }

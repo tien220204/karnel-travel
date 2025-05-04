@@ -1,18 +1,15 @@
 ﻿using AutoMapper;
-using Duende.IdentityServer.Validation;
 using FluentValidation;
-using KarnelTravel.API.Custom;
 using KarnelTravel.API.Services;
 using KarnelTravel.Application.Common.Interfaces;
-using KarnelTravel.Domain.Entities.Features.Users;
 using KarnelTravel.Infrastructure.Data;
 using KarnelTravel.Infrastructure.Models.Mappings;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using NSwag;
 using NSwag.Generation.Processors.Security;
-using System.Reflection;
+using System.Security.Claims;
+using System.Text.Json;
 
 namespace KarnelTravel.API;
 
@@ -25,7 +22,7 @@ public static class DependencyInjection
 		services.AddScoped<IUser, CurrentUser>();
 
 		services.AddHttpContextAccessor();
-		
+
 		services.AddHealthChecks()
 			.AddDbContextCheck<ApplicationDbContext>();
 
@@ -80,69 +77,71 @@ public static class DependencyInjection
 
 		services.AddHttpClient();
 
-		services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
-		{
-			options.SignIn.RequireConfirmedAccount = false;
-			options.SignIn.RequireConfirmedEmail = false;
-			options.SignIn.RequireConfirmedPhoneNumber = false;
+		// Thêm Keycloak Authentication
+		var keycloakConfig = configuration.GetSection("Keycloak");
 
-			options.Password = new PasswordOptions
+		services
+			.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+			.AddJwtBearer(options =>
 			{
-				RequiredLength = 1,
-				RequiredUniqueChars = 0,
-				RequireNonAlphanumeric = false,
-				RequireLowercase = false,
-				RequireUppercase = false,
-				RequireDigit = false,
-			};
+				options.Authority = keycloakConfig["ServerUrl"] + "/realms/" + keycloakConfig["Realm"];
+				//options.Audience = keycloakConfig["ClientId"];
+				options.Audience = "account";
+				options.RequireHttpsMetadata = false;
 
-			options.Lockout = new LockoutOptions
-			{
-				AllowedForNewUsers = true,
-				MaxFailedAccessAttempts = 999,
-			};
-			options.User.RequireUniqueEmail = true;
-		})
-			.AddEntityFrameworkStores<ApplicationDbContext>()
-			.AddDefaultTokenProviders()
-			.AddApiEndpoints();
+				options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+				{
+					RoleClaimType = ClaimTypes.Role // defalut role
+				};
 
-		var builder = services.AddIdentityServer(options =>
-		{
-			options.Events.RaiseErrorEvents = true;
-			options.Events.RaiseInformationEvents = true;
-			options.Events.RaiseFailureEvents = true;
-			options.Events.RaiseSuccessEvents = true;
+				options.Events = new JwtBearerEvents
+				{
+					OnTokenValidated = ctx =>
+					{
+						var identity = ctx.Principal!.Identity as ClaimsIdentity;
 
-			// see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
-			options.EmitStaticAudienceClaim = true;
+						// resource access key in json body for realm
+						var realmAccessClaim = ctx.Principal.FindFirst("realm_access");
+						if (realmAccessClaim != null)
+						{
+							using var doc = JsonDocument.Parse(realmAccessClaim.Value);
+							if (doc.RootElement.TryGetProperty("roles", out var roles))
+							{
+								foreach (var role in roles.EnumerateArray())
+								{
+									identity!.AddClaim(new Claim(ClaimTypes.Role, role.GetString()!));
+								}
+							}
+						}
 
-			//if (webHostEnvironment.IsProduction())
-			//{
-			//    options.LicenseKey = LoadLicenseKey(webHostEnvironment);
-			//}
-		}).AddInMemoryIdentityResources(IdentitySeverConfigs.IdentityResources)
-		  .AddInMemoryApiScopes(IdentitySeverConfigs.ApiScopes)
-		  .AddInMemoryClients(IdentitySeverConfigs.GetClients(configuration))
-		  .AddInMemoryApiResources(IdentitySeverConfigs.GetApiResources(configuration))
-		  .AddAspNetIdentity<ApplicationUser>()
-		  .AddProfileService<CustomProfileService>();
+						// resource access key in json body for client
+						var resourceAccessClaim = ctx.Principal.FindFirst("resource_access");
+						if (resourceAccessClaim != null)
+						{
+							using var doc = JsonDocument.Parse(resourceAccessClaim.Value);
+							if (doc.RootElement.TryGetProperty(keycloakConfig["ClientId"]!, out var clientAccess))
+							{
+								if (clientAccess.TryGetProperty("roles", out var roles))
+								{
+									foreach (var role in roles.EnumerateArray())
+									{
+										identity!.AddClaim(new Claim(ClaimTypes.Role, role.GetString()!));
+									}
+								}
+							}
+						}
 
-		var connectStr = configuration.GetConnectionString("DefaultConnection");
-		var migrationsAssembly = typeof(ApplicationDbContext).GetTypeInfo().Assembly.GetName().Name;
+						return Task.CompletedTask;
+					},
+					OnAuthenticationFailed = ctx =>
+					{
+						Console.WriteLine("JWT Authentication failed: " + ctx.Exception.Message);
+						return Task.CompletedTask;
+					}
+				};
+			});
 
-		builder.AddOperationalStore(options =>
-		{
-			options.ConfigureDbContext = b => b.UseNpgsql(connectStr,
-				sql => sql.MigrationsAssembly(migrationsAssembly));
 
-			// this enables automatic token cleanup. this is optional.
-			options.EnableTokenCleanup = true;
-			options.TokenCleanupInterval = 3600; // interval in seconds (default is 3600)
-		});
-
-		services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
-		services.AddScoped<UserManager<ApplicationUser>, CustomUserManager<ApplicationUser>>();
 
 		return services;
 	}

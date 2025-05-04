@@ -1,4 +1,8 @@
-﻿using KarnelTravel.Application.Feature.Hotels;
+﻿using KarnelTravel.Application.Common.Models;
+using KarnelTravel.Application.Common.Security;
+using KarnelTravel.Application.Feature.Hotels;
+using KarnelTravel.Application.Features.Hotels.Models.Dtos;
+using KarnelTravel.Application.Features.Hotels.Queries;
 using KarnelTravel.Application.Features.MasterData.Commands;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +20,7 @@ public class HotelController : ApiControllerBase
 	[HttpPost("create")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> ImportLocationFile(CreateHotelCommand command)
+	public async Task<IActionResult> CreateHotelAsync(CreateHotelCommand command)
 	{
 
 		if (!ModelState.IsValid)
@@ -29,6 +33,31 @@ public class HotelController : ApiControllerBase
 		if (result.IsSuccess)
 		{
 			return Success(result.Data);
+		}
+
+		return ClientError(result.Detail);
+	}
+
+	/// <summary>
+	/// Get hotel with filter and pagination query
+	/// </summary>
+	/// <param name="query"></param>
+	/// <returns></returns>
+	[HttpPost("search")]
+	[ProducesResponseType(typeof(AppApiResult<PaginatedList<HotelDto>>), StatusCodes.Status200OK)]
+	[ProducesResponseType(typeof(AppApiResult<PaginatedList<HotelDto>>), StatusCodes.Status400BadRequest)]
+	public async Task<IActionResult> GetHotelWithSearchFilterAndPaginationQueryAsync(GetHotelWithFilterAndPaginationQuery query)
+	{
+		if (!ModelState.IsValid)
+		{
+			return ClientError(ModelState);
+		}
+
+		var result = await Mediator.Send(query);
+
+		if (result.IsSuccess)
+		{
+			return Success(result.Data, result.Detail);
 		}
 
 		return ClientError(result.Detail);

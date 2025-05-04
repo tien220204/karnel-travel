@@ -15,18 +15,15 @@ namespace KarnelTravel.Infrastructure.Data;
 
 
 public class ApplicationDbContext :
-	IdentityDbContext<ApplicationUser, ApplicationRole, string>,
+	DbContext,
 	IApplicationDbContext,
 	IDataProtectionKeyContext
 {
 	public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
 	public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
-	public DbSet<ApplicationRole> AspNetRoles => Set<ApplicationRole>();
-	public DbSet<ApplicationUser> AspNetUsers => Set<ApplicationUser>();
-	public DbSet<ApplicationUserClaim> AspNetUserClaims => Set<ApplicationUserClaim>();
-	public DbSet<ApplicationRoleClaim> AspNetRoleClaims => Set<ApplicationRoleClaim>();
-	public DbSet<ApplicationUserRole> AspNetUserRoles => Set<ApplicationUserRole>();
+	public DbSet<ApplicationUser> ApplicationUsers => Set<ApplicationUser>();
+
 
 	#region hotel
 	public DbSet<Hotel> Hotels => Set<Hotel>();

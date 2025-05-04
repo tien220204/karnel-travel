@@ -13,4 +13,6 @@ public class CurrentUser : IUser
 	}
 
 	public string? Id => _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+
+	public ClaimsPrincipal? User => _httpContextAccessor.HttpContext?.User;
 }

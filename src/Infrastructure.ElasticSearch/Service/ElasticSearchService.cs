@@ -1,7 +1,6 @@
 ﻿using Elastic.Clients.Elasticsearch;
 using Infrastructure.ElasticSearch.Settings;
 using KarnelTravel.Application.Common.Interfaces;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Options;
 
 namespace Infrastructure.ElasticSearch.Service;
