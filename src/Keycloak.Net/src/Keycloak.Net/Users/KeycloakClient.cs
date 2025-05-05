@@ -31,6 +31,77 @@ namespace Keycloak.Net
 			string userId = response.IsSuccessStatusCode ? locationPathAndQuery.Substring(locationPathAndQuery.LastIndexOf("/", StringComparison.Ordinal) + 1) : null;
 			return userId;
 		}
+		//tét 
+		//	private async Task<HttpResponseMessage> InternalCreateUserAsync(string realm, User user)
+		//	{
+		//		var baseUrl =  GetBaseUrl(realm);
+		//		var requestUrl = baseUrl.AppendPathSegment($"/admin/realms/{realm}/users");
+
+		//		// Debug the URL and user data
+		//		Console.WriteLine($"Request URL: {requestUrl}");
+
+		//		var settings = new JsonSerializerSettings
+		//		{
+		//			NullValueHandling = NullValueHandling.Ignore,
+		//			Formatting = Formatting.Indented
+		//		};
+
+		//		var json = JsonConvert.SerializeObject(user, settings);
+		//		//			string json = "{\n" +
+		//		//"  \"username\": \"testapi 1\",\n" +
+		//		//"  \"email\": \"abc@gmail.com\",\n" +
+		//		//"  \"firstName\": \"test\",\n" +
+		//		//"  \"lastName\": \"1\",\n" +
+		//		//"  \"enabled\": true,\n" +
+		//		//"  \"credentials\": [\n" +
+		//		//"    {\n" +
+		//		//"      \"type\": \"password\",\n" +
+		//		//"      \"value\": \"123456\"\n" +
+		//		//"    }\n" +
+		//		//"  ]\n" +
+		//		//"}";
+
+
+
+		//		string json1 = "{\n" +
+		//"  \"username\": \"mariorossi1211111\",\n" +
+		//"  \"enabled\": true,\n" +
+		//"  \"credentials\": [\n" +
+		//"    {\n" +
+		//"      \"type\": \"password\",\n" +
+		//"      \"value\": \"1234\"\n" +
+		//"    }\n" +
+		//"  ]\n" +
+		//"}";
+
+
+
+		//		//var response = await requestUrl.PostJsonAsync(user).ConfigureAwait(false);
+
+		//		var response = await requestUrl.WithHeader("Content-Type", "application/json").PostStringAsync(json).ConfigureAwait(false);
+
+		//		// Optionally, log the response status code and headers
+		//		Console.WriteLine($"Response Status: {response.StatusCode}");
+		//		Console.WriteLine($"Response Headers: {response.Headers}");
+
+		//		return response;
+		//	}
+		//test
+		//public async Task<string> CreateAndRetrieveUserIdAsync(string realm, User user)
+		//{
+		//	var response = await InternalCreateUserAsync(realm, user).ConfigureAwait(false);
+
+		//	// Check the location header to retrieve the user ID
+		//	string locationPathAndQuery = response.Headers.Location?.PathAndQuery ?? "No Location Header";
+
+		//	// Debug the location header and user ID
+		//	Console.WriteLine($"Location Header: {locationPathAndQuery}");
+
+		//	string userId = response.IsSuccessStatusCode ? locationPathAndQuery.Substring(locationPathAndQuery.LastIndexOf("/", StringComparison.Ordinal) + 1) : null;
+		//	Console.WriteLine($"Extracted User ID: {userId}");
+
+		//	return userId;
+		//}
 
 		public async Task<IEnumerable<User>> GetUsersAsync(string realm, bool? briefRepresentation = null, string email = null, int? first = null,
 			string firstName = null, string lastName = null, int? max = null, string search = null, string username = null)

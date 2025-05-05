@@ -8,8 +8,8 @@ namespace Keycloak.Net.Models.Users
     {
         [JsonProperty("id")]
         public string Id { get; set; }
-        [JsonProperty("createdTimestamp")]
-        public long CreatedTimestamp { get; set; }
+        //[JsonProperty("createdTimestamp")]
+        //public long? CreatedTimestamp { get; set; }
         [JsonProperty("username")]
         public string UserName { get; set; }
         [JsonProperty("enabled")]

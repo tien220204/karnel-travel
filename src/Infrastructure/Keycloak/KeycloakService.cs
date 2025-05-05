@@ -1,5 +1,6 @@
 ﻿using KarnelTravel.Application.Common.Interfaces;
 using Keycloak.Net;
+using Keycloak.Net.Models.Clients;
 using Keycloak.Net.Models.Users;
 using Microsoft.Extensions.Configuration;
 
@@ -25,33 +26,46 @@ public class KeycloakService : IKeycloakService
 		);
 	}
 
-	public async Task<string> CreateUserAsync(string username, string password)
+	public async Task<string> CreateUserAsync(string username, string password, string email, string firstName, string lastName)
 	{
 		var user = new User
 		{
 			UserName = username,
-			//Email = email,
+			Email = email,
 			Enabled = true,
+			FirstName = firstName,
+			LastName = lastName,
 			Credentials = new List<Credentials>
 			{
 				new Credentials
 				{
 					Type = "password",
-					Value = password,
-					Temporary = false
+					Value = password
 				}
 			}
 		};
 
-		var success = await _client.CreateUserAsync(_realm, user);
+		try
+		{
+			var userKeycloakId = await _client.CreateAndRetrieveUserIdAsync(_realm, user);
 
+			return userKeycloakId;
+		}
+		catch (Flurl.Http.FlurlHttpException ex)
+		{
+			if (ex.Call.Response?.StatusCode == System.Net.HttpStatusCode.Conflict)
+			{
+				
+				throw new ApplicationException("User already exists in keycloak.");
+			}
 
-		if (!success)
-			return null;
+			// Log lỗi chi tiết hoặc ném lại nếu là lỗi khác
+			throw;
+		}
+		//var userKeycloakId = await _client.CreateAndRetrieveUserIdAsync(_realm, user);
 
-		var users = await _client.GetUsersAsync(_realm, username: username);
-		var createdUser = users?.FirstOrDefault(u => u.UserName == username);
-		return createdUser?.Id;
+		//return userKeycloakId;
+
 	}
 
 	public async Task<bool> DeleteUserAsync(string keycloakUserId)
@@ -73,6 +87,16 @@ public class KeycloakService : IKeycloakService
 		// Assign role to user
 		return await _client.AddClientRoleMappingsToUserAsync(_realm, keycloakUserId, _clientId, new[] { targetRole });
 	}
+
+	//private async Task<Client> GetClientAsync(string clientId)
+	//{
+	//	var clients = await _client.GetClientsAsync(_realm);
+
+	//	//client uuid
+	//	var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+	//	return client;
+
+	//} 
 
 	public async Task<List<string>> GetUserRolesAsync(string keycloakUserId)
 	{

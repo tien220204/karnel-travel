@@ -54,24 +54,25 @@ public class IdentityService : IIdentityService
 	//	return result.BuildResult(user.Id.ToString());
 	//}
 
-	public async Task<AppActionResultData<string>> CreateUserAsync(string userName, string password)
+	public async Task<AppActionResultData<string>> CreateUserAsync(string userName, string password, string email, string firstName, string lastName)
 	{
 		var result = new AppActionResultData<string>();
 
-		// Tạo user trên Keycloak (bạn cần implement gọi API ở KeycloakService)
-		var keycloakUserId = await _keycloakService.CreateUserAsync(userName, password);
+		//create on keycloak first
+		var keycloakUserId = await _keycloakService.CreateUserAsync(userName, password, email, firstName, lastName);
 
 		if (keycloakUserId == null)
 		{
-			return result.BuildError("Tạo user trên Keycloak thất bại");
+			return result.BuildError("Create user failed");
 		}
 
-		// Lưu thông tin user vào DB
+		// save info from keycloak to db
 		var appUser = new ApplicationUser
 		{
 
 			KeycloakId = keycloakUserId,
-			FullName = userName,
+			FullName = firstName + " " + lastName,
+			Email = email,
 
 		};
 

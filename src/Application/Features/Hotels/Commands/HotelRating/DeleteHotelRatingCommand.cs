@@ -1,18 +1,13 @@
-﻿using KarnelTravel.Application.Common.Interfaces;
+﻿using KarnelTravel.Application.Common;
+using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Security;
-using KarnelTravel.Application.Common;
 using KarnelTravel.Share.Localization;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KarnelTravel.Application.Features.Hotels.Commands.HotelRating;
 
 
-[Authorize(Roles = "user")]
+[Authorize(Roles = "user,admin")]
 public record DeleteHotelRatingCommand : IRequest<AppActionResultData<string>>
 {
 	public long Id { get; set; }
