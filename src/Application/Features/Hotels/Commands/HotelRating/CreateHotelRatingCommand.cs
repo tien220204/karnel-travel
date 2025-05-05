@@ -3,6 +3,7 @@ using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Security;
 using KarnelTravel.Share.Localization;
 using MediatR;
+using System.ComponentModel.DataAnnotations;
 
 namespace KarnelTravel.Application.Features.Hotels.Commands.HotelRating;
 
@@ -11,7 +12,11 @@ namespace KarnelTravel.Application.Features.Hotels.Commands.HotelRating;
 public class CreateHotelRatingCommand : IRequest<AppActionResultData<string>>
 {
 	public decimal StarRate { get; set; }
+
+	[Required]
 	public int HotelId { get; set; }
+	
+	[Required]	
 	public string UserId { get; set; }
 
 }
