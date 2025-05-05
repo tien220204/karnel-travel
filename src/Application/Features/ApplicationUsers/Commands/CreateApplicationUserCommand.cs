@@ -37,7 +37,7 @@ public class CreateApplicationUserCommandHandler : BaseHandler, IRequestHandler<
 			return BuildMultilingualError(result, Resources.ERR_MSG_DATA_EXISTED);
 		}
 
-		var newUser = await _identityService.CreateUserAsync(request.Username, request.Password);
+		var newUser = await _identityService.CreateUserAsync(request.Username, request.Password, request.Email, request.FirstName, request.LastName);
 
 		await _context.SaveChangesAsync(cancellationToken);
 
