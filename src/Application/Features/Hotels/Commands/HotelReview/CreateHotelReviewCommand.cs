@@ -5,6 +5,7 @@ using KarnelTravel.Share.Localization;
 using MediatR;
 using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Application.Common.Security;
+using System.ComponentModel.DataAnnotations;
 
 namespace KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
 
@@ -12,7 +13,11 @@ namespace KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
 public class CreateHotelReviewCommand :  IRequest<AppActionResultData<string>>
 {
 	public string Review { get; set; }
+
+	[Required]
 	public int HotelId { get; set; }
+
+	[Required]
 	public string UserId { get; set; }
 	public long? ParentReviewId { get; set; }
 }
