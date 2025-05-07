@@ -14,7 +14,7 @@ public class CreateHotelCommandValidator : AbstractValidator<CreateHotelCommand>
 		RuleFor(x => x.Name)
 			.NotEmpty().WithMessage("Name is required.")
 			.NotNull().WithMessage("Name is required.")
-			.MinimumLength(20).WithMessage("Name must be at least 20 characters long.")
+			.MaximumLength(20).WithMessage("Name must be at least 20 characters long.")
 			.Matches("^[a-zA-Z0-9 ]+$").WithMessage("Name must not contain special characters.");
 		
 	}

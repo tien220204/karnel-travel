@@ -28,6 +28,7 @@ public interface IApplicationDbContext
 	DbSet<Province> Provinces { get; }
 	DbSet<District> Districts { get; }
 	DbSet<Ward> Wards { get; }
+	DbSet<Amenity> Amenities { get; }
 	Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
 	//flight

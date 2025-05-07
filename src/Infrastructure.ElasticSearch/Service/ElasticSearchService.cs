@@ -1,6 +1,7 @@
 ﻿using Elastic.Clients.Elasticsearch;
 using Infrastructure.ElasticSearch.Settings;
 using KarnelTravel.Application.Common.Interfaces;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace Infrastructure.ElasticSearch.Service;
@@ -13,6 +14,7 @@ public class ElasticSearchService : IElasticSearchService
     {
         _elasticSettings = optionsMonitor.Value;
 
+
 		var settings = new ElasticsearchClientSettings(new Uri(_elasticSettings.Url))
 			//.Authentication()
 			.DefaultIndex(_elasticSettings.DefaultIndex);
@@ -22,14 +24,71 @@ public class ElasticSearchService : IElasticSearchService
 
 	public async Task CreateIndexIfNotExisted(string indexName)
 	{
-		var response = await _elasticsearchClient.Indices.ExistsAsync(indexName);
-		if (!response.Exists)
-			await _elasticsearchClient.Indices.CreateAsync(indexName);
+		try
+		{
+			var existsResponse = await _elasticsearchClient.Indices.ExistsAsync(indexName.ToLower());
+			if (!existsResponse.Exists)
+			{
+				var createResponse = await _elasticsearchClient.Indices.CreateAsync(indexName.ToLower());
+
+				//temporary exception display
+				if (!createResponse.IsValidResponse)
+				{
+					var debugInfo = createResponse.ElasticsearchServerError?.ToString() ??
+									createResponse.ElasticsearchServerError?.ToString() ??
+									createResponse.DebugInformation;
+
+					throw new Exception("Failed to create index: " + debugInfo);
+				}
+			}
+		}
+		catch (Exception ex)
+		{
+			throw new Exception("Failed to create index: " + ex.Message, ex);
+		}
+
 	}
 
-	public async  Task<bool> AddOrUpdate<T>(T dataObject)
+	//public async Task CreateIndexIfNotExisted(string indexName)
+	//{
+	//	var existsResponse = await _elasticsearchClient.Indices.ExistsAsync(indexName);
+
+	//	if (!existsResponse.Exists)
+	//	{
+	//		var createResponse = await _elasticsearchClient.Indices.CreateAsync(indexName, c => c
+	//			.Mappings(m => m
+	//				.Properties(p => p
+	//					.Text(t => t
+	//						.Name("name")
+	//					)
+	//					.Number(n => n
+	//						.Name("age")
+	//						.Type(NumberType.Integer)
+	//					)
+	//					.Date(d => d
+	//						.Name("created_at")
+	//						.Format("yyyy-MM-dd'T'HH:mm:ss")
+	//					)
+	//				)
+	//			)
+	//		);
+
+	//		if (!createResponse.IsValidResponse)
+	//		{
+	//			throw new Exception("Failed to create index: " + createResponse.ElasticsearchServerError?.ToString());
+	//		}
+	//	}
+	//}
+
+
+	public async  Task<bool> AddOrUpdate<T>(T dataObject, string indexName)
 	{
-		var response = await _elasticsearchClient.IndexAsync(dataObject, idx => idx.Index(_elasticSettings.DefaultIndex).OpType(OpType.Index));
+		var response = await _elasticsearchClient.IndexAsync(dataObject, idx => idx.Index(indexName.ToLower()).OpType(OpType.Index));
+
+		if (!response.IsValidResponse)
+		{
+			throw new Exception("Failed to index document: "+ response.ElasticsearchServerError?.ToString());
+		}
 
 		return response.IsValidResponse;
 	}
@@ -49,7 +108,7 @@ public class ElasticSearchService : IElasticSearchService
 
 		return response.Source;
 	}
-
+	
 	public async Task<List<T>?> GetAll<T>()
 	{
         var response = await _elasticsearchClient.SearchAsync<T>( g => g.Index(_elasticSettings.DefaultIndex));

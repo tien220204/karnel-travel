@@ -6,6 +6,48 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/api/v1/amenity/create": {
+      "post": {
+        "tags": [
+          "Amenity"
+        ],
+        "operationId": "Amenity_CreateAmenity",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAmenityCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/location/import-file": {
       "post": {
         "tags": [
@@ -598,6 +640,37 @@
           2
         ]
       },
+      "CreateAmenityCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "amenityType": {
+            "$ref": "#/components/schemas/AmenityType"
+          }
+        }
+      },
+      "AmenityType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Flight",
+          "Hotel",
+          "Both"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
       "CreateHotelCommand": {
         "allOf": [
           {
@@ -665,12 +738,8 @@
             "maximum": 180.0,
             "minimum": 0.0
           },
-          "paymentTypes": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/PaymentType"
-            }
+          "paymentType": {
+            "$ref": "#/components/schemas/PaymentType"
           },
           "servedMeals": {
             "type": "array",
@@ -683,67 +752,35 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelPolicy"
+              "$ref": "#/components/schemas/CreateHotelPolicyRequest"
             }
-          },
-          "country": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Country"
-              }
-            ]
-          },
-          "province": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Province"
-              }
-            ]
-          },
-          "district": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/District"
-              }
-            ]
-          },
-          "ward": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Ward"
-              }
-            ]
           },
           "hotelImages": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelImage"
+              "$ref": "#/components/schemas/CreateHotelImageRequest"
             }
           },
           "hotelAmenities": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelAmenity"
+              "$ref": "#/components/schemas/CreateHotelAmenityRequest"
             }
           },
           "hotelRooms": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelRoom"
+              "$ref": "#/components/schemas/CreateHotelRoomRequest"
             }
           },
           "hotelStyles": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelStyle"
+              "$ref": "#/components/schemas/CreateHotelStyleRequest"
             }
           }
         }
@@ -824,6 +861,324 @@
           5
         ]
       },
+      "CreateHotelPolicyRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelPolicyRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelPolicyRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateHotelImageRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelImageRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelImageRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAvatar": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CreateHotelAmenityRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelAmenityRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelAmenityRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amenityId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelRoomRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelRoomRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelRoomRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pricePerHour": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelStyleRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelStyleRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelStyleRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "styleId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "AppApiResultOfPaginatedListOfHotelDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "messages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AppMessage"
+            }
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PaginatedListOfHotelDto"
+              }
+            ]
+          }
+        }
+      },
+      "PaginatedListOfHotelDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/HotelDto"
+            }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HotelDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "propertyType": {
+                "$ref": "#/components/schemas/PropertyType"
+              },
+              "hotelClass": {
+                "$ref": "#/components/schemas/HotelClass"
+              },
+              "countryCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "wardCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "provinceCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "districtCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "longitude": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "latitude": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "paymentTypes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PaymentType"
+                }
+              },
+              "servedMeals": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ServedMeal"
+                }
+              },
+              "hotelPolicies": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelPolicy"
+                }
+              },
+              "country": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                ]
+              },
+              "province": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Province"
+                  }
+                ]
+              },
+              "district": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/District"
+                  }
+                ]
+              },
+              "ward": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Ward"
+                  }
+                ]
+              },
+              "hotelImages": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelImageDto"
+                }
+              },
+              "hotelAmenities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelAmenityDto"
+                }
+              },
+              "hotelRooms": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelRoomDto"
+                }
+              },
+              "hotelReviews": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelReviewDto"
+                }
+              },
+              "hotelStyles": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelStyleDto"
+                }
+              }
+            }
+          }
+        ]
+      },
       "HotelPolicy": {
         "allOf": [
           {
@@ -901,11 +1256,7 @@
                 "format": "int64"
               },
               "paymentTypes": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/PaymentType"
-                }
+                "$ref": "#/components/schemas/PaymentType"
               },
               "servedMeals": {
                 "type": "array",
@@ -1264,15 +1615,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
               "hotelId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "amenityId": {
                 "type": "integer",
                 "format": "int64"
               },
@@ -1283,6 +1630,42 @@
                     "$ref": "#/components/schemas/Hotel"
                   }
                 ]
+              },
+              "amenity": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Amenity"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Amenity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "icon": {
+                "type": "string",
+                "nullable": true
+              },
+              "amenityType": {
+                "$ref": "#/components/schemas/AmenityType"
               }
             }
           }
@@ -1306,6 +1689,10 @@
                 "nullable": true
               },
               "capacity": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "pricePerHour": {
                 "type": "integer",
                 "format": "int64"
               },
@@ -1506,14 +1893,6 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
               "hotelId": {
                 "type": "integer",
                 "format": "int64"
@@ -1611,193 +1990,14 @@
           }
         ]
       },
-      "AppApiResultOfPaginatedListOfHotelDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "messages": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/AppMessage"
-            }
-          },
-          "data": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/PaginatedListOfHotelDto"
-              }
-            ]
-          }
-        }
-      },
-      "PaginatedListOfHotelDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "items": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/HotelDto"
-            }
-          },
-          "pageNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalPages": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "hasPreviousPage": {
-            "type": "boolean"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        }
-      },
-      "HotelDto": {
+      "HotelImageDto": {
         "allOf": [
           {
             "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
           },
           {
             "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "propertyType": {
-                "$ref": "#/components/schemas/PropertyType"
-              },
-              "hotelClass": {
-                "$ref": "#/components/schemas/HotelClass"
-              },
-              "countryCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "wardCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "provinceCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "districtCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "longitude": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "latitude": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "paymentTypes": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/PaymentType"
-                }
-              },
-              "servedMeals": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/ServedMeal"
-                }
-              },
-              "hotelPolicies": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelPolicy"
-                }
-              },
-              "country": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Country"
-                  }
-                ]
-              },
-              "province": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Province"
-                  }
-                ]
-              },
-              "district": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/District"
-                  }
-                ]
-              },
-              "ward": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Ward"
-                  }
-                ]
-              },
-              "hotelImages": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelImage"
-                }
-              },
-              "hotelAmenities": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelAmenity"
-                }
-              },
-              "hotelRooms": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelRoom"
-                }
-              },
-              "hotelReviews": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelReview"
-                }
-              },
-              "hotelStyles": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelStyle"
-                }
-              }
-            }
+            "additionalProperties": false
           }
         ]
       },
@@ -1827,6 +2027,142 @@
           }
         }
       },
+      "HotelAmenityDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "HotelRoomDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "capacity": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "pricePerHour": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "HotelReviewDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "review": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "userName": {
+                "type": "string",
+                "nullable": true
+              },
+              "userAvatar": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentReviewId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "childReviews": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelReviewDto"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "HotelStyleDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "styleId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "style": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/StyleDto"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "StyleDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
       "GetHotelWithFilterAndPaginationQuery": {
         "type": "object",
         "additionalProperties": false,
@@ -1848,6 +2184,10 @@
       "CreateHotelRatingCommand": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "hotelId",
+          "userId"
+        ],
         "properties": {
           "starRate": {
             "type": "number",
@@ -1859,7 +2199,7 @@
           },
           "userId": {
             "type": "string",
-            "nullable": true
+            "minLength": 1
           }
         }
       },
@@ -1890,6 +2230,10 @@
       "CreateHotelReviewCommand": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "hotelId",
+          "userId"
+        ],
         "properties": {
           "review": {
             "type": "string",
@@ -1901,7 +2245,7 @@
           },
           "userId": {
             "type": "string",
-            "nullable": true
+            "minLength": 1
           },
           "parentReviewId": {
             "type": "integer",
@@ -1956,46 +2300,6 @@
             }
           }
         }
-      },
-      "HotelReviewDto": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "review": {
-                "type": "string",
-                "nullable": true
-              },
-              "userId": {
-                "type": "string",
-                "nullable": true
-              },
-              "userName": {
-                "type": "string",
-                "nullable": true
-              },
-              "userAvatar": {
-                "type": "string",
-                "nullable": true
-              },
-              "parentReviewId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "childReviews": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelReviewDto"
-                }
-              }
-            }
-          }
-        ]
       },
       "AppApiResultOfPaginatedListOfFlightDto": {
         "type": "object",

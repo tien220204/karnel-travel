@@ -27,10 +27,10 @@ public class HotelDto : BaseAuditableEntityDto<long>
 	public Province Province { get; set; }
 	public District District { get; set; }
 	public Ward Ward { get; set; }
-	public ICollection<HotelImage> HotelImages { get; set; }
-	public ICollection<HotelAmenity> HotelAmenities { get; set; }
-	public ICollection<HotelRoom> HotelRooms { get; set; }
-	public ICollection<HotelReview> HotelReviews { get; set; }
-	public ICollection<HotelStyle> HotelStyles { get; set; }
+	public ICollection<HotelImageDto> HotelImages { get; set; }
+	public ICollection<HotelAmenityDto> HotelAmenities { get; set; }
+	public ICollection<HotelRoomDto> HotelRooms { get; set; }
+	public ICollection<HotelReviewDto> HotelReviews { get; set; }
+	public ICollection<HotelStyleDto> HotelStyles { get; set; }
 }
 

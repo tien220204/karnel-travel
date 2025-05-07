@@ -36,6 +36,7 @@
     <Folder Include="Features\Flights\Models\Requests\" />
     <Folder Include="Features\Hotels\Models\Events\" />
     <Folder Include="Features\Hotels\Validators\" />
+    <Folder Include="Features\MasterData\Models\Requests\" />
     <Folder Include="Features\MasterData\Queries\" />
   </ItemGroup>
 

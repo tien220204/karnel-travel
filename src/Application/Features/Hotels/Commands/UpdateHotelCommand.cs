@@ -58,7 +58,7 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 		hotel.DistrictCode = request.DistrictCode;
 		hotel.CountryCode = request.CountryCode;
 		hotel.HotelClass = request.HotelClass;
-		hotel.HotelStyles = request.HotelStyles;
+		//hotel.HotelStyles = request.HotelStyles;
 		hotel.Latitude = request.Latitude;
 		hotel.Longitude = request.Longitude;
 

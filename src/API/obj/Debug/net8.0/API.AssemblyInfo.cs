@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a59772b503ed40c56dc2809d5fad8667dd22b0a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25d15e94496fd045d3269d6d3a1de1ec7f1ca6ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravel.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -48,6 +48,8 @@ public class ApplicationDbContext :
 	public DbSet<Province> Provinces => Set<Province>();
 	public DbSet<District> Districts => Set<District>();
 	public DbSet<Ward> Wards => Set<Ward>();
+	public DbSet<Amenity> Amenities => Set<Amenity>();
+
 
 	#endregion masterdata
 
