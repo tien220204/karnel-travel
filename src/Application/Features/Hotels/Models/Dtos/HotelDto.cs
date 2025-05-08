@@ -30,7 +30,6 @@ public class HotelDto : BaseAuditableEntityDto<long>
 	public WardDto Ward { get; set; }
 	public ICollection<HotelImageDto> HotelImages { get; set; }
 	public ICollection<HotelAmenityDto> HotelAmenities { get; set; }
-	public ICollection<HotelRoomDto> HotelRooms { get; set; }
 	public ICollection<HotelReviewDto> HotelReviews { get; set; }
 	public ICollection<HotelStyleDto> HotelStyles { get; set; }
 }

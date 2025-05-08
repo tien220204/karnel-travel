@@ -109,17 +109,6 @@ public class CreateHotelCommandHandler : BaseHandler, IRequestHandler<CreateHote
 			Amenity = a
 		}).ToList();
 
-
-
-		//create new room from request => add into list
-		var hotelRooms = request.HotelRooms.Select(r => new HotelRoom
-		{
-			Code = r.Code,
-			Description = r.Description,
-			Capacity = r.Capacity,
-			PricePerHour = r.PricePerHour
-		}).ToList();
-
 		//style id list in request
 		var requestStyleIds = request.HotelStyles.Select(s => s.StyleId).Distinct().ToList();
 
@@ -151,7 +140,6 @@ public class CreateHotelCommandHandler : BaseHandler, IRequestHandler<CreateHote
 			HotelPolicies = hotelPolicies,
 			HotelImages = hotelImages,
 			HotelAmenities = hotelAmenities,
-			HotelRooms = hotelRooms,
 			HotelStyles = hotelStyles
 		};
 
@@ -160,7 +148,7 @@ public class CreateHotelCommandHandler : BaseHandler, IRequestHandler<CreateHote
 		await _context.SaveChangesAsync(cancellationToken);
 
 
-		//handle by event handler later
+		//*Note: handle by event handler later
 		var hotelElasticDto = _mapper.Map<HotelDto>(newHotel);
 		await _elasticSearchService.CreateIndexIfNotExisted(nameof(Hotel));
 		await _elasticSearchService.AddOrUpdate(hotelElasticDto, nameof(Hotel));

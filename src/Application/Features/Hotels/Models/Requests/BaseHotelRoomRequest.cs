@@ -19,4 +19,5 @@ public class CreateHotelRoomRequest : BaseHotelRoomRequest
 public class UpdateHotelRoomRequest : BaseHotelRoomRequest
 {
 	public long Id { get; set; }
+	public long HotelId { get; set; }
 }

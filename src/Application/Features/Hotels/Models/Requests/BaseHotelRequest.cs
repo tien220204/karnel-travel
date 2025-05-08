@@ -22,7 +22,6 @@ public class BaseHotelRequest
 	public IList<CreateHotelPolicyRequest> HotelPolicies { get; set; }
 	public IList<CreateHotelImageRequest> HotelImages { get; set; }
 	public IList<CreateHotelAmenityRequest> HotelAmenities { get; set; }
-	public IList<CreateHotelRoomRequest> HotelRooms { get; set; }
 	public IList<CreateHotelStyleRequest> HotelStyles { get; set; }
 }
 

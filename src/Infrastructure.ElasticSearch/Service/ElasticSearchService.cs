@@ -116,16 +116,16 @@ public class ElasticSearchService : IElasticSearchService
         return response.IsValidResponse ? response.Documents.ToList() : default; 
     }
 
-	public async Task<bool> Remove<T>(string key)
+	public async Task<bool> Remove<T>(string key, string indexName)
 	{
-        var response = await _elasticsearchClient.DeleteAsync<T>(key, g => g.Index(_elasticSettings.DefaultIndex));
+        var response = await _elasticsearchClient.DeleteAsync<T>(key, nameof(indexName).ToLower());
 
         return response.IsValidResponse;
     }
 
-	public async Task<long?> RemoveAll<T>(string key)
+	public async Task<long?> RemoveAll<T>(string key, string indexName)
 	{
-		var response = await _elasticsearchClient.DeleteByQueryAsync<T>(d => d.Indices(_elasticSettings.DefaultIndex));
+		var response = await _elasticsearchClient.DeleteByQueryAsync<T>(nameof(indexName).ToLower());
 
 		return response.IsValidResponse ? response.Deleted : default;
 	}
