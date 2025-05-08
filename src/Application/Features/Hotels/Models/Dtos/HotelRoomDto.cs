@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace KarnelTravel.Application.Features.Hotels.Models.Dtos;
 public class HotelRoomDto : BaseAuditableEntityDto<long>
 {
+	public long HotelId { get; set; }
 	public string Code { get; set; }
 	public string Description { get; set; }
 	public long Capacity { get; set; }

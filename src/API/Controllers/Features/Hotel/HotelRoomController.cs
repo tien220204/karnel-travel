@@ -43,7 +43,7 @@ public class HotelRoomController : ApiControllerBase
 	[HttpPut("Update")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> CreateHotelReviewAsync(UpdateHotelRoomCommand command)
+	public async Task<IActionResult> UpdateHotelRoomAsync(UpdateHotelRoomCommand command)
 	{
 
 		if (!ModelState.IsValid)
@@ -69,7 +69,7 @@ public class HotelRoomController : ApiControllerBase
 	[HttpPost("delete")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> CreateHotelReviewAsync(CreateHotelReviewCommand command)
+	public async Task<IActionResult> DeleteHoteRoomAsync(DeleteHotelRoomCommand command)
 	{
 
 		if (!ModelState.IsValid)

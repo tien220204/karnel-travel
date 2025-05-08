@@ -65,9 +65,9 @@ public class CreateHotelRoomCommandHandler : BaseHandler, IRequestHandler<Create
 		await _context.SaveChangesAsync(cancellationToken);
 
 		//update existing hotel rooms list in elastic search
-		_mapper.Map<List<HotelRoomDto>>(hotel.HotelRooms);
+		var roomDtoList  = _mapper.Map<List<HotelRoomDto>>(hotel.HotelRooms);
 		await _elasticSearchService.CreateIndexIfNotExisted(nameof(HotelRoom));
-		await _elasticSearchService.AddOrUpdateBulk(hotelRooms, nameof(HotelRoom));
+		await _elasticSearchService.AddOrUpdateBulk(roomDtoList, nameof(HotelRoom));
 
 
 		return BuildMultilingualResult(result, hotel.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);

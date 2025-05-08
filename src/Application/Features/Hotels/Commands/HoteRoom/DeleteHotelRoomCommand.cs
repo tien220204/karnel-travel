@@ -41,7 +41,7 @@ public class DeleteHotelRoomCommandHandler : BaseHandler, IRequestHandler<Delete
 
 		//delete room data in elastic search
 		_mapper.Map<HotelRoom>(hotelRoom);
-		await _elasticSearchService.Remove<HotelRoom>(hotelRoom.Id.ToString(), nameof(HotelRoom).ToLower());
+		await _elasticSearchService.Remove<HotelRoom>(hotelRoom.Id.ToString(), nameof(HotelRoom));
 
 
 		return BuildMultilingualResult(result, hotelRoom.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);

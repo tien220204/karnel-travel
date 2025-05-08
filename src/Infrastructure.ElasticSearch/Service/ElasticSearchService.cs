@@ -95,7 +95,7 @@ public class ElasticSearchService : IElasticSearchService
 
 	public async  Task<bool> AddOrUpdateBulk<T>(IEnumerable<T> dataObjects, string indexName)
 	{
-		var response = await _elasticsearchClient.BulkAsync(b => b.Index(_elasticSettings.DefaultIndex)
+		var response = await _elasticsearchClient.BulkAsync(b => b.Index(indexName.ToLower())
 		.UpdateMany(dataObjects, (ud, u) => ud.Doc(u).DocAsUpsert(true))
 		);
 
@@ -118,14 +118,15 @@ public class ElasticSearchService : IElasticSearchService
 
 	public async Task<bool> Remove<T>(string key, string indexName)
 	{
-        var response = await _elasticsearchClient.DeleteAsync<T>(key, nameof(indexName).ToLower());
+        var response = await _elasticsearchClient.DeleteAsync<T>(key,d => d.Index(indexName.ToLower()));
 
         return response.IsValidResponse;
+		
     }
 
 	public async Task<long?> RemoveAll<T>(string key, string indexName)
 	{
-		var response = await _elasticsearchClient.DeleteByQueryAsync<T>(nameof(indexName).ToLower());
+		var response = await _elasticsearchClient.DeleteByQueryAsync<T>(indexName.ToLower());
 
 		return response.IsValidResponse ? response.Deleted : default;
 	}

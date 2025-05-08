@@ -44,9 +44,9 @@ public class UpdateHotelRoomCommandHandler : BaseHandler, IRequestHandler<Update
 		await _context.SaveChangesAsync(cancellationToken);
 
 		//update room in elasticsearch
-		_mapper.Map<HotelRoom>(room);
+		var newRoomDto =  _mapper.Map<HotelRoom>(room);
 		await _elasticSearchService.CreateIndexIfNotExisted(nameof(HotelRoom));
-		await _elasticSearchService.AddOrUpdate(room, room.Id.ToString());
+		await _elasticSearchService.AddOrUpdate(newRoomDto, nameof(HotelRoom));
 
 		return BuildMultilingualResult(result, room.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
 	}
