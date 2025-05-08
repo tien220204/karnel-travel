@@ -178,7 +178,7 @@
         }
       }
     },
-    "/api/v1/hotel-rating/create": {
+    "/api/v1/hotel/rating/create": {
       "post": {
         "tags": [
           "HotelRating"
@@ -220,7 +220,7 @@
         }
       }
     },
-    "/api/v1/hotel-rating/update": {
+    "/api/v1/hotel/rating/update": {
       "post": {
         "tags": [
           "HotelRating"
@@ -262,7 +262,7 @@
         }
       }
     },
-    "/api/v1/hotel-rating/delete": {
+    "/api/v1/hotel/rating/delete": {
       "post": {
         "tags": [
           "HotelRating"
@@ -304,7 +304,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/create": {
+    "/api/v1/hotel/review/create": {
       "post": {
         "tags": [
           "HotelReview"
@@ -346,7 +346,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/update": {
+    "/api/v1/hotel/review/update": {
       "post": {
         "tags": [
           "HotelReview"
@@ -388,7 +388,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/delete": {
+    "/api/v1/hotel/review/delete": {
       "post": {
         "tags": [
           "HotelReview"
@@ -430,7 +430,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/all": {
+    "/api/v1/hotel/review/all": {
       "get": {
         "tags": [
           "HotelReview"
@@ -453,6 +453,132 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AppApiResultOfIListOfHotelReviewDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel/room/create": {
+      "post": {
+        "tags": [
+          "HotelRoom"
+        ],
+        "operationId": "HotelRoom_CreateHotelRoom",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHotelRoomCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel/room/update": {
+      "put": {
+        "tags": [
+          "HotelRoom"
+        ],
+        "operationId": "HotelRoom_UpdateHotelRoom",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelRoomCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotel/room/delete": {
+      "post": {
+        "tags": [
+          "HotelRoom"
+        ],
+        "operationId": "HotelRoom_DeleteHoteRoom",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteHotelRoomCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
                 }
               }
             }
@@ -769,13 +895,6 @@
               "$ref": "#/components/schemas/CreateHotelAmenityRequest"
             }
           },
-          "hotelRooms": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/CreateHotelRoomRequest"
-            }
-          },
           "hotelStyles": {
             "type": "array",
             "nullable": true,
@@ -930,39 +1049,6 @@
         "additionalProperties": false,
         "properties": {
           "amenityId": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
-      "CreateHotelRoomRequest": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseHotelRoomRequest"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false
-          }
-        ]
-      },
-      "BaseHotelRoomRequest": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "code": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "pricePerHour": {
             "type": "integer",
             "format": "int64"
           }
@@ -1152,13 +1238,6 @@
                 "nullable": true,
                 "items": {
                   "$ref": "#/components/schemas/HotelAmenityDto"
-                }
-              },
-              "hotelRooms": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelRoomDto"
                 }
               },
               "hotelReviews": {
@@ -1367,35 +1446,6 @@
               },
               "amenityType": {
                 "$ref": "#/components/schemas/AmenityType"
-              }
-            }
-          }
-        ]
-      },
-      "HotelRoomDto": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "capacity": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "pricePerHour": {
-                "type": "integer",
-                "format": "int64"
               }
             }
           }
@@ -1622,6 +1672,94 @@
             "items": {
               "$ref": "#/components/schemas/HotelReviewDto"
             }
+          }
+        }
+      },
+      "CreateHotelRoomCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "hotelRooms": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateHotelRoomRequest"
+            }
+          },
+          "hotelId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelRoomRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelRoomRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelRoomRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pricePerHour": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "UpdateHotelRoomCommand": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/UpdateHotelRoomRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "UpdateHotelRoomRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelRoomRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "DeleteHotelRoomCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
           }
         }
       },

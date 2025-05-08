@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KarnelTravel.API.Controllers.Features.Hotel;
 [ApiVersion("1.0")]
-[Route("api/v{version:apiVersion}/hotel-review")]
+[Route("api/v{version:apiVersion}/hotel/review")]
 public class HotelReviewController : ApiControllerBase
 {
 	/// <summary>

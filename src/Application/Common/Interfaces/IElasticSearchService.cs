@@ -19,9 +19,9 @@ public interface IElasticSearchService
 	Task<List<T>> GetAll<T>();
 
 	//remove key
-	Task<bool> Remove<T>(string key);
+	Task<bool> Remove<T>(string key, string indexName);
 
 	//remove all
-	Task<long?> RemoveAll<T>(string key);
+	Task<long?> RemoveAll<T>(string key, string indexName);
 }
  

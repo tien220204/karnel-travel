@@ -1,22 +1,23 @@
-﻿using KarnelTravel.Application.Feature.Hotels;
-using KarnelTravel.Application.Features.Hotels.Commands.HotelRating;
+﻿using KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
+using KarnelTravel.Application.Features.Hotels.Commands.HoteRoom;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KarnelTravel.API.Controllers.Features.Hotel;
+
 [ApiVersion("1.0")]
-[Route("api/v{version:apiVersion}/hotel/rating")]
-public class HotelRatingController : ApiControllerBase
+[Route("api/v{version:apiVersion}/hotel/room")]
+public class HotelRoomController : ApiControllerBase
 {
 	/// <summary>
-	/// create hotel rating command
+	/// Create room for hotel async
 	/// </summary>
 	/// <param name="command"></param>
 	/// <returns></returns>
 	[HttpPost("create")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> CreateHotelAsync(CreateHotelRatingCommand command)
+	public async Task<IActionResult> CreateHotelRoomAsync(CreateHotelRoomCommand command)
 	{
 
 		if (!ModelState.IsValid)
@@ -35,14 +36,14 @@ public class HotelRatingController : ApiControllerBase
 	}
 
 	/// <summary>
-	/// update hotel rating by id command
+	/// Update hotel room by id 
 	/// </summary>
 	/// <param name="command"></param>
 	/// <returns></returns>
-	[HttpPost("update")]
+	[HttpPut("Update")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> UpdateHotelRatingAsync(UpdateHotelRatingCommand command)
+	public async Task<IActionResult> UpdateHotelRoomAsync(UpdateHotelRoomCommand command)
 	{
 
 		if (!ModelState.IsValid)
@@ -61,14 +62,14 @@ public class HotelRatingController : ApiControllerBase
 	}
 
 	/// <summary>
-	/// Delete hotel rating command
+	/// delete room by id
 	/// </summary>
 	/// <param name="command"></param>
 	/// <returns></returns>
 	[HttpPost("delete")]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
-	public async Task<IActionResult> DeleteHotelRatingAsync(DeleteHotelRatingCommand command)
+	public async Task<IActionResult> DeleteHoteRoomAsync(DeleteHotelRoomCommand command)
 	{
 
 		if (!ModelState.IsValid)
