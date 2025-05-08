@@ -440,8 +440,8 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<int[]>("PaymentTypes")
-                        .HasColumnType("integer[]");
+                    b.Property<int>("PaymentTypes")
+                        .HasColumnType("integer");
 
                     b.Property<int>("PropertyType")
                         .HasColumnType("integer");
@@ -476,13 +476,13 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
+                    b.Property<long>("AmenityId")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTimeOffset>("Created")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<long>("HotelId")
@@ -497,10 +497,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("text");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("AmenityId");
 
                     b.HasIndex("HotelId");
 
@@ -710,6 +709,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("text");
 
+                    b.Property<long>("PricePerHour")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HotelId");
@@ -731,11 +733,52 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
+                    b.Property<long>("HotelId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset>("LastModified")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("text");
+
+                    b.Property<long>("StyleId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HotelId");
+
+                    b.HasIndex("StyleId");
+
+                    b.ToTable("HotelStyles");
+                });
+
+            modelBuilder.Entity("KarnelTravel.Domain.Entities.Features.MasterData.Amenity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("AmenityType")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<long>("HotelId")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Icon")
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
@@ -749,16 +792,9 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<long>("StyleId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("HotelId");
-
-                    b.HasIndex("StyleId");
-
-                    b.ToTable("HotelStyles");
+                    b.ToTable("Amenities");
                 });
 
             modelBuilder.Entity("KarnelTravel.Domain.Entities.Features.MasterData.Country", b =>
@@ -1070,11 +1106,19 @@ namespace KarnelTravel.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("KarnelTravel.Domain.Entities.Features.Hotels.HotelAmenity", b =>
                 {
+                    b.HasOne("KarnelTravel.Domain.Entities.Features.MasterData.Amenity", "Amenity")
+                        .WithMany()
+                        .HasForeignKey("AmenityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("KarnelTravel.Domain.Entities.Features.Hotels.Hotel", "Hotel")
                         .WithMany("HotelAmenities")
                         .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Amenity");
 
                     b.Navigation("Hotel");
                 });

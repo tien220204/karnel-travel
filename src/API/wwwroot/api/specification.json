@@ -6,6 +6,48 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/api/v1/amenity/create": {
+      "post": {
+        "tags": [
+          "Amenity"
+        ],
+        "operationId": "Amenity_CreateAmenity",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAmenityCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/location/import-file": {
       "post": {
         "tags": [
@@ -598,6 +640,37 @@
           2
         ]
       },
+      "CreateAmenityCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "amenityType": {
+            "$ref": "#/components/schemas/AmenityType"
+          }
+        }
+      },
+      "AmenityType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Flight",
+          "Hotel",
+          "Both"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
       "CreateHotelCommand": {
         "allOf": [
           {
@@ -665,12 +738,8 @@
             "maximum": 180.0,
             "minimum": 0.0
           },
-          "paymentTypes": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/PaymentType"
-            }
+          "paymentType": {
+            "$ref": "#/components/schemas/PaymentType"
           },
           "servedMeals": {
             "type": "array",
@@ -683,67 +752,35 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelPolicy"
+              "$ref": "#/components/schemas/CreateHotelPolicyRequest"
             }
-          },
-          "country": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Country"
-              }
-            ]
-          },
-          "province": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Province"
-              }
-            ]
-          },
-          "district": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/District"
-              }
-            ]
-          },
-          "ward": {
-            "nullable": true,
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Ward"
-              }
-            ]
           },
           "hotelImages": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelImage"
+              "$ref": "#/components/schemas/CreateHotelImageRequest"
             }
           },
           "hotelAmenities": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelAmenity"
+              "$ref": "#/components/schemas/CreateHotelAmenityRequest"
             }
           },
           "hotelRooms": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelRoom"
+              "$ref": "#/components/schemas/CreateHotelRoomRequest"
             }
           },
           "hotelStyles": {
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/HotelStyle"
+              "$ref": "#/components/schemas/CreateHotelStyleRequest"
             }
           }
         }
@@ -824,792 +861,133 @@
           5
         ]
       },
-      "HotelPolicy": {
+      "CreateHotelPolicyRequest": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+            "$ref": "#/components/schemas/BaseHotelPolicyRequest"
           },
           {
             "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "type": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
+            "additionalProperties": false
           }
         ]
       },
-      "Hotel": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "propertyType": {
-                "$ref": "#/components/schemas/PropertyType"
-              },
-              "hotelClass": {
-                "$ref": "#/components/schemas/HotelClass"
-              },
-              "countryCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "wardCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "provinceCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "districtCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "longitude": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "latitude": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "paymentTypes": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/PaymentType"
-                }
-              },
-              "servedMeals": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/ServedMeal"
-                }
-              },
-              "hotelPolicies": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelPolicy"
-                }
-              },
-              "country": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Country"
-                  }
-                ]
-              },
-              "province": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Province"
-                  }
-                ]
-              },
-              "district": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/District"
-                  }
-                ]
-              },
-              "ward": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Ward"
-                  }
-                ]
-              },
-              "hotelImages": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelImage"
-                }
-              },
-              "hotelAmenities": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelAmenity"
-                }
-              },
-              "hotelRooms": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelRoom"
-                }
-              },
-              "hotelReviews": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelReview"
-                }
-              },
-              "hotelStyles": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelStyle"
-                }
-              },
-              "hotelRatings": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelRating"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "Country": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "provinces": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/Province"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "Province": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "shortName": {
-                "type": "string",
-                "nullable": true
-              },
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "parentCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "priority": {
-                "type": "integer",
-                "format": "int32",
-                "nullable": true
-              },
-              "country": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Country"
-                  }
-                ]
-              },
-              "districts": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/District"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "District": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "parentCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "province": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Province"
-                  }
-                ]
-              },
-              "wards": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/Ward"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "Ward": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "parentCode": {
-                "type": "string",
-                "nullable": true
-              },
-              "district": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/District"
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "BaseEntityOfLong": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/DomainEventEntity"
-          },
-          {
-            "type": "object",
-            "x-abstract": true,
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          }
-        ]
-      },
-      "DomainEventEntity": {
+      "BaseHotelPolicyRequest": {
         "type": "object",
-        "x-abstract": true,
         "additionalProperties": false,
         "properties": {
-          "domainEvents": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/BaseEvent"
-            }
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
           }
         }
       },
-      "BaseEvent": {
+      "CreateHotelImageRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelImageRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BaseHotelImageRequest": {
         "type": "object",
-        "x-abstract": true,
-        "additionalProperties": false
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAvatar": {
+            "type": "boolean"
+          }
+        }
       },
-      "HotelImage": {
+      "CreateHotelAmenityRequest": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+            "$ref": "#/components/schemas/BaseHotelAmenityRequest"
           },
           {
             "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "url": {
-                "type": "string",
-                "nullable": true
-              },
-              "isAvatar": {
-                "type": "boolean"
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
+            "additionalProperties": false
           }
         ]
       },
-      "BaseAuditableEntityOfLong": {
+      "BaseHotelAmenityRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "amenityId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelRoomRequest": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseEntityOfLong"
+            "$ref": "#/components/schemas/BaseHotelRoomRequest"
           },
           {
             "type": "object",
-            "x-abstract": true,
-            "additionalProperties": false,
-            "properties": {
-              "created": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "createdBy": {
-                "type": "string",
-                "nullable": true
-              },
-              "lastModified": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "lastModifiedBy": {
-                "type": "string",
-                "nullable": true
-              },
-              "isDeleted": {
-                "type": "boolean"
-              }
-            }
+            "additionalProperties": false
           }
         ]
       },
-      "HotelAmenity": {
+      "BaseHotelRoomRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pricePerHour": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CreateHotelStyleRequest": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
+            "$ref": "#/components/schemas/BaseHotelStyleRequest"
           },
           {
             "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
+            "additionalProperties": false
           }
         ]
       },
-      "HotelRoom": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "capacity": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
+      "BaseHotelStyleRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "styleId": {
+            "type": "integer",
+            "format": "int64"
           }
-        ]
-      },
-      "HotelReview": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "review": {
-                "type": "string",
-                "nullable": true
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "parentReviewId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "userId": {
-                "type": "string",
-                "format": "guid"
-              },
-              "parentReview": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/HotelReview"
-                  }
-                ]
-              },
-              "childReviews": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelReview"
-                }
-              },
-              "user": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/ApplicationUser"
-                  }
-                ]
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "ApplicationUser": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfGuid"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "keycloakId": {
-                "type": "string",
-                "nullable": true
-              },
-              "dateOfBirth": {
-                "type": "string",
-                "format": "date-time",
-                "nullable": true
-              },
-              "fullName": {
-                "type": "string",
-                "nullable": true
-              },
-              "provinceId": {
-                "type": "integer",
-                "format": "int32",
-                "nullable": true
-              },
-              "provinceName": {
-                "type": "string",
-                "nullable": true
-              },
-              "districtId": {
-                "type": "integer",
-                "format": "int32",
-                "nullable": true
-              },
-              "districtName": {
-                "type": "string",
-                "nullable": true
-              },
-              "wardId": {
-                "type": "integer",
-                "format": "int32",
-                "nullable": true
-              },
-              "wardName": {
-                "type": "string",
-                "nullable": true
-              },
-              "address": {
-                "type": "string",
-                "nullable": true
-              },
-              "email": {
-                "type": "string",
-                "nullable": true
-              }
-            }
-          }
-        ]
-      },
-      "BaseAuditableEntityOfGuid": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseEntityOfGuid"
-          },
-          {
-            "type": "object",
-            "x-abstract": true,
-            "additionalProperties": false,
-            "properties": {
-              "created": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "createdBy": {
-                "type": "string",
-                "nullable": true
-              },
-              "lastModified": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "lastModifiedBy": {
-                "type": "string",
-                "nullable": true
-              },
-              "isDeleted": {
-                "type": "boolean"
-              }
-            }
-          }
-        ]
-      },
-      "BaseEntityOfGuid": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/DomainEventEntity"
-          },
-          {
-            "type": "object",
-            "x-abstract": true,
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string",
-                "format": "guid"
-              }
-            }
-          }
-        ]
-      },
-      "HotelStyle": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "styleId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "style": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Style"
-                  }
-                ]
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "Style": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "name": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "hotelStyles": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelStyle"
-                }
-              }
-            }
-          }
-        ]
-      },
-      "HotelRating": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "starRate": {
-                "type": "number",
-                "format": "decimal"
-              },
-              "userId": {
-                "type": "string",
-                "format": "guid"
-              },
-              "hotelId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "user": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/ApplicationUser"
-                  }
-                ]
-              },
-              "hotel": {
-                "nullable": true,
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/Hotel"
-                  }
-                ]
-              }
-            }
-          }
-        ]
+        }
       },
       "AppApiResultOfPaginatedListOfHotelDto": {
         "type": "object",
@@ -1727,14 +1105,14 @@
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelPolicy"
+                  "$ref": "#/components/schemas/HotelPolicyDto"
                 }
               },
               "country": {
                 "nullable": true,
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/Country"
+                    "$ref": "#/components/schemas/CountryDto"
                   }
                 ]
               },
@@ -1742,7 +1120,7 @@
                 "nullable": true,
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/Province"
+                    "$ref": "#/components/schemas/ProvinceDto"
                   }
                 ]
               },
@@ -1750,7 +1128,7 @@
                 "nullable": true,
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/District"
+                    "$ref": "#/components/schemas/DistrictDto"
                   }
                 ]
               },
@@ -1758,7 +1136,7 @@
                 "nullable": true,
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/Ward"
+                    "$ref": "#/components/schemas/WardDto"
                   }
                 ]
               },
@@ -1766,38 +1144,49 @@
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelImage"
+                  "$ref": "#/components/schemas/HotelImageDto"
                 }
               },
               "hotelAmenities": {
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelAmenity"
+                  "$ref": "#/components/schemas/HotelAmenityDto"
                 }
               },
               "hotelRooms": {
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelRoom"
+                  "$ref": "#/components/schemas/HotelRoomDto"
                 }
               },
               "hotelReviews": {
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelReview"
+                  "$ref": "#/components/schemas/HotelReviewDto"
                 }
               },
               "hotelStyles": {
                 "type": "array",
                 "nullable": true,
                 "items": {
-                  "$ref": "#/components/schemas/HotelStyle"
+                  "$ref": "#/components/schemas/HotelStyleDto"
                 }
               }
             }
+          }
+        ]
+      },
+      "HotelPolicyDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
           }
         ]
       },
@@ -1827,6 +1216,277 @@
           }
         }
       },
+      "CountryDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ProvinceDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentCode": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "DistrictDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentCode": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "WardDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentCode": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "HotelImageDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "HotelAmenityDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "amenity": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/AmenityDto"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "AmenityDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "icon": {
+                "type": "string",
+                "nullable": true
+              },
+              "amenityType": {
+                "$ref": "#/components/schemas/AmenityType"
+              }
+            }
+          }
+        ]
+      },
+      "HotelRoomDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "capacity": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "pricePerHour": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "HotelReviewDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "review": {
+                "type": "string",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "userName": {
+                "type": "string",
+                "nullable": true
+              },
+              "userAvatar": {
+                "type": "string",
+                "nullable": true
+              },
+              "parentReviewId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "childReviews": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelReviewDto"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "HotelStyleDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "styleId": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "style": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/StyleDto"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "StyleDto": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
       "GetHotelWithFilterAndPaginationQuery": {
         "type": "object",
         "additionalProperties": false,
@@ -1848,6 +1508,10 @@
       "CreateHotelRatingCommand": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "hotelId",
+          "userId"
+        ],
         "properties": {
           "starRate": {
             "type": "number",
@@ -1859,7 +1523,7 @@
           },
           "userId": {
             "type": "string",
-            "nullable": true
+            "minLength": 1
           }
         }
       },
@@ -1890,6 +1554,10 @@
       "CreateHotelReviewCommand": {
         "type": "object",
         "additionalProperties": false,
+        "required": [
+          "hotelId",
+          "userId"
+        ],
         "properties": {
           "review": {
             "type": "string",
@@ -1901,7 +1569,7 @@
           },
           "userId": {
             "type": "string",
-            "nullable": true
+            "minLength": 1
           },
           "parentReviewId": {
             "type": "integer",
@@ -1956,46 +1624,6 @@
             }
           }
         }
-      },
-      "HotelReviewDto": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "review": {
-                "type": "string",
-                "nullable": true
-              },
-              "userId": {
-                "type": "string",
-                "nullable": true
-              },
-              "userName": {
-                "type": "string",
-                "nullable": true
-              },
-              "userAvatar": {
-                "type": "string",
-                "nullable": true
-              },
-              "parentReviewId": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "childReviews": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelReviewDto"
-                }
-              }
-            }
-          }
-        ]
       },
       "AppApiResultOfPaginatedListOfFlightDto": {
         "type": "object",
@@ -2248,6 +1876,76 @@
             }
           }
         ]
+      },
+      "BaseAuditableEntityOfLong": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfLong"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "lastModifiedBy": {
+                "type": "string",
+                "nullable": true
+              },
+              "isDeleted": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "BaseEntityOfLong": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DomainEventEntity"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "DomainEventEntity": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "properties": {
+          "domainEvents": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BaseEvent"
+            }
+          }
+        }
+      },
+      "BaseEvent": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false
       },
       "Airport": {
         "allOf": [

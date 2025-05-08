@@ -1,10 +1,95 @@
 
 
+# services:
+#   elasticsearch:
+#     image: docker.elastic.co/elasticsearch/elasticsearch:8.16.3
+#     container_name: elasticsearch
+#     environment:
+#       - CLI_JAVA_OPTS=-Xms2g -Xmx2g
+#       - bootstrap.memory_lock=true
+#       - xpack.security.enabled=true
+#       - xpack.security.enrollment.enabled=false
+
+#       # ssl is compulsory in production/several nodes
+#       - xpack.security.transport.ssl.enabled=false
+#       - xpack.security.http.ssl.enabled=false
+
+#       # single node for test
+#       - discovery.type=single-node
+      
+#       # default user la = elastic
+#       - ELASTIC_PASSWORD=password 
+#     ulimits:
+#       memlock:
+#         soft: -1
+#         hard: -1
+#     ports:
+#       - "9200:9200"
+#     volumes:
+#       - ./esdata:/usr/share/elasticsearch/data  # Lưu data vào thư mục gốc của dự án
+
+#   kibana:
+#     image: docker.elastic.co/kibana/kibana:8.16.3
+#     container_name: kibana
+#     environment:
+#         - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+#         # - ELASTICSEARCH_USERNAME=elastic
+#         # - ELASTICSEARCH_PASSWORD=password
+#         - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=d1a66dfd-c4d3-4a0a-8290-2abcb83ab3aa
+#     ports:
+#       - "5601:5601"
+      
+#     depends_on:
+#       - elasticsearch
+
+# volumes:
+#   esdata:
+#     driver: local
+
+
+
+# services:
+#   elasticsearch:
+#     image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
+#     container_name: elasticsearch
+#     environment:
+#       - node.name=elasticsearch
+#       - cluster.name=datasearch
+#       - bootstrap.memory_lock=true
+#       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#       - cluster.initial_master_nodes=elasticsearch
+      
+#       # default user la = elastic
+#       - ELASTIC_PASSWORD=password
+#     ulimits:
+#       memlock:
+#         soft: -1
+#         hard: -1
+#     ports:
+#       - "9200:9200"
+#     volumes:
+#       - ./esdata:/usr/share/elasticsearch/data  # Lưu data vào thư mục gốc của dự án
+
+#   kibana:
+#     image: docker.elastic.co/kibana/kibana:7.0.1
+#     container_name: kibana
+#     ports:
+#       - "5601:5601"
+#     depends_on:
+#       - elasticsearch
+
+# volumes:
+#   esdata:
+#     driver: local
+
+
+
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.16.3
     container_name: elasticsearch
     environment:
+      # true if in practical case => ssl= true (ssl can be false if single node setting for devmode)
       - xpack.security.enabled=false
       - node.name=elasticsearch
       - cluster.name=datasearch
@@ -25,6 +110,11 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:8.16.3
     container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+        # - ELASTICSEARCH_USERNAME=elastic
+        # - ELASTICSEARCH_PASSWORD=password
+        # - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=d1a66dfd-c4d3-4a0a-8290-2abcb83ab3aa
     ports:
       - "5601:5601"
     depends_on:

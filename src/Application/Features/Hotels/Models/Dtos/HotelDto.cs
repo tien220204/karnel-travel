@@ -1,4 +1,5 @@
-﻿using KarnelTravel.Domain.Entities.Features.Hotels;
+﻿using KarnelTravel.Application.Features.MasterData.Dtos;
+using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Entities.Features.MasterData;
 using KarnelTravel.Domain.Enums.Hotels;
 using Share.Common.Models;
@@ -22,15 +23,15 @@ public class HotelDto : BaseAuditableEntityDto<long>
 	public long Latitude { get; set; }
 	public List<PaymentType> PaymentTypes { get; set; }
 	public List<ServedMeal> ServedMeals { get; set; }
-	public ICollection<HotelPolicy> HotelPolicies { get; set; }
-	public Country Country { get; set; }
-	public Province Province { get; set; }
-	public District District { get; set; }
-	public Ward Ward { get; set; }
-	public ICollection<HotelImage> HotelImages { get; set; }
-	public ICollection<HotelAmenity> HotelAmenities { get; set; }
-	public ICollection<HotelRoom> HotelRooms { get; set; }
-	public ICollection<HotelReview> HotelReviews { get; set; }
-	public ICollection<HotelStyle> HotelStyles { get; set; }
+	public ICollection<HotelPolicyDto> HotelPolicies { get; set; }
+	public CountryDto Country { get; set; }
+	public ProvinceDto Province { get; set; }
+	public DistrictDto District { get; set; }
+	public WardDto Ward { get; set; }
+	public ICollection<HotelImageDto> HotelImages { get; set; }
+	public ICollection<HotelAmenityDto> HotelAmenities { get; set; }
+	public ICollection<HotelRoomDto> HotelRooms { get; set; }
+	public ICollection<HotelReviewDto> HotelReviews { get; set; }
+	public ICollection<HotelStyleDto> HotelStyles { get; set; }
 }
 

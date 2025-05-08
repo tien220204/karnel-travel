@@ -24,10 +24,12 @@ public class CreateHotelRatingCommand : IRequest<AppActionResultData<string>>
 public class CreateHotelRatingCommandHandler : BaseHandler, IRequestHandler<CreateHotelRatingCommand, AppActionResultData<string>>
 {
 	private readonly IApplicationDbContext _context;
+	private readonly IElasticSearchService _elasticSearchService;
 
-	public CreateHotelRatingCommandHandler(IApplicationDbContext context)
+	public CreateHotelRatingCommandHandler(IApplicationDbContext context, IElasticSearchService elasticSearchService)
 	{
 		_context = context;
+		_elasticSearchService = elasticSearchService;
 	}
 
 	public async Task<AppActionResultData<string>> Handle(CreateHotelRatingCommand request, CancellationToken cancellationToken)
@@ -49,6 +51,9 @@ public class CreateHotelRatingCommandHandler : BaseHandler, IRequestHandler<Crea
 
 
 		_context.HotelRatings.Add(newHotelRating);
+
+		//_elasticSearchService.
+
 		await _context.SaveChangesAsync(cancellationToken);
 
 		return BuildMultilingualResult(result, newHotelRating.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);

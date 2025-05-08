@@ -238,3 +238,7 @@ _Pvt_Extensions
 
 # dependencies
 **/node_modules/
+
+
+# Elasticsearch data (should not be version controlled)
+docker-compose-files/elastic_search/esdata/

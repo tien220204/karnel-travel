@@ -1,11 +1,13 @@
-﻿namespace KarnelTravel.Application.Common.Interfaces;
+﻿using System.Runtime.CompilerServices;
+
+namespace KarnelTravel.Application.Common.Interfaces;
 public interface IElasticSearchService
 {
 	//create index
 	Task CreateIndexIfNotExisted(string indexName);
 
 	//add or update data
-	Task<bool> AddOrUpdate<T>(T dataObject);
+	Task<bool> AddOrUpdate<T>(T dataObject, string indexName);
 
 	//update bulk data
 	Task<bool>  AddOrUpdateBulk<T>(IEnumerable<T> dataObjects, string indexName);

@@ -45,6 +45,7 @@ public class KeycloakService : IKeycloakService
 			}
 		};
 
+		//temporary response in unexceptional case of Keycloak
 		try
 		{
 			var userKeycloakId = await _client.CreateAndRetrieveUserIdAsync(_realm, user);
@@ -59,12 +60,9 @@ public class KeycloakService : IKeycloakService
 				throw new ApplicationException("User already exists in keycloak.");
 			}
 
-			// Log lỗi chi tiết hoặc ném lại nếu là lỗi khác
 			throw;
 		}
-		//var userKeycloakId = await _client.CreateAndRetrieveUserIdAsync(_realm, user);
-
-		//return userKeycloakId;
+		
 
 	}
 

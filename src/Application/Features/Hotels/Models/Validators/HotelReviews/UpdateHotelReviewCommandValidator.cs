@@ -1,10 +1,20 @@
-﻿using System;
+﻿using FluentValidation;
+using KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KarnelTravel.Application.Features.Hotels.Models.Validators.HotelReviews;
-internal class UpdateHotelReviewCommandValidator
+public class UpdateHotelReviewCommandValidator : AbstractValidator<UpdateHotelReviewCommand>
 {
+	public UpdateHotelReviewCommandValidator()
+	{
+		RuleFor(x => x.Review)
+			.NotEmpty().WithMessage("Review is required.")
+			.NotNull().WithMessage("Review is required.")
+			.MinimumLength(225).WithMessage("Review must be at least 225 characters long.")
+			.Matches("^[a-zA-Z0-9 ]+$").WithMessage("Review must not contain special characters.");
+	}
 }
