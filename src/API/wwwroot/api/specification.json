@@ -304,7 +304,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/create": {
+    "/api/v1/hotel/review/create": {
       "post": {
         "tags": [
           "HotelReview"
@@ -346,7 +346,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/update": {
+    "/api/v1/hotel/review/update": {
       "post": {
         "tags": [
           "HotelReview"
@@ -388,7 +388,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/delete": {
+    "/api/v1/hotel/review/delete": {
       "post": {
         "tags": [
           "HotelReview"
@@ -430,7 +430,7 @@
         }
       }
     },
-    "/api/v1/hotel-review/all": {
+    "/api/v1/hotel/review/all": {
       "get": {
         "tags": [
           "HotelReview"
@@ -769,13 +769,6 @@
               "$ref": "#/components/schemas/CreateHotelAmenityRequest"
             }
           },
-          "hotelRooms": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/CreateHotelRoomRequest"
-            }
-          },
           "hotelStyles": {
             "type": "array",
             "nullable": true,
@@ -930,39 +923,6 @@
         "additionalProperties": false,
         "properties": {
           "amenityId": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
-      "CreateHotelRoomRequest": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseHotelRoomRequest"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false
-          }
-        ]
-      },
-      "BaseHotelRoomRequest": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "code": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "pricePerHour": {
             "type": "integer",
             "format": "int64"
           }
@@ -1152,13 +1112,6 @@
                 "nullable": true,
                 "items": {
                   "$ref": "#/components/schemas/HotelAmenityDto"
-                }
-              },
-              "hotelRooms": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/HotelRoomDto"
                 }
               },
               "hotelReviews": {
@@ -1367,35 +1320,6 @@
               },
               "amenityType": {
                 "$ref": "#/components/schemas/AmenityType"
-              }
-            }
-          }
-        ]
-      },
-      "HotelRoomDto": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BaseAuditableEntityDtoOfLong"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "type": "string",
-                "nullable": true
-              },
-              "description": {
-                "type": "string",
-                "nullable": true
-              },
-              "capacity": {
-                "type": "integer",
-                "format": "int64"
-              },
-              "pricePerHour": {
-                "type": "integer",
-                "format": "int64"
               }
             }
           }

@@ -15,7 +15,7 @@ public class DeleteHotelCommandHandler : BaseHandler, IRequestHandler<DeleteHote
 {
 	private readonly IApplicationDbContext _context;
 	private readonly IElasticSearchService _elasticSearchService;
-	private readonly IMapper _mapper
+	private readonly IMapper _mapper;
 
 	public DeleteHotelCommandHandler(IApplicationDbContext context, IElasticSearchService elasticSearchService, IMapper mapper)
 	{

@@ -48,6 +48,6 @@ public class UpdateHotelRoomCommandHandler : BaseHandler, IRequestHandler<Update
 		await _elasticSearchService.CreateIndexIfNotExisted(nameof(HotelRoom));
 		await _elasticSearchService.AddOrUpdate(room, room.Id.ToString());
 
-		return result;
+		return BuildMultilingualResult(result, room.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
 	}
 }

@@ -1,15 +1,16 @@
-﻿using KarnelTravel.Application.Common;
+﻿using AutoMapper;
+using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Features.Hotel.Models.Requests;
+using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Domain.Entities.Features.Hotels;
 using KarnelTravel.Domain.Enums.Hotels;
 using KarnelTravel.Share.Localization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Share.Common.Extensions;
-using System.Drawing.Drawing2D;
-using System.Net.WebSockets;
 using ZiggyCreatures.Caching.Fusion;
+
 
 namespace KarnelTravel.Application.Features.Hotels.Commands;
 public class UpdateHotelCommand : UpdateHotelRequest, IRequest<AppActionResultData<string>>
@@ -20,11 +21,16 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 {
 	private readonly IApplicationDbContext _context;
 	private readonly IFusionCache _fusionCache;
-	public UpdateHotelCommandHandler(IApplicationDbContext context, IFusionCache fusionCache)
+	private readonly IElasticSearchService _elasticSearchService;
+	private readonly IMapper _mapper;
+	public UpdateHotelCommandHandler(IApplicationDbContext context, IElasticSearchService elasticSearchService, IMapper mapper, IFusionCache fusionCache)
 	{
 		_context = context;
+		_elasticSearchService = elasticSearchService;
+		_mapper = mapper;
 		_fusionCache = fusionCache;
 	}
+	
 	public async Task<AppActionResultData<string>> Handle(UpdateHotelCommand request, CancellationToken cancellationToken)
 	{
 		var result = new AppActionResultData<string>();
@@ -152,13 +158,12 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 		hotel.HotelStyles = hotelStyles;
 
 
-
-
-
-
 		_context.Hotels.Update(hotel);
 		await _context.SaveChangesAsync(cancellationToken);
 
+		var hotelDto =  _mapper.Map<HotelDto>(hotel);
+		await _elasticSearchService.CreateIndexIfNotExisted(nameof(Hotel));
+		await _elasticSearchService.AddOrUpdate(hotelDto, nameof(Hotel));
 
 		//await _fusionCache.RemoveAsync(CacheKeys.ALL_PRODUCT_CATEGORY);
 
