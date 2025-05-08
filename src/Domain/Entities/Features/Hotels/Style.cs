@@ -6,5 +6,4 @@ public class Style : BaseAuditableEntity<long>
 {
 	public string Name { get; set; }
 	public string Description { get; set; }
-	public ICollection<HotelStyle> HotelStyles { get; set; }
 }
