@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zQILSK+Xt2w=",
+  "dgSpecHash": "YVcBToMhHSE=",
   "success": true,
   "projectFilePath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\phamt\\.nuget\\packages\\awssdk.core\\3.7.400.14\\awssdk.core.3.7.400.14.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\awssdk.s3\\3.7.402.5\\awssdk.s3.3.7.402.5.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\cloudinarydotnet\\1.26.2\\cloudinarydotnet.1.26.2.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\elastic.clients.elasticsearch\\8.17.1\\elastic.clients.elasticsearch.8.17.1.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\elastic.transport\\0.5.7\\elastic.transport.0.5.7.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus\\7.3.0\\epplus.7.3.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",

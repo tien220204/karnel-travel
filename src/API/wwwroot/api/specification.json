@@ -178,6 +178,48 @@
         }
       }
     },
+    "/api/v1/hotel/update": {
+      "post": {
+        "tags": [
+          "Hotel"
+        ],
+        "operationId": "Hotel_UpdateHotel",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHotelCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/hotel/rating/create": {
       "post": {
         "tags": [
@@ -1174,11 +1216,7 @@
                 "format": "int64"
               },
               "paymentTypes": {
-                "type": "array",
-                "nullable": true,
-                "items": {
-                  "$ref": "#/components/schemas/PaymentType"
-                }
+                "$ref": "#/components/schemas/PaymentType"
               },
               "servedMeals": {
                 "type": "array",
@@ -1265,7 +1303,17 @@
           },
           {
             "type": "object",
-            "additionalProperties": false
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              }
+            }
           }
         ]
       },
@@ -1554,6 +1602,34 @@
             "format": "int32"
           }
         }
+      },
+      "UpdateHotelCommand": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/UpdateHotelRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "UpdateHotelRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseHotelRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "hotelId": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
       },
       "CreateHotelRatingCommand": {
         "type": "object",

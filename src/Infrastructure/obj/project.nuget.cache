@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R9MSIyYR27I=",
+  "dgSpecHash": "gS26eLVd2cc=",
   "success": true,
   "projectFilePath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\phamt\\.nuget\\packages\\duende.identityserver.entityframework\\7.0.6\\duende.identityserver.entityframework.7.0.6.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\duende.identityserver.entityframework.storage\\7.0.6\\duende.identityserver.entityframework.storage.7.0.6.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\duende.identityserver.storage\\7.0.6\\duende.identityserver.storage.7.0.6.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\elastic.clients.elasticsearch\\8.17.1\\elastic.clients.elasticsearch.8.17.1.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\elastic.transport\\0.5.7\\elastic.transport.0.5.7.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus\\7.3.0\\epplus.7.3.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",

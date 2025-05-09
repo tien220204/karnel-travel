@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravel.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45df3b8778d75cc095bf6da69cd2f228fc203616")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e9fbdc990f7f0fe7f4d217719cde0e2cf365378")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravel.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravel.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
