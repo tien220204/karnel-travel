@@ -3,7 +3,6 @@ using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Domain.Entities.Features.Hotels;
-using KarnelTravel.Share.Cache.Contanst;
 using KarnelTravel.Share.Localization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -37,18 +36,18 @@ public class GetAllHotelReviewQueryHandler : BaseHandler, IRequestHandler<GetAll
 		var result = new AppActionResultData<IList<HotelReviewDto>>();
 
 		//var hotelReviewDtos = await _fusionCache.GetOrDefaultAsync<IList<HotelReviewDto>>(CacheKeys.ALL_PRODUCT_CATEGORY);
-		
+
 
 		//if (hotelReviewDtos.IsNullOrEmpty())
 		//{
-			var hotelReviews = await _context.HotelReviews.Include(x => x.ParentReview)
-												.Include(x => x.ChildReviews).AsNoTracking()
-												.Where(x => !x.IsDeleted)
-												.ToListAsync();
+		var hotelReviews = await _context.HotelReviews.Include(x => x.ParentReview)
+											.Include(x => x.ChildReviews).AsNoTracking()
+											.Where(x => !x.IsDeleted)
+											.ToListAsync();
 
-			var hotelReviewDtos = BuildHierarchy(hotelReviews, null);
+		var hotelReviewDtos = BuildHierarchy(hotelReviews, null);
 
-			//await _fusionCache.SetAsync(CacheKeys.ALL_PRODUCT_CATEGORY_ACTIVE, HotelReviewDtos);
+		//await _fusionCache.SetAsync(CacheKeys.ALL_PRODUCT_CATEGORY_ACTIVE, HotelReviewDtos);
 		//}
 		return BuildMultilingualResult(result, hotelReviewDtos, Resources.INF_MSG_SUCCESSFULLY);
 	}
@@ -68,7 +67,7 @@ public class GetAllHotelReviewQueryHandler : BaseHandler, IRequestHandler<GetAll
 				CreatedBy = c.CreatedBy,
 				LastModified = c.LastModified,
 				LastModifiedBy = c.LastModifiedBy,
-				
+
 			})
 			.OrderByDescending(c => c.Created)
 			.ToList();

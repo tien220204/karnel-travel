@@ -3710,6 +3710,7 @@
         "dependencies": {
           "Ardalis.GuardClauses": "4.6.0",
           "AutoMapper": "13.0.1",
+          "Elastic.Clients.Elasticsearch": "8.17.1",
           "FluentAssertions": "6.12.0",
           "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "KarnelTravel.Domain": "1.0.0",

@@ -10,6 +10,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Share.Common.Extensions;
 using ZiggyCreatures.Caching.Fusion;
+using HotelObj = KarnelTravel.Domain.Entities.Features.Hotels.Hotel;
 
 
 namespace KarnelTravel.Application.Features.Hotels.Commands;
@@ -56,7 +57,11 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 			return BuildMultilingualError(result, Resources.ERR_MSG_DATA_WITH_ID_NOT_FOUND, nameof(request.WardCode));
 		}
 
-		var hotel = _context.Hotels.AsNoTracking().FirstOrDefault(x => x.Id == request.HotelId && !x.IsDeleted);
+		var hotel = _context.Hotels
+			.Include(h => h.HotelStyles)
+			.Include(h => h.HotelAmenities)
+			.Include(h => h.HotelPolicies)
+			.FirstOrDefault(x => x.Id == request.HotelId && !x.IsDeleted);
 
 		if (hotel is null)
 		{
@@ -64,16 +69,31 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 		}
 
 		//delete old policy list
-		var oldPolicyList = hotel.HotelPolicies.ForEach(p => p.IsDeleted = true);
+		if(hotel.HotelPolicies != null && hotel.HotelPolicies.Any(p => !p.IsDeleted))
+		{
+			hotel.HotelPolicies.ForEach(p => p.IsDeleted = true);
+		}
+		
 
 		//delete old image list
-		var oldImageList = hotel.HotelImages.ForEach(i => i.IsDeleted = true);
+
+		if(hotel.HotelImages != null &&  hotel.HotelImages.Any(i => !i.IsDeleted))
+		{
+			hotel.HotelImages.ForEach(i => i.IsDeleted = true);
+		}
+		
 
 		//delete old amenity list
-		var oldAmenityList = hotel.HotelAmenities.ForEach(a => a.IsDeleted = true);
+		if(hotel.HotelAmenities != null && hotel.HotelAmenities.Any(a => !a.IsDeleted))
+		{
+			hotel.HotelAmenities.ForEach(a => a.IsDeleted = true);
+		}
 
 		//delete old style list
-		var oldStyleList = hotel.HotelStyles.ForEach(s => s.IsDeleted = true);
+		if(hotel.HotelStyles != null && hotel.HotelStyles.Any(s => !s.IsDeleted))
+		{
+			hotel.HotelStyles.ForEach(s => s.IsDeleted = true);
+		}
 
 
 		//check for is defined enum type : PaymentType
@@ -162,6 +182,7 @@ public class UpdateHotelCommandHandler : BaseHandler, IRequestHandler<UpdateHote
 		await _context.SaveChangesAsync(cancellationToken);
 
 		var hotelDto =  _mapper.Map<HotelDto>(hotel);
+
 		await _elasticSearchService.CreateIndexIfNotExisted(nameof(Hotel));
 		await _elasticSearchService.AddOrUpdate(hotelDto, nameof(Hotel));
 

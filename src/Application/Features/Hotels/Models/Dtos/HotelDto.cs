@@ -21,7 +21,7 @@ public class HotelDto : BaseAuditableEntityDto<long>
 	public string DistrictCode { get; set; }
 	public long Longitude { get; set; }
 	public long Latitude { get; set; }
-	public List<PaymentType> PaymentTypes { get; set; }
+	public PaymentType PaymentTypes { get; set; }
 	public List<ServedMeal> ServedMeals { get; set; }
 	public ICollection<HotelPolicyDto> HotelPolicies { get; set; }
 	public CountryDto Country { get; set; }

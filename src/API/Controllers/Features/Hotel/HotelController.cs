@@ -1,9 +1,8 @@
 ﻿using KarnelTravel.Application.Common.Models;
-using KarnelTravel.Application.Common.Security;
 using KarnelTravel.Application.Feature.Hotels;
+using KarnelTravel.Application.Features.Hotels.Commands;
 using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Application.Features.Hotels.Queries;
-using KarnelTravel.Application.Features.MasterData.Commands;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -58,6 +57,32 @@ public class HotelController : ApiControllerBase
 		if (result.IsSuccess)
 		{
 			return Success(result.Data, result.Detail);
+		}
+
+		return ClientError(result.Detail);
+	}
+
+	/// <summary>
+	/// Update hotel async 
+	/// </summary>
+	/// <param name="command"></param>
+	/// <returns></returns>
+	[HttpPost("update")]
+	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
+	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
+	public async Task<IActionResult> UpdateHotelAsync(UpdateHotelCommand command)
+	{
+
+		if (!ModelState.IsValid)
+		{
+			return ClientError(ModelState);
+		}
+
+		var result = await Mediator.Send(command);
+
+		if (result.IsSuccess)
+		{
+			return Success(result.Data);
 		}
 
 		return ClientError(result.Detail);

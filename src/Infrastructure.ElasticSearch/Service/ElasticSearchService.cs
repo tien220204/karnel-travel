@@ -16,8 +16,10 @@ public class ElasticSearchService : IElasticSearchService
 
 
 		var settings = new ElasticsearchClientSettings(new Uri(_elasticSettings.Url))
-			//.Authentication()
-			.DefaultIndex(_elasticSettings.DefaultIndex);
+			//.Authentication().
+			.DefaultIndex(_elasticSettings.DefaultIndex)
+			//enable detailed req/resp
+			.DisableDirectStreaming();
 
 		_elasticsearchClient = new ElasticsearchClient(settings);
 	}
@@ -129,5 +131,27 @@ public class ElasticSearchService : IElasticSearchService
 		var response = await _elasticsearchClient.DeleteByQueryAsync<T>(indexName.ToLower());
 
 		return response.IsValidResponse ? response.Deleted : default;
+	}
+
+	//temporary
+	public async Task<SearchResponse<T>> SearchMultiFieldsByKeyword<T>(List<string> fields, string keyword, string indexName)
+	{
+
+		var fieldObjects = Fields.FromStrings(fields.ToArray());
+
+		var searchResponse = await _elasticsearchClient.SearchAsync<T>(s => s
+			.Index(indexName.ToLower())
+			.Query(q => q
+				.MultiMatch(m => m
+					.Fields(fieldObjects)
+					.Query(keyword)
+				)
+			)
+		);
+		if (searchResponse.IsValidResponse)
+		{
+			return searchResponse;
+		}
+		throw new Exception("Failed to search: " + searchResponse.ElasticsearchServerError?.ToString());
 	}
 }
