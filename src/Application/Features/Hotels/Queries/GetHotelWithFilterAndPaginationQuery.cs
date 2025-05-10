@@ -60,7 +60,7 @@ public class GetHotelWithFilterAndPaginationQueryHandler : BaseHandler, IRequest
 			//"district.name"
 		};
 
-		var elasticResult = await _elasticSearchService.SearchMultiFieldsByKeyword<HotelDto>(fieldToSearch, searchText, nameof(Hotel), request.PageIndex, request.PageSize);
+		var elasticResult = await _elasticSearchService.SearchMultiFieldsByKeyword<HotelDto>(fieldToSearch, searchText, nameof(Hotel));
 
 		var res = elasticResult.Hits.Select(x => x.Source).ToList();
 

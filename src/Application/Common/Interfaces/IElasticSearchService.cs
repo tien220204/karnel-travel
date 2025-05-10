@@ -25,5 +25,5 @@ public interface IElasticSearchService
 	Task<long?> RemoveAll<T>(string key, string indexName);
 
 	//search multi fields by keyword
-	Task<SearchResponse<T>> SearchMultiFieldsByKeyword<T>(List<string> fields, string keyword, string indexName, int pageIndex, int pageSize);
+	Task<SearchResponse<T>> SearchMultiFieldsByKeyword<T>(List<string> fields, string keyword, string indexName);
 }
