@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KarnelTravel.Application.Features.ApplicationUsers.Models.Dtos.Token;
 
 namespace KarnelTravel.Application.Common.Interfaces;
 public interface IKeycloakService
@@ -12,5 +8,7 @@ public interface IKeycloakService
 	Task<bool> DeleteUserAsync(string keycloakUserId);
 	Task<bool> AssignRoleAsync(string keycloakUserId, string role);
 	Task<List<string>> GetUserRolesAsync(string keycloakUserId);
-	
+	Task<string> GetUserToken(string username, string password);
+
+
 }

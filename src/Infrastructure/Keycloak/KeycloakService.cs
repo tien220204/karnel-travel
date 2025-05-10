@@ -1,8 +1,13 @@
-﻿using KarnelTravel.Application.Common.Interfaces;
+﻿
+using Elastic.Clients.Elasticsearch.Nodes;
+using KarnelTravel.Application.Common.Interfaces;
 using Keycloak.Net;
 using Keycloak.Net.Models.Clients;
+using Keycloak.Net.Models.Common;
 using Keycloak.Net.Models.Users;
 using Microsoft.Extensions.Configuration;
+using System.Text.Json;
+using Client = Keycloak.Net.Models.Clients.Client;
 
 namespace KarnelTravel.Infrastructure.Keycloak;
 public class KeycloakService : IKeycloakService
@@ -10,8 +15,9 @@ public class KeycloakService : IKeycloakService
 	private readonly KeycloakClient _client;
 	private readonly string _realm;
 	private readonly string _clientId;
+	private readonly HttpClient _httpClient;
 
-	public KeycloakService(IConfiguration config)
+	public KeycloakService(IConfiguration config, HttpClient httpClient)
 	{
 		var url = config["Keycloak:ServerUrl"];
 		var adminUser = config["Keycloak:AdminUser"];
@@ -24,6 +30,7 @@ public class KeycloakService : IKeycloakService
 			url: url,
 			clientSecret: clientSecret
 		);
+		_httpClient = httpClient;
 	}
 
 	public async Task<string> CreateUserAsync(string username, string password, string email, string firstName, string lastName)
@@ -86,15 +93,15 @@ public class KeycloakService : IKeycloakService
 		return await _client.AddClientRoleMappingsToUserAsync(_realm, keycloakUserId, _clientId, new[] { targetRole });
 	}
 
-	//private async Task<Client> GetClientAsync(string clientId)
-	//{
-	//	var clients = await _client.GetClientsAsync(_realm);
+	private async Task<Client> GetClientAsync(string clientId)
+	{
+		var clients = await _client.GetClientsAsync(_realm);
 
-	//	//client uuid
-	//	var client = clients.FirstOrDefault(c => c.ClientId == clientId);
-	//	return client;
+		//client uuid
+		var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+		return client;
 
-	//} 
+	}
 
 	public async Task<List<string>> GetUserRolesAsync(string keycloakUserId)
 	{
@@ -109,10 +116,54 @@ public class KeycloakService : IKeycloakService
 
 	private async Task<string> GetClientUuidAsync(string clientId)
 	{
-		var clients = await _client.GetClientsAsync(_realm);
-		var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+		var client = await GetClientAsync(clientId);
 		return client?.Id; 
 	}
 
-	
+
+	public async Task<string> GetUserToken(string username, string password)
+	{
+		var tokenEndpoint = $"http://localhost:8080/realms/{_realm}/protocol/openid-connect/token";
+
+		try
+		{
+			var clientUuId = await GetClientUuidAsync(_clientId);
+			var clientSecret = await _client.GetClientSecretAsync(_realm, clientUuId);
+
+			if (clientSecret == null)
+				throw new Exception("Client not found in Keycloak");
+
+			var clientSecretValue = clientSecret.Value;
+
+			var parameters = new List<KeyValuePair<string, string>>
+		{
+			new("grant_type", "password"),
+			new("client_id", _clientId),
+			new("username", username),
+			new("password", password),
+			new("client_secret", clientSecretValue)
+		};
+
+			var content = new FormUrlEncodedContent(parameters);
+			var response = await _httpClient.PostAsync(tokenEndpoint, content);
+
+			if (!response.IsSuccessStatusCode)
+			{
+				var errorContent = await response.Content.ReadAsStringAsync();
+				return ($"Failed to get token. Status: {response.StatusCode}, Content: {errorContent}");
+			}
+
+			var json = await response.Content.ReadAsStringAsync();
+			return json;
+		}
+		catch (HttpRequestException httpEx)
+		{
+			throw new Exception("HTTP request failed", httpEx);
+		}
+		catch (Exception ex)
+		{ 
+			throw new Exception("An error occurred while getting the token in keycloak process", ex);
+		}
+	}
+
 }

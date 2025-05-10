@@ -780,7 +780,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Application.csproj": {
+                "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Application\\Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

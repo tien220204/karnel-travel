@@ -1,4 +1,5 @@
 ﻿using KarnelTravel.Application.Features.ApplicationUsers.Commands;
+using KarnelTravel.Application.Features.ApplicationUsers.Queries;
 using KarnelTravel.Application.Features.Hotels.Commands.HotelRating;
 using KarnelTravel.Share.Common.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,32 @@ public class ApplicationUserController : ApiControllerBase
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
 	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
 	public async Task<IActionResult> CreateUserAccountAsync(CreateApplicationUserCommand command)
+	{
+
+		if (!ModelState.IsValid)
+		{
+			return ClientError(ModelState);
+		}
+
+		var result = await Mediator.Send(command);
+
+		if (result.IsSuccess)
+		{
+			return Success(result.Data);
+		}
+
+		return ClientError(result.Detail);
+	}
+
+	/// <summary>
+	/// get token
+	/// </summary>
+	/// <param name="command"></param>
+	/// <returns></returns>
+	[HttpGet("get-token")]
+	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status200OK)]
+	[ProducesResponseType(typeof(AppApiResult<string>), StatusCodes.Status400BadRequest)]
+	public async Task<IActionResult> GetToken(GetTokenQuery command)
 	{
 
 		if (!ModelState.IsValid)

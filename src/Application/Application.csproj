@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\ApplicationUsers\Models\Requests\**" />
     <Compile Remove="Features\Hotel\**" />
+    <EmbeddedResource Remove="Features\ApplicationUsers\Models\Requests\**" />
     <EmbeddedResource Remove="Features\Hotel\**" />
+    <None Remove="Features\ApplicationUsers\Models\Requests\**" />
     <None Remove="Features\Hotel\**" />
   </ItemGroup>
 
@@ -30,9 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\ApplicationUsers\Models\Dtos\" />
-    <Folder Include="Features\ApplicationUsers\Models\Requests\" />
-    <Folder Include="Features\ApplicationUsers\Queries\" />
     <Folder Include="Features\Flights\Models\Events\" />
     <Folder Include="Features\Flights\Models\Requests\" />
     <Folder Include="Features\Hotels\Models\Events\" />

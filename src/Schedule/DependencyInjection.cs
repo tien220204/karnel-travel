@@ -39,6 +39,7 @@ public static class DependencyInjection // Changed to static class to fix CS1106
 
 		services.AddSingleton<ISchedulerTask, DemoTask>();
 		services.AddSingleton<ISchedulerTask, ImportProcessingEventTask>();
+		services.AddSingleton<ISchedulerTask, CleanDataHotelTask>();
 
 		services.AddHostedService<RegisterScheduleService>();
 
