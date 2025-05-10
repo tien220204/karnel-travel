@@ -3,9 +3,11 @@ using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Domain.Entities.Features.Hotels;
+using KarnelTravel.Share.Cache.Contanst;
 using KarnelTravel.Share.Localization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Share.Common.Extensions;
 using ZiggyCreatures.Caching.Fusion;
 
 namespace KarnelTravel.Application.Features.Hotels.Queries;
@@ -35,20 +37,20 @@ public class GetAllHotelReviewQueryHandler : BaseHandler, IRequestHandler<GetAll
 	{
 		var result = new AppActionResultData<IList<HotelReviewDto>>();
 
-		//var hotelReviewDtos = await _fusionCache.GetOrDefaultAsync<IList<HotelReviewDto>>(CacheKeys.ALL_PRODUCT_CATEGORY);
+		var hotelReviewDtos = await _fusionCache.GetOrDefaultAsync<IList<HotelReviewDto>>(CacheKeys.ALL_HOLTEL_REVIEW);
 
 
-		//if (hotelReviewDtos.IsNullOrEmpty())
-		//{
-		var hotelReviews = await _context.HotelReviews.Include(x => x.ParentReview)
+		if (hotelReviewDtos.IsNullOrEmpty())
+		{
+			var hotelReviews = await _context.HotelReviews.Include(x => x.ParentReview)
 											.Include(x => x.ChildReviews).AsNoTracking()
 											.Where(x => !x.IsDeleted)
 											.ToListAsync();
 
-		var hotelReviewDtos = BuildHierarchy(hotelReviews, null);
+			hotelReviewDtos = BuildHierarchy(hotelReviews, null);
 
-		//await _fusionCache.SetAsync(CacheKeys.ALL_PRODUCT_CATEGORY_ACTIVE, HotelReviewDtos);
-		//}
+			await _fusionCache.SetAsync(CacheKeys.ALL_HOLTEL_REVIEW, hotelReviewDtos);
+		}
 		return BuildMultilingualResult(result, hotelReviewDtos, Resources.INF_MSG_SUCCESSFULLY);
 	}
 

@@ -37,6 +37,7 @@
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure.ElasticSearch\Infrastructure.ElasticSearch.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\Schedule\Scheduler.csproj" />
     <ProjectReference Include="..\Share\Share.csproj" />
   </ItemGroup>
 

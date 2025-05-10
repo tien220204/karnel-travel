@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Schedule.Settings;
-internal class HangfireSettings
+﻿namespace Schedule.Settings;
+public class HangfireSettings
 {
+	public string ConnectionString { get; set; }
 }

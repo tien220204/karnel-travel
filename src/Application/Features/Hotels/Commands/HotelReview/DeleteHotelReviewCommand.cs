@@ -1,8 +1,10 @@
 ﻿using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Security;
+using KarnelTravel.Share.Cache.Contanst;
 using KarnelTravel.Share.Localization;
 using MediatR;
+using ZiggyCreatures.Caching.Fusion;
 namespace KarnelTravel.Application.Features.Hotels.Commands.HotelReview;
 
 [Authorize(Roles = "user")]
@@ -14,10 +16,12 @@ public record DeleteHotelReviewCommand : IRequest<AppActionResultData<string>>
 public class DeleteHotelReviewCommandHandler : BaseHandler, IRequestHandler<DeleteHotelReviewCommand, AppActionResultData<string>>
 {
 	private readonly IApplicationDbContext _context;
+	private readonly IFusionCache _fusionCache;	
 
-	public DeleteHotelReviewCommandHandler(IApplicationDbContext context)
+	public DeleteHotelReviewCommandHandler(IApplicationDbContext context, IFusionCache fusionCache)
 	{
 		_context = context;
+		_fusionCache = fusionCache;
 	}
 
 	public async Task<AppActionResultData<string>> Handle(DeleteHotelReviewCommand request, CancellationToken cancellationToken)
@@ -34,6 +38,8 @@ public class DeleteHotelReviewCommandHandler : BaseHandler, IRequestHandler<Dele
 		hotelReview.IsDeleted = true;
 
 		_context.HotelReviews.Update(hotelReview);
+
+		await _fusionCache.RemoveAsync(CacheKeys.ALL_HOLTEL_REVIEW);
 
 		await _context.SaveChangesAsync(cancellationToken);
 

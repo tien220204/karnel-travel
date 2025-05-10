@@ -5,6 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Scheduler.Interfaces;
-internal class ISchedulerTask
+public interface ISchedulerTask
 {
+	string Name { get; }
+	string CronTime { get; }
+	Task ExecuteJob();
+	string GetQueueName()
+	{
+		return "default";
+	}
 }

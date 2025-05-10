@@ -1,10 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hangfire;
+using Hangfire.SqlServer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Schedule.Settings;
+using Scheduler.Interfaces;
+using Scheduler.Service;
+using Scheduler.Tasks;
 
 namespace Schedule;
-internal class DependencyInjection
+public static class DependencyInjection // Changed to static class to fix CS1106
 {
+	public static IServiceCollection AddScheduleServices(this IServiceCollection services, IConfiguration configuration)
+	{
+		//using 
+		var hangfireSettings = configuration.GetSection(nameof(HangfireSettings)).Get<HangfireSettings>();
+
+
+		//services.AddSingleton<IElasticSearchService, ElasticSearchService>();
+
+		services.AddHangfire(x => x.UseSqlServerStorage(hangfireSettings.ConnectionString, new SqlServerStorageOptions
+		{
+			CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+			SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+			QueuePollInterval = TimeSpan.Zero,
+			UseRecommendedIsolationLevel = true,
+			DisableGlobalLocks = true
+		}));
+
+		services.AddHangfireServer(options =>
+		{
+			options.WorkerCount = 1;
+			options.Queues = new[] { "default" };
+			options.ServerName = Environment.MachineName;
+			options.SchedulePollingInterval = TimeSpan.FromSeconds(5);
+		});
+
+		
+
+		services.AddSingleton<ISchedulerTask, DemoTask>();
+		services.AddSingleton<ISchedulerTask, ImportProcessingEventTask>();
+
+		services.AddHostedService<RegisterScheduleService>();
+
+		return services;
+	}
 }
