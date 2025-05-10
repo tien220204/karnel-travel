@@ -12,7 +12,7 @@ public static class DependencyInjection
         services.AddMemoryCache();
 
         // Bind settings
-        var cacheSettings = configuration.GetSection(nameof(CloudinaryOAuthApiSettings)).Get<FushionCacheSettings>();
+        var cacheSettings = configuration.GetSection(nameof(FushionCacheSettings)).Get<FushionCacheSettings>();
 
         if (cacheSettings.EnableDistributedCache)
         {

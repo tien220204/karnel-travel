@@ -12,6 +12,8 @@ using KarnelTravel.Infrastructure;
 using KarnelTravel.Share.CloudinaryService;
 using KarnelTravel.Share.Cache;
 using Infrastructure.ElasticSearch;
+using Schedule;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,7 @@ builder.Services.AddApiServices(builder.Configuration, builder.Environment);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureElasticSearchServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddScheduleServices(builder.Configuration);
 builder.Services.AddCloudinaryServices(builder.Configuration);
 builder.Services.AddApplicationCache(builder.Configuration);
 builder.Services.ConfigMapper();
@@ -64,6 +67,9 @@ else
 }
 
 await ApplicationDbContextSeed.SeedProductUnitAsync(app.Services);
+
+app.UseHangfireDashboard(); 
+
 
 app.UseHealthChecks("/health");
 app.UseHttpsRedirection();

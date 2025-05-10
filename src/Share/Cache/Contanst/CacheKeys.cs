@@ -1,6 +1,9 @@
 ﻿namespace KarnelTravel.Share.Cache.Contanst;
 public static class CacheKeys
 {
-    //public const string ALL_PRODUCT_CATEGORY = nameof(ALL_PRODUCT_CATEGORY);
-    
+	#region
+	public const string ALL_HOLTEL_REVIEW = nameof(ALL_HOLTEL_REVIEW);
+	#endregion
+
+
 }

@@ -1,6 +1,7 @@
 ﻿using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Security;
+using KarnelTravel.Share.Cache.Contanst;
 using KarnelTravel.Share.Localization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -40,8 +41,7 @@ public class UpdateHotelReviewCommandHandler : BaseHandler, IRequestHandler<Upda
 		_context.HotelReviews.Update(hotelReview);
 		await _context.SaveChangesAsync(cancellationToken);
 
-
-		//await _fusionCache.RemoveAsync(CacheKeys.ALL_PRODUCT_CATEGORY);
+		await _fusionCache.RemoveAsync(CacheKeys.ALL_HOLTEL_REVIEW);
 
 		return BuildMultilingualResult(result, hotelReview.Id.ToString(), Resources.INF_MSG_SUCCESSFULLY);
 	}
