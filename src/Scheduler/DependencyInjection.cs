@@ -10,7 +10,7 @@ using Scheduler.Tasks;
 namespace Schedule;
 public static class DependencyInjection // Changed to static class to fix CS1106
 {
-	public static IServiceCollection AddScheduleServices(this IServiceCollection services, IConfiguration configuration)
+	public static IServiceCollection AddSchedulerServices(this IServiceCollection services, IConfiguration configuration)
 	{
 		//using 
 		var hangfireSettings = configuration.GetSection(nameof(HangfireSettings)).Get<HangfireSettings>();

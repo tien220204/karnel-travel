@@ -41,8 +41,8 @@
               "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj"
               },
-              "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj": {
-                "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj"
+              "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj": {
+                "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj"
               },
               "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj": {
                 "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj"
@@ -753,14 +753,14 @@
         }
       }
     },
-    "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj": {
+    "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj",
+        "projectUniqueName": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj",
         "projectName": "Scheduler",
-        "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj",
+        "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj",
         "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\obj\\",
+        "outputPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

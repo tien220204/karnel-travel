@@ -11736,8 +11736,8 @@
     },
     "Scheduler/1.0.0": {
       "type": "project",
-      "path": "../Schedule/Scheduler.csproj",
-      "msbuildProject": "../Schedule/Scheduler.csproj"
+      "path": "../Scheduler/Scheduler.csproj",
+      "msbuildProject": "../Scheduler/Scheduler.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11809,8 +11809,8 @@
             "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Infrastructure\\Infrastructure.csproj"
             },
-            "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj": {
-              "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Schedule\\Scheduler.csproj"
+            "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj": {
+              "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Scheduler\\Scheduler.csproj"
             },
             "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj": {
               "projectPath": "D:\\Workspace\\PersonalProjects\\karnel-travel\\src\\Share\\Share.csproj"
