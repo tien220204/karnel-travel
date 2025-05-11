@@ -94,6 +94,23 @@ dotnet ef database update
 cd src/KarnelTravel.Api
 dotnet run
 ```
-5. **Run api**:
+5. **Run API**:
 
-access http://localhost:5212/api/index.html?url=/api/specification.json for api list
+Access the Swagger UI at:  
+[http://localhost:5212/api/index.html?url=/api/specification.json](http://localhost:5212/api/index.html?url=/api/specification.json) for API list.
+
+---
+
+6. **Import initial location data**:
+
+Before using other APIs, you must import the initial location data.
+
+1. Download the Excel file ['karnel-travel/data/location/location.xls'](karnel-travel/data/location/location.xls).
+2. Use the **Import Location API** to upload the data:
+
+    - **Endpoint**: `POST /location/import-file`  
+    - **Content-Type**: `multipart/form-data`  
+    - **Form field name**: `file`
+
+> ⚠️ **Note:** This step is required before using any feature that relies on location data (e.g., creating flights, promotions, etc.).
+
