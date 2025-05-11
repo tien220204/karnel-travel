@@ -5,12 +5,12 @@
 
 # KarnelTravel
 
-![KarnelTravel Icon]("ch co")
+<!-- ![KarnelTravel Icon]("ch co")
 
 [![Build Status](https://ci.appveyor.com/api/projects/status/c9npduu2dp9ljlps?svg=true)](https://ci.appveyor.com/project/YourUsername/KarnelTravel)
 [![License](https://img.shields.io/github/license/YourUsername/KarnelTravel.svg?maxAge=2592000)](https://github.com/YourUsername/KarnelTravel/blob/master/LICENSE)
 [![NuGet](https://img.shields.io/nuget/v/KarnelTravel.svg?maxAge=2592000)](https://www.nuget.org/packages/KarnelTravel/)
-![Downloads](https://img.shields.io/nuget/dt/KarnelTravel)
+![Downloads](https://img.shields.io/nuget/dt/KarnelTravel) -->
 
 ## Description
 
@@ -20,25 +20,25 @@ The app includes features for managing flights, hotels, users, and roles, as wel
 
 ## Features
 * [X] User Authentication and Authorization (via Keycloak)
-* [X] Flight Management (Create, Read, Update, Delete)
-<!-- * [X] Airport Management -->
-<!-- * [X] Promotion Management -->
+* [X] Flight Management (Create, Read, Update, Delete)(in progress)
+* [X] Hotel Management (Create, Read, Update, Delete)
 * [X] Role and Permission Management (in progress)
-<!-- * [X] Integration with external APIs for search and booking -->
-* [X] Optimized performance with caching mechanisms
+* [X] Integration with external APIs for search and booking (In progress)
+* [X] Optimized performance with caching mechanisms and full text search engine
 * [X] Secure API with JWT Authentication
-* [X] Admin Dashboard for flight and user management
+* [X] Background tasks for cleaning data and sync data occasionally
+
+
+<!-- * [X] Admin Dashboard for flight and user management -->
 
 ## Technologies Used
 
 * **ASP.NET Core** – Backend framework
-<!-- * **Angular** – Frontend framework -->
 * **Keycloak** – Identity and Access Management
 * **Serilog** – Logging
 * **Hangfire** – Background task processing
 * **Sql server** -Database for background job
 * **PostgreSQL** – Main database
-<!-- * **Cloudinary** – Image and media storage -->
 * **ElasticSearch** –  Full text search capabilities
 <!-- * **Redis** – Distributed caching -->
 * **FushionCache** –  Memory cache
@@ -66,11 +66,12 @@ Follow the instructions below to set up and run the project locally:
 ```bash
 git https://github.com/tien220204/karnel-travel.git
 cd karnel-travel
-
+```
 
 2. **Prepare the services for application**:
-
+```bash
 # Background Job (Hangfire SQL Server)
+
 cd docker-compose-files/background-job-storage
 docker compose up -d
 
@@ -81,17 +82,18 @@ docker compose up -d
 # Keycloak
 cd ../keycloak
 docker compose up -d
-
+ ```
 3. **Update Db**:
 
+```bash
 cd src/KarnelTravel.Infrastructure
 dotnet ef database update
-
+```
 4. **Run application**:
-
+```bash
 cd src/KarnelTravel.Api
 dotnet run
-
-5. **run api**:
+```
+5. **Run api**:
 
 access http://localhost:5212/api/index.html?url=/api/specification.json for api list
