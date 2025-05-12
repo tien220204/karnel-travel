@@ -10,10 +10,13 @@
 
   <ItemGroup>
     <Compile Remove="Features\ApplicationUsers\Models\Requests\**" />
+    <Compile Remove="Features\Flights\Models\Events\**" />
     <Compile Remove="Features\Hotel\**" />
     <EmbeddedResource Remove="Features\ApplicationUsers\Models\Requests\**" />
+    <EmbeddedResource Remove="Features\Flights\Models\Events\**" />
     <EmbeddedResource Remove="Features\Hotel\**" />
     <None Remove="Features\ApplicationUsers\Models\Requests\**" />
+    <None Remove="Features\Flights\Models\Events\**" />
     <None Remove="Features\Hotel\**" />
   </ItemGroup>
 
@@ -33,8 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Flights\Models\Events\" />
-    <Folder Include="Features\Flights\Models\Requests\" />
     <Folder Include="Features\Hotels\Models\Events\" />
     <Folder Include="Features\Hotels\Validators\" />
     <Folder Include="Features\MasterData\Models\Requests\" />
