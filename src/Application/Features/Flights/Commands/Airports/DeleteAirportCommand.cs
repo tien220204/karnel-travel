@@ -29,6 +29,8 @@ public class DeleteAirportCommandHandler : BaseHandler, IRequestHandler<DeleteAi
 		_context.Airports.Update(airport);
 		await _context.SaveChangesAsync(cancellationToken);
 
+		//update cache
+
 		return BuildMultilingualResult(result, request.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
 	}
 }
