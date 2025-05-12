@@ -1,6 +1,9 @@
-﻿using KarnelTravel.Application.Common;
+﻿using AutoMapper;
+using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
+using KarnelTravel.Application.Features.Flights.Models.Dtos;
 using KarnelTravel.Application.Features.Flights.Models.Requests;
+using KarnelTravel.Domain.Entities.Features.Flights;
 using KarnelTravel.Share.Localization;
 using MediatR;
 
@@ -13,11 +16,13 @@ public class CreateFlightCommandHand : BaseHandler, IRequestHandler<CreateFlight
 {
 	private readonly IApplicationDbContext _context;
 	private readonly IElasticSearchService _elasticSearchService;
+	private readonly IMapper _mapper;
 
-	public CreateFlightCommandHand(IApplicationDbContext context, IElasticSearchService elasticSearchService)
+	public CreateFlightCommandHand(IApplicationDbContext context, IElasticSearchService elasticSearchService, IMapper mapper)
 	{
 		_context = context;
 		_elasticSearchService = elasticSearchService;
+		_mapper = mapper;
 	}
 	public async Task<AppActionResultData<string>> Handle(CreateFlightCommand request, CancellationToken cancellationToken)
 	{
@@ -35,6 +40,9 @@ public class CreateFlightCommandHand : BaseHandler, IRequestHandler<CreateFlight
 		_context.Flights.Add(flight);
 
 		await _context.SaveChangesAsync(cancellationToken);
+
+		var flightDto = _mapper.Map<FlightDto>(flight);
+		await _elasticSearchService.AddOrUpdate(flightDto, nameof(Flight));
 
 		return BuildMultilingualResult(result, flight.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
 	}

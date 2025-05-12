@@ -4,6 +4,7 @@ using KarnelTravel.Domain.Entities.Features.Flights;
 using KarnelTravel.Share.Localization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Share.Common.Extensions;
 
 namespace KarnelTravel.Application.Features.Flights.Commands;
 public class DeleteFlightCommand : IRequest<AppActionResultData<string>>
@@ -28,7 +29,7 @@ public class DeleteFlightCommandHandler : BaseHandler, IRequestHandler<DeleteFli
 			return BuildMultilingualError(result, Resources.ERR_MSG_DATA_WITH_ID_NOT_FOUND, request.Id.ToString());
 		}
 
-		if (CanUpdateFlight(flight){
+		if (CanUpdateFlight(flight)){
 			return BuildMultilingualError(result, Resources.ERR_MSG_UNABLE_TO_MODIFY_DATA, [nameof(Flight), request.Id]);
 		}
 
@@ -37,7 +38,7 @@ public class DeleteFlightCommandHandler : BaseHandler, IRequestHandler<DeleteFli
 		_context.Flights.Update(flight);
 		await _context.SaveChangesAsync(cancellationToken);
 
-		return BuildMultilingualResult(result, request.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
+		return BuildMultilingualResult(result, flight.Id.ToString(), Resources.INF_MSG_SAVE_SUCCESSFULLY);
 	}
 	private bool CanUpdateFlight(Flight flight)
 	{
