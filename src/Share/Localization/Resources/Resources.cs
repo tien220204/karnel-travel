@@ -149,5 +149,18 @@ namespace KarnelTravel.Share.Localization {
                 return ResourceManager.GetString("INF_MSG_SUCCESSFULLY", resourceCulture);
             }
         }
-    }
+
+
+		/// <summary>
+		///  Looks up a localized string similar to Không thể sửa đổi dữ liệu.
+		/// </summary>
+		public static string ERR_MSG_UNABLE_TO_MODIFY_DATA
+		{
+			get
+			{
+				return ResourceManager.GetString("ERR_MSG_UNABLE_TO_MODIFY_DATA", resourceCulture);
+			}
+		}
+
+	}
 }

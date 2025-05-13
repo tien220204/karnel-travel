@@ -8,6 +8,7 @@ ERR_MSG_CANNOT_UPLOAD_IMAGE = Không thể tải hình ảnh lên cho: {0}.
 ERR_MSG_INVALID_DATA_TYPE = Kiểu dữ liệu không hợp lệ - Yêu cầu là kiểu: {0}
 ERR_MSG_FILE_IS_EMPTY = File không tồn tại dữ liệu
 ERR_MSG_DATA_EXISTED = Dữ liệu đã tồn tại - Dữ liệu yêu cầu là duy nhất. 
+ERR_MSG_UNABLE_TO_MODIFY_DATA = Không thể sửa đổi dữ liệu {0} với mã: {1}.
 
 #endregion ERROR
 

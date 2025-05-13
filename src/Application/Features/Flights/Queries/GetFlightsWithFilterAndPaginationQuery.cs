@@ -1,14 +1,11 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Common.Mappings;
 using KarnelTravel.Application.Features.Flights.Models.Dtos;
-using KarnelTravel.Application.Features.Hotels.Models.Dtos;
 using KarnelTravel.Domain.Entities.Features.Flights;
 using KarnelTravel.Share.Localization;
 using MediatR;
-using Share.Common.Extensions;
 
 namespace KarnelTravel.Application.Features.Flights.Queries;
 

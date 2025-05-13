@@ -56,10 +56,11 @@ public class CreateAirportCommandHandler : BaseHandler, IRequestHandler<CreateAi
 			ProvinceCode = request.ProvinceCode,
 			CountryCode = request.CountryCode,
 			Timezone = request.Timezone,
-		}
+		};
 		
 
 		await _context.Airports.AddAsync(newAirport);
+
 
 		//await _cache.RemoveAsync(CacheKeys.);
 		await _context.SaveChangesAsync(cancellationToken);

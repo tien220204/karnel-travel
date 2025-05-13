@@ -1,5 +1,4 @@
-﻿using Amazon.Auth.AccessControlPolicy;
-using AutoMapper;
+﻿using AutoMapper;
 using KarnelTravel.Application.Common;
 using KarnelTravel.Application.Common.Interfaces;
 using KarnelTravel.Application.Features.Flights.Models.Requests;
@@ -17,16 +16,14 @@ public class UpdateAirportCommandHandler : BaseHandler, IRequestHandler<UpdateAi
 {
 	private readonly IApplicationDbContext _context;
 	private readonly IElasticSearchService _elasticSearchService;
-	private readonly IMapper _mapper;
 	private readonly IFusionCache _cache;
 	public UpdateAirportCommandHandler(IApplicationDbContext context, IElasticSearchService elasticSearchService, IMapper mapper, IFusionCache cache)
 	{
 		_context = context;
 		_elasticSearchService = elasticSearchService;
-		_mapper = mapper;
 		_cache = cache;
 	}
-	
+
 	public async Task<AppActionResultData<string>> Handle(UpdateAirportCommand request, CancellationToken cancellationToken)
 	{
 		var result = new AppActionResultData<string>();
