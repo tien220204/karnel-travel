@@ -40,6 +40,7 @@
     <Folder Include="Features\Hotels\Validators\" />
     <Folder Include="Features\MasterData\Models\Requests\" />
     <Folder Include="Features\MasterData\Queries\" />
+    <Folder Include="Features\NewFolder\" />
   </ItemGroup>
 
 </Project>
